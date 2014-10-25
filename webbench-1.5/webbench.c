@@ -29,7 +29,7 @@
 volatile int timerexpired=0;
 int speed=0; // 记录进程成功得到服务器相应的数量，即成功数
 int failed=0; // 记录失败的数目
-int bytes=0;  // 记录进程成功读取的字节数
+int bytes=0;  // 记录进程成功读取的字节数，当force = 0时有效
 /* globals */
 // HTTP协议版本，默认为HTTP 1.0
 int http10=1; /* 0 - http/0.9, 1 - http/1.0, 2 - http/1.1 */
@@ -79,6 +79,7 @@ static void benchcore(const char* host,const int port, const char *request);
 static int bench(void);
 static void build_request(const char *url);
 
+// timerexpired = 1 时，定时结束
 static void alarm_handler(int signal)
 {
     timerexpired=1;
@@ -403,36 +404,40 @@ static int bench(void)
             return 3;
 	    }
 	    /* fprintf(stderr,"Child - %d %d\n",speed,failed); */
-	    fprintf(f,"%d %d %d\n",speed,failed,bytes);
+	    // 子进程将speed failed bytes写进管道
+        fprintf(f,"%d %d %d\n",speed,failed,bytes);
 	    fclose(f);
 	    return 0;
     } 
-    else
+    else  //父进程
     {
-        f=fdopen(mypipe[0],"r");
+        f=fdopen(mypipe[0],"r"); //mypipe[0]与标准流相结合
         if(f==NULL) 
 	    {
             perror("open pipe for reading failed.");
             return 3;
 	    }
-	    setvbuf(f,NULL,_IONBF,0);
+	    setvbuf(f,NULL,_IONBF,0);  //设置无缓冲区
 	    speed=0;
         failed=0;
         bytes=0;
 
 	    while(1)
 	    {
+            // 通过f从管道读取数据，注意fscanf为阻塞式函数
             pid=fscanf(f,"%d %d %d",&i,&j,&k);
 		    if(pid<2)
             {
                 fprintf(stderr,"Some of our childrens died.\n");
                 break;
             }
+            // 父进程利用管道负责统计子进程的三种数据和
 		    speed+=i;
 		    failed+=j;
 		    bytes+=k;
 		    /* fprintf(stderr,"*Knock* %d %d read=%d\n",speed,failed,pid); */
-		    if(--clients==0) break;
+		    // 当子进程数据读完后，就退出
+            if(--clients==0) break;
 	    } 
 	    fclose(f);
 
@@ -481,12 +486,13 @@ void benchcore(const char *host,const int port,const char *req)
         if(rlen!=write(s,req,rlen)) {failed++;close(s);continue;} // header大小与发送的不相等，则失败
         if(http10==0)  // 针对HTTP0.9的特殊处理，关闭s的写功能，成功则返回0，错误则返回-1
 	    if(shutdown(s,1)) { failed++;close(s);continue;}
+        // 发出请求后需要等待服务器的响应结果
         if(force==0)  // force = 0表示等待从Server返回的数据
         {
             /* read all available data from socket */
 	        while(1)
 	        {
-                if(timerexpired) break; // timerexpired默认为0，当为1时表示 
+                if(timerexpired) break; // timerexpired默认为0，在规定时间内读取当为1时表示定时结束 
 	            i=read(s,buf,1500); // 从socket读取返回数据
                 /* fprintf(stderr,"%d\n",i); */
 	            if(i<0) 
