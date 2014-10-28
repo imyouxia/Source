@@ -5,7 +5,7 @@ tinyhttpd是一个超轻量型Http Server，使用C语言开发，全部代码�
 ## 编译
 
 错误比较多，我博客里对此做了些说明：
-
+[tinyhttpd源码改正和剖析](http://armsword.com/2014/10/29/tinyhttpd-code-analyse.html)
 
 
 
