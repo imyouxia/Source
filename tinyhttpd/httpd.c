@@ -74,12 +74,14 @@ void *accept_request(void* client1)
     }
     method[i] = '\0';
 
+    // 判断是否实现了"GET"、"POST"协议
     if (strcasecmp(method, "GET") && strcasecmp(method, "POST"))
     {
         unimplemented(client);
         return NULL;
     }
 
+    // 如果实现了POST协议，那么表示实现了CGI功能
     if (strcasecmp(method, "POST") == 0)
         cgi = 1;
 
@@ -98,6 +100,7 @@ void *accept_request(void* client1)
         query_string = url;
         while ((*query_string != '?') && (*query_string != '\0'))
             query_string++;
+        // 得到GET的URI
         if (*query_string == '?')
         {
             cgi = 1;
@@ -105,27 +108,36 @@ void *accept_request(void* client1)
             query_string++;
         }
     }
-
+    // htdocs 是存放网页的文件夹，与Apache的WWW目录相似
     sprintf(path, "htdocs%s", url);
     if (path[strlen(path) - 1] == '/')
-        strcat(path, "index.html");
-    if (stat(path, &st) == -1) {
+        strcat(path, "index.html"); // 注意许多时候首页不一定是index.html
+    if (stat(path, &st) == -1) // 获取文件信息失败 
+    {
+        // 读取并抛弃HEADERS
         while ((numchars > 0) && strcmp("\n", buf))  /* read & discard headers */
             numchars = get_line(client, buf, sizeof(buf));
         not_found(client);
     }
     else
     {
+        // 是目录
         if ((st.st_mode & S_IFMT) == S_IFDIR)
             strcat(path, "/index.html");
+        /*
+         * 文件所有者具有可执行权限、用户组具有可执行权限、其他用户具有可执行权限
+         * 则表示是具备CGI功能
+         */
+
         if ((st.st_mode & S_IXUSR) ||
                 (st.st_mode & S_IXGRP) ||
                 (st.st_mode & S_IXOTH)    )
             cgi = 1;
+        // 普通类似htm/html网页，不能被功能
         if (!cgi)
             serve_file(client, path);
         else
-            execute_cgi(client, path, method, query_string);
+            execute_cgi(client, path, method, query_string); // 执行CGI程序
     }
 
     close(client);
@@ -159,6 +171,7 @@ void bad_request(int client)
  * Parameters: the client socket descriptor
  *             FILE pointer for the file to cat */
 /**********************************************************************/
+// 循环读取文本文件，并向客户端/网页打印网页内容
 void cat(int client, FILE *resource)
 {
     char buf[1024];
@@ -175,6 +188,7 @@ void cat(int client, FILE *resource)
 /* Inform the client that a CGI script could not be executed.
  * Parameter: the client socket descriptor. */
 /**********************************************************************/
+// 创建管道失败，发送个HTTP 500内部错误吧
 void cannot_execute(int client)
 {
     char buf[1024];
@@ -194,6 +208,7 @@ void cannot_execute(int client)
  * on value of errno, which indicates system call errors) and exit the
  * program indicating an error. */
 /**********************************************************************/
+// 打印错误
 void error_die(const char *sc)
 {
     perror(sc);
@@ -226,6 +241,7 @@ void execute_cgi(int client, const char *path,
     else    /* POST */
     {
         numchars = get_line(client, buf, sizeof(buf));
+        // 获取Content-Length的长度
         while ((numchars > 0) && strcmp("\n", buf))
         {
             buf[15] = '\0';
@@ -265,7 +281,9 @@ void execute_cgi(int client, const char *path,
         dup2(cgi_input[0], 0);
         close(cgi_output[0]);
         close(cgi_input[1]);
+        // 设置CGI环境变量，此处设置的环境变量有点少。。。
         sprintf(meth_env, "REQUEST_METHOD=%s", method);
+        // 把字符串加入到当前环境变量中，只对本程序有用，不会影响到外部环境
         putenv(meth_env);
         if (strcasecmp(method, "GET") == 0) {
             sprintf(query_env, "QUERY_STRING=%s", query_string);
@@ -275,8 +293,7 @@ void execute_cgi(int client, const char *path,
             sprintf(length_env, "CONTENT_LENGTH=%d", content_length);
             putenv(length_env);
         }
-        execl(path, path, NULL);
-        //execl(path, query_string, NULL);
+        execl(path, path, NULL); // 执行成功则不返回
         exit(0);
     } else {    /* parent */
         close(cgi_output[1]);
@@ -284,14 +301,15 @@ void execute_cgi(int client, const char *path,
         if (strcasecmp(method, "POST") == 0)
             for (i = 0; i < content_length; i++) {
                 recv(client, &c, 1, 0);
+                // 向子进程发送数据
                 write(cgi_input[1], &c, 1);
             }
-        while (read(cgi_output[0], &c, 1) > 0)
+        while (read(cgi_output[0], &c, 1) > 0) // 读取子进程数据
             send(client, &c, 1, 0);
 
         close(cgi_output[0]);
         close(cgi_input[1]);
-        waitpid(pid, &status, 0);
+        waitpid(pid, &status, 0); // 防止产生僵尸进程
     }
 }
 
@@ -352,6 +370,8 @@ int get_line(int sock, char *buf, int size)
 /* Parameters: the socket to print the headers on
  *             the name of the file */
 /**********************************************************************/
+
+// 向客户端发送HTTP Response请求，一般包括协议版本和文本类型  
 void headers(int client, const char *filename)
 {
     char buf[1024];
@@ -370,6 +390,7 @@ void headers(int client, const char *filename)
 /**********************************************************************/
 /* Give a client a 404 not found status message. */
 /**********************************************************************/
+// 如果文件不存在，那就报404 NOT FOUND 错误呗
 void not_found(int client)
 {
     char buf[1024];
@@ -416,7 +437,9 @@ void serve_file(int client, const char *filename)
         not_found(client);
     else
     {
+        // 发送HTTP Response请求
         headers(client, filename);
+        // 发送HTTP BODY，即打印网页内容
         cat(client, resource);
     }
     fclose(resource);
@@ -471,6 +494,7 @@ int startup(u_short *port)
  * implemented.
  * Parameter: the client socket */
 /**********************************************************************/
+// 如果未实现"GET"和"POST"协议，HTTP Response 以下内容
 void unimplemented(int client)
 {
     char buf[1024];
