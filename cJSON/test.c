@@ -28,7 +28,7 @@
 void doit(char *text)
 {
 	char *out;cJSON *json;
-	
+	// 将字符串/文本 解析成JSON格式
 	json=cJSON_Parse(text);
 	if (!json) {printf("Error before: [%s]\n",cJSON_GetErrorPtr());}
 	else
