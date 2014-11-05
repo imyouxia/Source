@@ -70,24 +70,26 @@ void create_objects()
 	cJSON_AddNumberToObject(fmt,"frame rate",	24);
 	
 	out=cJSON_Print(root);	cJSON_Delete(root);	printf("%s\n",out);	free(out);	/* Print to text, Delete the cJSON, print it, release the string. */
-
-	/* Our "days of the week" array: */
+    
+    /*
+     *
+	// Our "days of the week" array:
 	const char *strings[7]={"Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"};
 	root=cJSON_CreateStringArray(strings,7);
 
 	out=cJSON_Print(root);	cJSON_Delete(root);	printf("%s\n",out);	free(out);
 
-	/* Our matrix: */
+	// Our matrix: 
 	int numbers[3][3]={{0,-1,0},{1,0,0},{0,0,1}};
 	root=cJSON_CreateArray();
 	for (i=0;i<3;i++) cJSON_AddItemToArray(root,cJSON_CreateIntArray(numbers[i],3));
 
-/*	cJSON_ReplaceItemInArray(root,1,cJSON_CreateString("Replacement")); */
+    // cJSON_ReplaceItemInArray(root,1,cJSON_CreateString("Replacement"));
 	
 	out=cJSON_Print(root);	cJSON_Delete(root);	printf("%s\n",out);	free(out);
 
 
-	/* Our "gallery" item: */
+	// Our "gallery" item:
 	int ids[4]={116,943,234,38793};
 	root=cJSON_CreateObject();
 	cJSON_AddItemToObject(root, "Image", img=cJSON_CreateObject());
@@ -102,7 +104,7 @@ void create_objects()
 
 	out=cJSON_Print(root);	cJSON_Delete(root);	printf("%s\n",out);	free(out);
 
-	/* Our array of "records": */
+	// Our array of "records":
 	struct record fields[2]={
 		{"zip",37.7668,-1.223959e+2,"","SAN FRANCISCO","CA","94107","US"},
 		{"zip",37.371991,-1.22026e+2,"","SUNNYVALE","CA","94085","US"}};
@@ -121,9 +123,11 @@ void create_objects()
 		cJSON_AddStringToObject(fld, "Country", fields[i].country);
 	}
 	
-/*	cJSON_ReplaceItemInObject(cJSON_GetArrayItem(root,1),"City",cJSON_CreateIntArray(ids,4)); */
+    //cJSON_ReplaceItemInObject(cJSON_GetArrayItem(root,1),"City",cJSON_CreateIntArray(ids,4));
 	
 	out=cJSON_Print(root);	cJSON_Delete(root);	printf("%s\n",out);	free(out);
+    */
+
 
 }
 
@@ -137,10 +141,10 @@ int main (int argc, const char * argv[]) {
 
 	/* Process each json textblock by parsing, then rebuilding: */
 	doit(text1);
-	doit(text2);	
-	doit(text3);
-	doit(text4);
-	doit(text5);
+	//doit(text2);	
+	//doit(text3);
+	//doit(text4);
+	//doit(text5);
 
 	/* Parse standard testfiles: */
 /*	dofile("../../tests/test1"); */

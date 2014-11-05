@@ -310,19 +310,27 @@ cJSON *cJSON_ParseWithOpts(const char *value,const char **return_parse_end,int r
 cJSON *cJSON_Parse(const char *value) {return cJSON_ParseWithOpts(value,0,0);}
 
 /* Render a cJSON item/entity/structure to text. */
+// 格式化打印
 char *cJSON_Print(cJSON *item)				{return print_value(item,0,1);}
+// 非格式化打印
 char *cJSON_PrintUnformatted(cJSON *item)	{return print_value(item,0,0);}
 
 /* Parser core - when encountering text, process appropriately. */
 static const char *parse_value(cJSON *item,const char *value)
 {
     if (!value)						return 0;	/* Fail on null. */
+    // json串为null
     if (!strncmp(value,"null",4))	{ item->type=cJSON_NULL;  return value+4; }
+    // json串为false
     if (!strncmp(value,"false",5))	{ item->type=cJSON_False; return value+5; }
+    // json串为true
     if (!strncmp(value,"true",4))	{ item->type=cJSON_True; item->valueint=1;	return value+4; }
+    // json串以 " 开头，待
     if (*value=='\"')				{ return parse_string(item,value); }
+    // 
     if (*value=='-' || (*value>='0' && *value<='9'))	{ return parse_number(item,value); }
     if (*value=='[')				{ return parse_array(item,value); }
+    // JSON以 { 开头
     if (*value=='{')				{ return parse_object(item,value); }
 
     ep=value;return 0;	/* failure. */
@@ -347,6 +355,7 @@ static char *print_value(cJSON *item,int depth,int fmt)
 }
 
 /* Build an array from input text. */
+// 解析数组，原理与parse_object类似
 static const char *parse_array(cJSON *item,const char *value)
 {
     cJSON *child;
@@ -433,6 +442,7 @@ static char *print_array(cJSON *item,int depth,int fmt)
 }
 
 /* Build an object from the text. */
+// 解析 object
 static const char *parse_object(cJSON *item,const char *value)
 {
     cJSON *child;
@@ -444,10 +454,12 @@ static const char *parse_object(cJSON *item,const char *value)
 
     item->child=child=cJSON_New_Item();
     if (!item->child) return 0;
+    // pair 为 string : value ，即先解析string
     value=skip(parse_string(child,skip(value)));
     if (!value) return 0;
     child->string=child->valuestring;child->valuestring=0;
     if (*value!=':') {ep=value;return 0;}	/* fail! */
+    // 递归求是string，数字，数组还是object，即 string,[ { 等
     value=skip(parse_value(child,skip(value+1)));	/* skip any spacing, get the value. */
     if (!value) return 0;
 
@@ -476,8 +488,10 @@ static char *print_object(cJSON *item,int depth,int fmt)
     cJSON *child=item->child;
     int numentries=0,fail=0;
     /* Count the number of entries. */
+    // child 的个数
     while (child) numentries++,child=child->next;
     /* Explicitly handle empty object case */
+    // 空object
     if (!numentries)
     {
         out=(char*)cJSON_malloc(fmt?depth+4:3);
@@ -582,6 +596,7 @@ static cJSON *create_reference(cJSON *item)
 }
 
 /* Add item to array/object. */
+// 
 void cJSON_AddItemToArray(cJSON *array, cJSON *item)						
 {
     cJSON *c=array->child;
@@ -599,6 +614,7 @@ void cJSON_AddItemToArray(cJSON *array, cJSON *item)
     }
 }
 
+// 向对象里添加条目
 void cJSON_AddItemToObject(cJSON *object,const char *string,cJSON *item)	
 {
     if (!item) 
@@ -735,6 +751,7 @@ cJSON *cJSON_CreateNumber(double num)
     return item;
 }
  
+// 创建字符串
 cJSON *cJSON_CreateString(const char *string)	
 {
     cJSON *item=cJSON_New_Item();
@@ -746,6 +763,7 @@ cJSON *cJSON_CreateString(const char *string)
     return item;
 }
 
+// 创建数组
 cJSON *cJSON_CreateArray(void)					
 {
     cJSON *item=cJSON_New_Item();
@@ -753,6 +771,7 @@ cJSON *cJSON_CreateArray(void)
     return item;
 }
         
+// 创建对象
 cJSON *cJSON_CreateObject(void)					
 {
     cJSON *item=cJSON_New_Item();
