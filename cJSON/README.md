@@ -3,7 +3,8 @@
 cJSON是C语言中的一个JSON编解码器，非常轻量级，单文件，代码不到1K行，速度也非常理想。其代码被非常好地维护着，虽然代码较短，但是里面用到的数据结构和算法都是非常值的学习的。
 
 ## 编译和运行
-gcc cJSON.c test.c -o test -lm   
-./test
+- 编译：gcc cJSON.c test.c -o test -lm   
+ 
+- 运行：./test
 
 
