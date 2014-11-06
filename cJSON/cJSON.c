@@ -83,7 +83,7 @@ static cJSON *cJSON_New_Item(void)
 }
 
 /* Delete a cJSON structure. */
-// 待
+// 释放内存，递归法，先child，再next
 void cJSON_Delete(cJSON *c)
 {
     cJSON *next;
@@ -232,6 +232,7 @@ static const char *parse_string(cJSON *item,const char *str)
 }
 
 /* Render the cstring provided to an escaped version that can be printed. */
+// 将字符串变为可转义的形式
 static char *print_string_ptr(const char *str)
 {
     const char *ptr;char *ptr2,*out;int len=0;unsigned char token;
@@ -243,7 +244,7 @@ static char *print_string_ptr(const char *str)
         if (strchr("\"\\\b\f\n\r\t",token)) 
             len++; 
         else if (token<32) 
-            len+=5;  // 待
+            len+=5;  
         ptr++;
     }
 
@@ -337,6 +338,7 @@ static const char *parse_value(cJSON *item,const char *value)
 }
 
 /* Render a value to text. */
+// 转换为字符串格式
 static char *print_value(cJSON *item,int depth,int fmt)
 {
     char *out=0;
@@ -481,6 +483,7 @@ static const char *parse_object(cJSON *item,const char *value)
 }
 
 /* Render an object to text. */
+// 将 Object 格式化为字符串 
 static char *print_object(cJSON *item,int depth,int fmt)
 {
     char **entries=0,**names=0;
@@ -577,6 +580,7 @@ cJSON *cJSON_GetObjectItem(cJSON *object,const char *string)
 }
 
 /* Utility for array list handling. */
+// 连接next prev指针
 static void suffix_object(cJSON *prev,cJSON *item) 
 {
     prev->next=item;
@@ -596,7 +600,7 @@ static cJSON *create_reference(cJSON *item)
 }
 
 /* Add item to array/object. */
-// 
+// 碰到 { 则使用child 指针连接，否则是next prev指针连接 
 void cJSON_AddItemToArray(cJSON *array, cJSON *item)						
 {
     cJSON *c=array->child;
@@ -707,6 +711,7 @@ void cJSON_ReplaceItemInObject(cJSON *object,const char *string,cJSON *newitem)
 }
 
 /* Create basic types: */
+// 类型为NULL
 cJSON *cJSON_CreateNull(void)					
 {
     cJSON *item=cJSON_New_Item();
@@ -714,7 +719,8 @@ cJSON *cJSON_CreateNull(void)
         item->type=cJSON_NULL;
     return item;
 }
-        
+
+// 类型为True
 cJSON *cJSON_CreateTrue(void)					
 {
     cJSON *item=cJSON_New_Item();
@@ -722,7 +728,8 @@ cJSON *cJSON_CreateTrue(void)
         item->type=cJSON_True;
     return item;
 }
-        
+
+// 类型为False
 cJSON *cJSON_CreateFalse(void)				
 {
     cJSON *item=cJSON_New_Item();
@@ -739,6 +746,7 @@ cJSON *cJSON_CreateBool(int b)
     return item;
 }
         
+// 类型为数字
 cJSON *cJSON_CreateNumber(double num)			
 {
     cJSON *item=cJSON_New_Item();
@@ -781,6 +789,7 @@ cJSON *cJSON_CreateObject(void)
 }
 
 /* Create Arrays: */
+// 创建int类型数组
 cJSON *cJSON_CreateIntArray(const int *numbers,int count)		
 {
     int i;
@@ -796,7 +805,8 @@ cJSON *cJSON_CreateIntArray(const int *numbers,int count)
     }
     return a;
 }
-        
+
+// 创建float类型数组
 cJSON *cJSON_CreateFloatArray(const float *numbers,int count)	
 {
     int i;
@@ -813,6 +823,7 @@ cJSON *cJSON_CreateFloatArray(const float *numbers,int count)
     return a;
 }
 
+// 创建double类型数组
 cJSON *cJSON_CreateDoubleArray(const double *numbers,int count)	
 {
     int i;
@@ -828,7 +839,8 @@ cJSON *cJSON_CreateDoubleArray(const double *numbers,int count)
     }
     return a;
 }
- 
+
+// 创建string类型数组
 cJSON *cJSON_CreateStringArray(const char **strings,int count)	
 {
     int i;

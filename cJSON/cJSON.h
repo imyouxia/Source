@@ -37,7 +37,7 @@ extern "C"
 #define cJSON_Array 5
 #define cJSON_Object 6
 	
-#define cJSON_IsReference 256
+#define cJSON_IsReference 256  // 1 0000 0000 
 
 /* The cJSON structure: */
 typedef struct cJSON {
