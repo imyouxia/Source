@@ -1,0 +1,101 @@
+<html>
+<head>
+   <title>Larbin : Parcourir le web, telle est ma passion</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+<table border=0 width="100%">
+<tr>
+<td align="center">
+<font color="#FF0000"><h1>Larbin</h1></font>
+<h1>Multi-purpose web crawler</h1>
+</td>
+<td align="right" width="5%">
+<a href="index.html"><img SRC="l-fr.jpg" ALT="version française"></a>
+</td>
+</tr>
+</table>
+
+<h2>Introduction</h2>
+
+Larbin is a web crawler (also called (web) robot, spider,
+scooter...). It is intended to fetch a large number of web pages to
+fill the database of a search engine. With a network fast enough,
+Larbin should be able to fetch more than 100 millions pages on a
+standard PC.
+
+<p>Larbin is (just) a web crawler, NOT an indexer. You have to write
+some code yourself in order to save pages or index them in a database.
+
+<p>Larbin was initially developped for the XYLEME project in the VERSO
+team at INRIA. The goal of Larbin was to go and fetch xml pages on the
+web to fill the database of an xml-oriented search engine. Thanks to
+its origins, Larbin is very generalistic (and easy to customize).
+
+<p><a href="use-eng.html">How to use Larbin</a>
+<br><a href="custom-eng.html">How to customize Larbin</a>
+
+<h2>Availability (<a href="download.html">Download</a>)</h2>
+
+Larbin is freely available on the web. It is under the GPL. Comments
+are welcomed ! Please mail me if you use Larbin; I'll be very happy to
+know it.
+
+<br>However, this program is not suited for personnal use, and might
+be ill-used (wget or ht://dig are often more appropriate).
+
+<p>Whatever you might do with Larbin, don't forget I'm not ta all
+responsible for the damages you might cause.
+
+<h2>Current state</h2>
+
+The current version of Larbin can fetch 5,000,000 pages a day on a
+standard PC, but this speed mainly depends on your network.
+
+<br>Larbin works under Linux and uses standard libraries, plus <a
+href="http://www.chiark.greenend.org.uk/~ian/adns/">adns</a> (included
+in the distribution). The program is multithreaded but prefers using
+select instead of a lot of threads (for efficiency purposes).
+
+<br>The advantage of Larbin over wget or ht://dig is that it is much
+faster when getting files over many sites (because it opens a lot of
+connexions at a time) and very generalistic (in particular very easy
+to customize).
+
+<h2>To do</h2>
+
+I have a lot of improvements in mind, but if you need something
+specific, mail me (<A 
+HREF="mailto:sebastien@ailleret.com">sebastien@ailleret.com</A>).
+Here are the things I want to do :
+<ul>
+<li>Allow the program to run on multiple hosts.
+<li>Solaris compatibility.
+</ul>
+
+Here is what you can do with it :
+<ul>
+<li>A crawler for a standard search engine.
+<li>A crawler for a specialized search engine (xml, images, mp3...).
+<li>Statistics on the web (about servers or page contents)
+</ul>
+
+<hr>
+<table border=0 width="100%">
+<tr>
+<td>
+<a HREF="mailto:sebastien@ailleret.com">sebastien@ailleret.com</a>
+<br> <a
+href="http://perso.wanadoo.fr/sebastien.ailleret/index-eng.html">home
+page</a>
+</td>
+<td align="right">
+<A href="http://sourceforge.net"> <IMG
+src="http://sourceforge.net/sflogo.php?group_id=42562" width="88"
+height="31" border="0" alt="SourceForge Logo"></A>
+</td>
+</tr>
+</table>
+
+</body>
+</html>

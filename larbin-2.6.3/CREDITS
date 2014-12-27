@@ -1,0 +1,53 @@
+This is credits-file of people that have contributed to larbin.  It is
+sorted by name and formatted to allow easy grepping and beautification
+by scripts. The fields are: name (N), email (E), web-address (W),
+description (D), and snail-mail address (S).
+
+Thanks,
+
+                        Sebastien
+----------
+
+N: Sebastien Ailleret
+E: sebastien@ailleret.com
+W: http://www.ailleret.com/
+D: Main developper
+S: France
+
+N: Craig Baker
+E: cdb@cdbsystems.com
+D: Bug report and ideas
+
+N: Osman Burchan Bayazit
+E: burchanb@cs.tamu.edu
+D: Bug report with patch
+
+N: Tim Fitz
+E: fitzboy@iparadigms.com
+D: clean up patch
+
+N: Otis Gospodnetic
+E: otisgospodnetic@britannica.com
+D: Bug report, feed back and ideas
+
+N: Niels Provos
+E: provos@citi.umich.edu
+D: Bug report with patch concerning configuration file parsing
+
+N: Hsiao Ruey-Lung
+E: b2506023@csie.ntu.edu.tw
+D: Bug report with patch concerning frame management
+
+N: Christian Storm
+E: storm@iparadigms.com
+D: various patches and comments
+
+N: Laurent Viennot
+E: laurent.viennot@inria.fr
+D: patch for better tolerance to buggy html, histograms
+S: INRIA Rocquencourt
+S: France
+
+N: Ira Joseph Woodhead
+E: ira@av.com
+D: patches and comments

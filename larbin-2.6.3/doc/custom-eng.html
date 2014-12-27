@@ -1,0 +1,250 @@
+<html>
+<head>
+   <title>Larbin : Parcourir le web, telle est ma passion</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+<center>
+<font color="#FF0000"><h1>How to customize Larbin</h1></font>
+</center>
+
+<h2>Where do the pages arrive ?</h2>
+
+In order to customize larbin according to your needs, you have to
+create a userouput file (see src/interf/useroutput.cc). This file must
+define the 4 following functions :
+
+<ul>
+<li>void loaded (html *page) : This function is called when the
+fetch ended with success. From the page object, you can
+<ul>
+<li>get the url of the page by calling the method getUrl()
+<li>get the content of the page by calling the method getPage()
+<li>get the list of the sons by calling the method getLinks() (if
+<a href="#options.h">options.h</a> includes "#define LINKS_INFO")
+<li>get the http headers by calling the method getHeaders()
+<li>get the tag with getUrl()->tag (if <a
+href="#options.h">options.h</a> includes "#define URL_TAGS")
+</ul>
+
+For more details, see src/fetcher/file.h (for html), src/utils/url.h,
+src/utils/Vector.h.
+
+<li>void failure (url *u, FetchError reason) : This function is
+called when the fetch ended by an error. u describes the url of the
+page. A description of its class can be found in src/utils/url.h.
+reason explains why the fetch failed. enum FetchError is defined in <a
+href="#types.h">src/types.h</a>.
+
+<li>void initUserOutput () : Function for initialising all your data,
+called after all other initialisations
+
+<li>void outputStats(int fds) : This function is called from the
+webserver if you want to track some data. fds is the file descriptor
+on which you must write to exchange with the net. This function is
+called in another thread than the main one with no lock at all, so be
+carefull !
+</ul>
+
+<br>In case of specificSearch, the functions loaded and failure are
+only called for specific pages.
+
+<p>For examples of useroutput files, see src/interf/xxxuseroutput.cc.
+
+<p>There are several default modules you can use. For more details,
+see <a href="#options.h">options.h</a>.
+
+<h2>Simple customizations</h2>
+
+<h4><a name="larbin.conf">larbin.conf</a></h4>
+
+The basic configurations are made in larbin.conf. Here are the
+different fields of this file :
+<ul>
+<li>From : YOUR mail : sent with http headers : very usefull when someone
+wants to complain about the robot :-(
+<li>UserAgent : name of the robot (sent with each request)
+<li>httpPort : port on which is launched the http statistic webserver
+(see http://localhost:8081/ when larbin is launched). If you set port
+to 0, no webserver will be launched. This can allow larbin not to
+launch a single thread.
+<li>inputPort : port on which you can submit urls to fetch. If this
+line does not exist or if the port is 0, no input will be available.
+<li>pagesConnexions : Number of page you fetch in parallel (to adapt
+depending of your network speed). Decrease this if you have too many
+timeouts (see stats) : 10% seems to be a maximum.
+<li>dnsConnexions : Number of dns calls in parallel. 10 should be ok.
+<li>depthInSite : How deep do you want to go in a site.
+<li>noExternalLinks : Only follow links which are related to the same
+host.
+<li>waitDuration : time between 2 calls at the same server in
+seconds. It should never be less than 30 s. However, even with 60 s,
+it won't slow the crawler much, and it is a much
+better behaviour.
+<li>proxy : if you want to connect through a proxy (host port). Unless
+you have no other way to connect to the internet, you should not use
+this because it might slow the crawler a lot, and is probably also not
+so good for the proxy (especially if it has a cache).
+
+<li>StartUrl : Where the search starts. This appears not to be very
+important, as soon as the page contains external urls.
+
+<li>limitToDomain : with this option enabled, you will only crawl
+pages of some specific domain (.fr and .dk for example).
+
+<li>forbiddenExtensions : What are the extensions you don't want ?
+(write all of them and terminate your list with end)
+</ul>
+
+<h4><a name="options.h">options.h</a></h4>
+
+In this file, you can define options which can change what will be
+done. Here are the different thing you can define (you must recompile
+larbin if you change one of those) :
+
+<ul>
+<li> The first thing you can define is the module you want to use for
+ouput. This defines what you want to do with the pages larbin
+gets. Here are the different options :
+<ul>
+<li> <tt>DEFAULT_OUTPUT</tt> : This module mainly does nothing,
+except statistics.
+<li> <tt>SIMPLE_SAVE</tt> : This module saves pages on disk. It stores
+2000 files per directory (with an index).
+<li> <tt>MIRROR_SAVE</tt> : This module saves pages on disk with the
+hierarchy of the site they come from. It uses one directory per site.
+<li> <tt>STATS_OUTPUT</tt> : This modules makes some stats on the
+pages. In order to see the results, see
+http://localhost:8081/output.html.
+</ul>
+These modules can be customized in <a href="#types.h">src/types.h</a>.
+<br> If you want to define a new module, please have a look at
+"src/interf/useroutput.cc", and do not hesitate to send me your work
+for inclusion.
+</ul>
+
+<ul>
+<li> <tt>SPECIFICSEARCH</tt> : If this option is set, larbin's goal is
+to search for specific document. You must then define 2 arrays (NULL
+terminated) of char *, <tt>contentTypes</tt> and
+<tt>privilegedExts</tt>, which define respectively the content types
+which are looked for, and the extension of files (this extension is
+only used for speeding the search, pages are said to be specific only
+by looking at the content/type in http headers). You should also
+define another option telling how you want to manage specific pages :
+<ul>
+<li> <tt>DEFAULT_SPECIFIC</tt> : Default way of managing specific files
+: they are treated as html (ie same size limitations...), except that
+they are not parsed.
+<li> <tt>SAVE_SPECIFIC</tt> : Specific pages are saved on disk. this
+allows in particular specific pages to be much bigger (see <a
+href="#types.h">src/types.h</a> for customizating this module).
+<li> <tt>DYNAMIC_SPECIFIC</tt> : for big pages, larbin uses
+dynamically allocated buffers.
+</ul>
+If you want to define a new policy, please have a look at
+"src/fetch/specbuf.cc" and "src/fetch/specbuf.h", and do not hesitate
+to send me your work for inclusion.
+</ul>
+
+<ul>
+<li> <tt>LINKS_INFO</tt> : Associate to each page the list of the
+links it contains. This information can be used in
+"useroutput.cc" with <tt>page->getLinks()</tt>.
+<li> <tt>FOLLOW_LINKS</tt> : If this option is not set, html pages
+won't be parsed and links won't be followed. This can be usefull when
+you feed larbin through the input system.
+<li> <tt>NO_DUP</tt> : if this option is set, larbin does not return
+success when a page with the same content than an old one is
+encontered.
+<li> <tt>URL_TAGS</tt> : if this option is set, an int is associated
+to every url (by default 0). If you use the input system, you'll have
+to give an int and the url instead of just the url. When the pages is
+fetched, you'll get it with the int (redirections are followed).
+<li> <tt>EXIT_AT_END</tt> : If this option is set, larbin exits when
+there are not any more urls to get.
+<li> <tt>IMAGES</tt> : If set, larbin gets the images contained in
+pages (ie follow img src links). Make sure to update
+forbiddenExtensions in <a href="#larbin.conf">larbin.conf</a>
+according to your needs.
+<li> <tt>ANYTYPE</tt> : If set, larbin gets every pages without caring
+about content type. Make sure to update forbiddenExtensions in
+<a href="#larbin.conf">larbin.conf</a> according to your needs.
+<li> <tt>COOKIES</tt> : If set, larbin manages cookies. Up to now, it
+is a very simple implementation, but it should be suitable in more
+than 90% of the situations.
+</ul>
+
+<ul>
+<li> <tt>CGILEVEL</tt> : This option is foolowed by an integer which
+specified how reluctant to cgi you are. 0 means you want all cgis, 1
+means you refuse urls with '?' or '=' inside, 2 means you also
+want to ban urls with 'cgi' inside.
+
+<li> <tt>MAXBANDWIDTH</tt> : This option is followed by an integer
+which indicates the maximum bandwidth larbin should use. Because of
+the way bandwidth is limited, larbin might use 10 to 20 per cent more
+bandwidth than expected. If this option is not set, there is no
+bandwidth limitation.
+
+<li> <tt>DEPTHBYSITE</tt> : If this option is set, when a links points
+to another site, the depth of the new url is reinitialized, else it is
+never.
+</ul>
+
+<ul>
+<li> <tt>THREAD_OUTPUT</tt> : This option must be set if the code in
+"useroutput.cc" (the code you add) can use blocking instructions
+(read/write on network file descriptor...). If it is not set, there is
+only one thread in the program (except the webserver if any), so no
+locking is needed.
+
+<li> <tt>RELOAD</tt> : If this option is enabled, larbin restarts from
+where it last stopped when you launch it. This allows to stop and
+restart larbin as needed (or restart after a crash). If you want to
+restart from scratch, use the -scratch option.
+</ul>
+
+<ul>
+<li> <tt>NOWEBSERVER</tt> : Do not launch the webserver. This can be
+usefull if you don't want to launch any thread.
+<li> <tt>GRAPH</tt> : Include nice histograms in the real time stat page.
+<li> <tt>NDEBUG</tt> : Disable debugging information in the webserver.
+<li> <tt>NOSTATS</tt> : Disable stats information in the webserver.
+<li> <tt>STATS</tt> : Display stats on stdout every 8 seconds.
+<li> <tt>BIGSTATS</tt> : Display the name of every page that is
+fetched on stdout. This might slow larbin quite much.
+<li> <tt>CRASH</tt> : Should only be used for reporting terrible
+bugs (with make debug).
+</ul>
+
+<h4><a name="types.h">src/types.h</a></h4>
+
+If you want to tune larbin a little more, go and see this file (it is
+supposed to be commented enough). Of course, for those changes to have
+effects, you have to recompile larbin.
+
+<h2>More customizations</h2>
+
+If you need something more, you'll have to do it (or ask me
+to do it :-)).
+
+<hr>
+<table border=0 width="100%">
+<tr>
+<td>
+<a HREF="mailto:sebastien@ailleret.com">sebastien@ailleret.com</a>
+<br> <a
+href="http://perso.wanadoo.fr/sebastien.ailleret/index-eng.html">home
+page</a>
+</td>
+<td align="right">
+<A href="http://sourceforge.net"> <IMG
+src="http://sourceforge.net/sflogo.php?group_id=42562" width="88"
+height="31" border="0" alt="SourceForge Logo"></A>
+</td>
+</tr>
+</table>
+
+</body>
+</html>

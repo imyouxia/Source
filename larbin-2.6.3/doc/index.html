@@ -1,0 +1,108 @@
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <title>Larbin : Parcourir le web, telle est ma passion...</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+<table border=0 width="100%">
+<tr>
+<td align="center">
+<font color="#FF0000"><h1>Larbin</h1></font>
+<h1>Web crawler généraliste</h1>
+</td>
+<td align="right" width="10%">
+<a href="index-eng.html"><img SRC="l-en.jpg" ALT="english version"></a>
+</td>
+</tr>
+</table>
+
+<h2>Présentation</h2>
+
+Larbin est un web crawler (synonyme de (web) robot, spider, scooter,
+aspirateur...). Il est dimensionné pour ramener une grande quantité de
+pages web pour remplir la base de données d'un moteur de recherche. A
+condition d'avoir un réseau suffisament rapide, Larbin est censé être
+capable de ramener plus de 100 millions de pages sur un PC classique.
+
+<p>Larbin est juste un crawler. Il ne contient aucun outil pour
+indexer vos données.
+
+<p>Larbin a été initialement développé pour le projet XYLEME de
+l'équipe VERSO de l'INRIA. Son but était de récupérer toutes les pages
+xml présentes sur le web pour approvisionner la base de données d'un
+moteur de recherche tourné vers le xml. Du fait de cette conception,
+Larbin est très généraliste.
+
+<p><a href="use-eng.html">Comment utiliser Larbin</a>
+<br><a href="custom-eng.html">Comment éduquer votre Larbin</a>
+
+<h2>Disponiblité (<a href="download.html">Télécharger</a>)</h2>
+
+Larbin est à la disposition de tout le monde. Il est sous license
+GPL. Les critiques (constructives) sont les bienvenues !
+
+<br>Malgré tout, un tel programme n'est pas fait pour être utilisé par
+n'importe qui et n'importe comment : Larbin n'est pas orienté vers le
+grand public (wget ou ht://dig sont sans doute plus appropriés dans
+beaucoup de cas).
+
+<p>Quoi qu'il en soit, je ne suis aucunement responsable des dommages
+causés par l'utilisation de Larbin.
+
+<h2>État actuel</h2>
+
+Le programme actuel est capable de récupérer 5.000.000 de
+pages par jour sur un PC standard (la vitesse dépend en fait
+principalement de votre réseau).
+
+<br>Larbin fonctionne sous Linux et utilise les librairies standards,
+plus la librairie <a
+href="http://www.chiark.greenend.org.uk/~ian/adns/">adns</a> (elle est
+incluse dans le logiciel). Le programme est très faiblement
+multithreadé et privilégie l'utilisation de fonctions non bloquantes
+(select et adns) pour des raisons d'efficacité.
+
+<br>L'intérêt de Larbin par rapport à wget ou ht://dig est qu'il est
+beaucoup plus rapide (car il peut gérer plusieurs centaines de
+connexions en parallèle) et qu'il est très généraliste (en particulier
+très spécialisable).
+
+<h2>A faire</h2>
+
+De nombreuses fonctionnalités peuvent être ajoutées. N'hésitez pas à
+me contacter (<A 
+HREF="mailto:sebastien@ailleret.com">sebastien@ailleret.com</A>)
+si vous avez besoin d'une nouvelle fonction. Voici quelques
+améliorations en vue :
+<ul>
+<li>Faire tourner le programme en parallèle de façon coopérative sur
+plusieurs ordinateurs à la fois.
+<li>Assurer la compatibilité avec Solaris.
+</ul>
+
+Voici quelques idées de choses faisables avec Larbin :
+<ul>
+<li>Crawler pour un moteur de recherche classique
+<li>Crawler pour un moteur de recherche spécialisé. ex :
+recherche des pages xml, d'images, de mp3...
+<li>Statistiques sur le web (sur serveurs web ou contenu des pages)
+</ul>
+
+<hr>
+<table border=0 width="100%">
+<tr>
+<td>
+<a HREF="mailto:sebastien@ailleret.com">sebastien@ailleret.com</a>
+<br> <a href="http://perso.wanadoo.fr/sebastien.ailleret/">home page</a>
+</td>
+<td align="right">
+<A href="http://sourceforge.net"> <IMG
+src="http://sourceforge.net/sflogo.php?group_id=42562" width="88"
+height="31" border="0" alt="SourceForge Logo"></A>
+</td>
+</tr>
+</table>
+
+</body>
+</html>

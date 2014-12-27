@@ -1,0 +1,60 @@
+#!/bin/bash
+
+# configure adns
+(cd adns; ./configure)
+
+#configure larbin itself
+cat /dev/null > config.h
+cat /dev/null > config.make
+
+if [ -e /proc/self/status ]; then
+    echo "#define HAS_PROC_SELF_STATUS" >> config.h
+fi
+
+# find existing programs
+function exists () {
+    command -v $1 2> /dev/null > /dev/null;
+}
+
+if exists gmake; then
+    echo "MAKE=gmake" >> config.make
+    export MAKE=gmake
+else
+    echo "MAKE=make" >> config.make
+    export MAKE=make
+fi
+
+if exists gcc; then
+    echo "CC=gcc" >> config.make
+    export CC=gcc
+fi
+
+if exists g++; then
+    echo "CXX=g++" >> config.make
+fi
+
+#find libraries to use
+echo "int main () { return 0; }" > test.c
+
+function testlib () {
+    if $CC $1 -o test test.c 2> /dev/null > /dev/null; then
+        echo "LIBS +=" $1 >> config.make
+    fi
+}
+
+testlib -pthread
+testlib -lpthread
+testlib -lresolv
+testlib -lsocket
+testlib -lnsl
+
+rm -f test test.c test.o
+
+# run make dep
+touch .depend
+touch adns/.depend
+touch src/.depend
+touch src/fetch/.depend
+touch src/interf/.depend
+touch src/utils/.depend
+$MAKE dep

@@ -1,0 +1,91 @@
+<html>
+<head>
+   <title>Larbin : Parcourir le web, telle est ma passion</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+<center>
+<font color="#FF0000"><h1>How to use Larbin</h1></font>
+</center>
+
+<h2>How to compile ?</h2>
+
+untar the package
+<br>./configure
+<br>gmake
+
+<p>If you need specific settings, <tt>gmake</tt> accept several options :
+<ul>
+<li><tt>gmake</tt> : build the standard executable.
+<li><tt>gmake prof</tt> : enable profiling, ie compile with <tt>-g
+-DPROF</tt> (the execution is very slow).
+<li><tt>gmake debug</tt> : compile with <tt>-g</tt>, in order to enable
+debugging with gdb.
+</ul>
+
+<p>For more customizations see <a href="custom-eng.html">this page</a>
+
+<h2>How to run the program ?</h2>
+
+Once compiled, you can launch the program simply by typing
+'./larbin'. Use the "-c conf_file" to define the configuration file
+you want to use (larbin.conf by default).
+
+<p>You can follow the work of Larbin thanks to its web server : just
+take your favorite browser and submit it the following url :
+<a href="http://localhost:8081/">http://localhost:8081/</a> (with no proxy).
+
+<p>If you want to submit urls to larbin, by hand or through a program,
+connect to the port 1976 (tcp) of your computer. The first thing to do
+is to enable input (add the line "inputPort 1976" in larbin.conf).
+The first line you write explains larbin what to do with the urls you
+give it. This line should look like this : "priority:1 depth:3
+test:0".
+
+<ul>
+<li>Set priority to 1 if the urls you submit need to be treated
+before usual urls. If you submit a big number of urls, set priority to
+0 so are stored urls on disk, thus avoiding to run out of memory.
+<li>Depth tells larbin how many links it should follow (inside a
+site). 0 means no links should be followed. 1 means just download
+chidren. More than 5 is probably not a good idea.
+<li>Set test to 1 if you want larbin to make sure it did not already
+see this page before downloading it. set test to 0 if you want to
+download this page even if you already fetched it before.
+</ul>
+
+Then you just have to write one url per line (or one int, one space
+and one url if <a href="custom-eng.html#options.h">options.h</a>
+includes "#define URL_TAGS"). You can try it with a simple 'telnet
+localhost 1976'.
+
+<h2>How to restart after a crash (or an intentional stop)</h2>
+
+Larbin saves its internal state on disk frequently. This allows larbin
+to restart where it last stopped after an intentional stop or a
+crash. If you want to restart from scratch, use the -scratch option.
+
+<p>This feature is only usable if <a
+href="custom-eng.html#options.h">options.h</a> includes "#define
+RELOAD". For restarting from previous state, there must be at least 2
+fifo files (fifoxxxxxx in working directory).
+
+<hr>
+<table border=0 width="100%">
+<tr>
+<td>
+<a HREF="mailto:sebastien@ailleret.com">sebastien@ailleret.com</a>
+<br> <a
+href="http://perso.wanadoo.fr/sebastien.ailleret/index-eng.html">home
+page</a>
+</td>
+<td align="right">
+<A href="http://sourceforge.net"> <IMG
+src="http://sourceforge.net/sflogo.php?group_id=42562" width="88"
+height="31" border="0" alt="SourceForge Logo"></A>
+</td>
+</tr>
+</table>
+
+</body>
+</html>

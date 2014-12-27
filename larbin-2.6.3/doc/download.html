@@ -1,0 +1,276 @@
+<html>
+<head>
+   <title>Larbin : Parcourir le web, telle est ma passion</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+<center>
+<font color="#FF0000"><h1>Download Larbin</h1></font>
+</center>
+
+<h2>Latest version</h2>
+
+Here is the latest version of larbin :
+<a href="http://prdownloads.sourceforge.net/larbin/larbin-2.6.3.tar.gz">
+larbin.tar.gz</a>
+
+<p>If you need another version of larbin, see <a
+href="http://sourceforge.net/project/showfiles.php?group_id=42562">
+here </a>.
+
+<h2>Changelog</h2>
+
+V2.6.3 (2003-07-09) :
+<ul>
+<li> Add the possibility to follow only internal links (ie on the same
+site). See option noExternalLinks in larbin.conf.
+<li> Correct a compilation problem with gcc 3.XX (and avoid warnings).
+<li> Add the possibility to use "" in larbin.conf to define a token
+containing blank char.
+</ul>
+
+V2.6.2 (2002-04-14) :
+<ul>
+<li> A very basic implementation of cookies has been added (see
+COOKIES in options.h).
+<li> Can now get images (see IMAGES and ANYTYPE in options.h).
+<li> Rewrite the robots.txt and html parser (should use less ressources and
+understand tags better).
+<li> Try to be more portable (index becomes strchr, Makefile
+update...). larbin should now compile on Solaris.
+<li> Try to rewrite things in order to make some #ifdef more readable.
+<li> Many cleanups and efficiency update thanks to profiling.
+</ul>
+
+V2.6.1 (2002-03-09) :
+<ul>
+<li> Some configurations did not compile.
+<li> Possibility to get images with pages (follow img src).
+<li> Correct fatal bug in proxy management.
+<li> Improve robots.txt parser (normalize path : /./, %xx, ...).
+<li> Cleanups.
+</ul>
+
+V2.6.0 (2002-01-12) : This version does not work with proxy
+<ul>
+<li> larbin website moves to sourceforge.
+<li> Add a new output file, which does some stats on the size of the
+pages (see STATS_OUTPUT in options.h).
+<li> Depth can be calculated for each site or for the whole seach (see
+DEPTHBYSITE in options.h).
+<li> big work on the sequencer.
+<li> dns requests follow CNAME chains (much less dns errors).
+<li> More static buffers for avoiding allocations/fragmantations.
+</ul>
+
+V2.5.9 (2001-12-12) :
+<ul>
+<li> specificSearch has changed a lot and must now be configured from
+"options.h" (instead of "larbin.conf").
+<li> Try to make output interface simpler. The file to change is now
+useroutput.cc. There are predefined examples
+(interf/XXXuseroutput.cc).
+<li> Try to make buffers for specfic pages more flexibles (see
+"fetch/specbuf.cc" and "fetch/specbuf.h"). Add a dynamic buffers option.
+<li> Can choose if you're interested by cgi (see CGILEVEL in
+options.h).
+<li> New management of timeout.
+<li> Crawl through a proxy works again.
+<li> Try to avoid too many dns calls and to increase the number of
+sites simultaneously in ram.
+<li> Improve the webserver.
+<li> Possibility to totally disable the webserver (using port 0 in
+larbin.conf). This way, it becomes possible to launch no thread at
+all.
+<li> correct small bug and enhance robots.txt parsing
+</ul>
+
+V2.5.0 (2001-11-22) :
+<ul>
+<li> The old config.h is now named options.h.
+<li> The stats page now includes fancy histograms (thanks to Laurent
+Viennot). see GRAPH in options.h (set by default).
+<li> Possibility to limit bandwidth usage (see MAXBANDWIDTH in options.h).
+<li> Larbin now works on freeBSD (a configure script has been added).
+<li> Change in the RELOAD semantics. By default, it restarts from
+where it last stops. To restart from scratch, use -scratch. Also save
+duplicate information if they exists.
+<li> Possibility to manage specific files with a bigger size than
+maxFileSize (they are directly stored on disk). This is SPECIFICSAVE
+in options.h.
+<li> Possibility for larbin to stop when everything has been fetched
+(EXIT_AT_END in options.h).
+<li> Many code cleanups.
+</ul>
+
+V2.2.2 (2001-10-02) :
+<ul>
+<li> You can now save files and respect directory structure (option
+MIRROR_SITES in config.h).
+<li> Change the way depthInSite works (more intuitive).
+<li> Correct bug with sites closing connection before the end of headers.
+</ul>
+
+V2.2.1 (2001-09-13) : This version is buggy if you try to read the
+content of the pages (for instance if you use the SAVE option).
+<ul>
+<li> Add the possibility to suppress duplicate pages (option NO_DUP in
+config.h).
+<li> Parse the whole page (except headers), only when totally
+received. This is much better for the duplicate option.
+</ul>
+
+V2.2.0 (2001-07-23) :
+<ul>
+<li> Add the possibility to save fetched pages in files.
+<li> Replace select by poll for using unlimited number of file connexions.
+<li> Some efficiency updates (url normalizer, html parser...).
+<li> Possibility to query a same server many times simultaneously (use
+with care if the server is not yours).
+</ul>
+
+V2.1.1 (2001-06-19) :
+<ul>
+<li> Url parser improvement.
+<li> Possibility to use one less thread (if the output never does
+blocking operation).
+<li> Possibility to disable the -reload option : this avoids unnecessary
+saves of the hashtable on disk (<tt>#define RELOAD</tt> in config.h).
+</ul>
+
+V2.1.0 (2001-06-06) : Should be quite more stable than the previous
+ones : a quick test without tuning (but 24 hours long) gives back 4.5
+million pages without any problem (memory consumption : 50 Mo).
+<ul>
+<li> Improve the html parser (do not parse comments and improve cgi
+filter).
+<li> Possibility to associate tags to urls.
+<li> Update in the input system.
+<li> Rewrite Makefiles and the configuration system (now much more
+customizable).
+<li> Again less allocations in many places thanks to static buffers
+(especially url.cc and PersistentFifo.cc).
+<li> Delete stupid (and buggy) hacks.
+</ul>
+
+V2.0.1 (2001-05-23) : Contains some bugs that may causes long term
+slow down.
+<ul>
+<li> Rewrite of the input section (first step toward multi-host larbin).
+<li> Rewrite of the the robots.txt parser (less allocation and fix a
+very old bug).
+<li> Small improvements of the html parser.
+</ul>
+
+V2.0.0 (2001-05-11) : Contains some bugs that may causes long term
+slow down.
+<ul>
+<li>Big internal rewrite (it allows less dns calls and no more rapid
+fire with virtual hosts).
+<li>Much less copy of data.  
+<li>Much less allocations : this should lead to less fragmentation, so
+less memory consumption.
+<li>Small API change (headers and content of the page are now char* :
+before it was a String).
+<li>More tolerant to buggy html.
+</ul>
+
+V1.2.2 (2001-04-04) :
+<ul>
+<li>More tolerant to buggy html
+<li>Correct a bug with specificSearch (parsing of the configuration
+file)
+<li>Suppress some system calls when possible (especially time)
+<li>Use less cpu when reaching the end of the search
+<li>Stats improvements
+<li>new Makefiles options (make stats and make bigstats), if you want
+stats on stdout. "make bigstats" might decrease performances a lot.
+</ul>
+
+V1.2.1 (2001-03-12) :
+<ul>
+<li>More Makefile enhancement
+<li>Suppress shutdown calls since they seem to hang some kernels
+<li>Manage redirections as errors and follow them correctly
+<li>Correct a bug with specificSearch (assertion failed)
+<li>Output functions simplification
+</ul>
+
+V1.2.0 (2001-02-18) :
+<ul>
+<li>Use less threads (only for user interaction)
+<li>Makefile enhancement (make all debug nodebug crash and prof)
+<li>Change the directory structure
+<li>Correct a bug in robots.txt management
+<li>Correct a bug in frame management
+</ul>
+
+V1.1.4 :
+<ul>
+<li>RedHat 7.0 (gcc 2.96) compatibility
+<li>Minor bug fixes and feature enhancements
+</ul>
+
+V1.1.3 :
+<ul>
+<li>adns 1.0
+<li>Little performance improvements (especially in the parser)
+</ul>
+
+V1.1.2 :
+<ul>
+<li>Larbin works quicker and better through a proxy
+</ul>
+
+V1.1.1 :
+<ul>
+<li>Bug fix : no more crash after 2 days
+</ul>
+
+V1.1.0 :
+<ul>
+<li>Possibility to restart larbin where it last stopped
+<li>Stats and output improvements
+<li>Makefiles cleanup
+</ul>
+
+V1.0.2 :
+<ul>
+<li>Increased compatibility : gcc 2.95 (Mandrake 7.0) and alpha
+processor
+<li>input is more powerfull (see <a href="use-eng.html">here</a>)
+<li>Possibility to crawl through a proxy
+<li>http headers are saved (Ira Joseph Woodhead)
+<li>No more dynamic library to install
+<li>less cpu time used on startup
+</ul>
+
+V1.0.1 :
+<ul>
+<li>"make crash" for efficient feedback
+<li>stats improvements
+<li>Configuration improvement (SpecificSearch, limitToDomain) : see
+larbin.conf for details
+</ul>
+
+<p>V1.0.0 : Initial release
+
+<hr>
+<table border=0 width="100%">
+<tr>
+<td>
+<a HREF="mailto:sebastien@ailleret.com">sebastien@ailleret.com</a>
+<br> <a
+href="http://perso.wanadoo.fr/sebastien.ailleret/index-eng.html">home
+page</a>
+</td>
+<td align="right">
+<A href="http://sourceforge.net"> <IMG
+src="http://sourceforge.net/sflogo.php?group_id=42562" width="88"
+height="31" border="0" alt="SourceForge Logo"></A>
+</td>
+</tr>
+</table>
+
+</body>
+</html>
