@@ -107,11 +107,18 @@ bool mailer::setmessage(const std::vector<char>& newmessage) {
    return true;
 }
 
+/*
+    使用base64对data进行编码，
+    设计此种编码是为了使二进制数据可以通过非纯8-bit的传输层传输
+    例如电子邮件的主题
+*/
+
 bool mailer::setmessageHTML(const std::string& newmessage) {
    if(!newmessage.length())
       return false;
 
    messageHTML.clear(); // erase the old message
+   // 将string依次存入vector<char>里
    for (std::string::size_type i = 0; i < newmessage.length(); ++i)
       messageHTML.push_back(newmessage[i]);
    messageHTML = base64encode(messageHTML);
