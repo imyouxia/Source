@@ -74,6 +74,7 @@ public:
    // or:
    //    mailer mail(args...);
    //    mail.operator()();
+   //只能定义为成员函数
    void operator()();
    void send();
 
@@ -223,6 +224,7 @@ private:
    // Subject of the mail
    std::string subject;
    // The contents of the mail message
+   // 存储邮件内容
    std::vector<char> message;
    // The contents of the mail message in html format.
    std::vector<char> messageHTML;

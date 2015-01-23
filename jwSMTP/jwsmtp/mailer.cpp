@@ -48,7 +48,7 @@ mailer::mailer(const char* TOaddress, const char* FROMaddress,
                                lookupMXRecord(MXLookup),
                                auth(false) {
    // Parse the email addresses into an Address structure.
-   setsender(FROMaddress);
+   setsender(FROMaddress); //获得发件人名字和邮箱地址，主要是解析邮箱
    addrecipient(TOaddress);
    setmessage(Message);
 
@@ -67,7 +67,7 @@ mailer::mailer(const char* TOaddress, const char* FROMaddress,
                                auth(false) {
    // Parse the email addresses into an Address structure.
    setsender(FROMaddress);
-   addrecipient(TOaddress);
+   addrecipient(TOaddress); //将收件人信息和recipient_type存入收件人列表
    setmessage(Message);
 
    initNetworking(); // in win32 init networking, else just does nothin'
@@ -82,20 +82,22 @@ mailer::mailer(bool MXLookup, unsigned short Port):
 }
 
 mailer::~mailer() { }
-   
+
+// 设置消息
 bool mailer::setmessage(const std::string& newmessage) {
    if(!newmessage.length())
       return false;
 
    message.clear(); // erase the old message
    for (std::string::size_type i = 0; i < newmessage.length(); ++i)
-      message.push_back(newmessage[i]);
+      message.push_back(newmessage[i]); //vector<char>类型
 
    checkRFCcompat();
 
    return true;
 }
 
+// 同上
 bool mailer::setmessage(const std::vector<char>& newmessage) {
    if(!newmessage.size())
       return false;
@@ -125,6 +127,10 @@ bool mailer::setmessageHTML(const std::string& newmessage) {
 
    return true;
 }
+
+    /*
+      base64编码
+    */
 
 bool mailer::setmessageHTML(const std::vector<char>& newmessage) {
    if(!newmessage.size())
@@ -159,6 +165,7 @@ bool mailer::setmessageHTMLfile(const std::string& filename) {
 // keeps words intact also.
 // Check line returns are in the form "\r\n"
 // (qmail balks otherwise, i.e. LAME server)
+// "lame server"指的是不能确信其是否具有域的授权的服务器。
 void mailer::checkRFCcompat() {
    // Check the line breaks.
    std::vector<char>::iterator it;
@@ -296,12 +303,14 @@ bool mailer::setsender(const std::string& newsender) {
    if(!newsender.length())
       return false;
 
+   // 发件人Email地址，结构体，包括发件人和邮箱地址
    Address newaddress(parseaddress(newsender));
 
    fromAddress = newaddress;
    return true;
 }
 
+// recipient_type 默认值为TO
 bool mailer::addrecipient(const std::string& newrecipient, short recipient_type) {
    // SMTP only allows 100 recipients max at a time.
    // rfc821
@@ -314,12 +323,12 @@ bool mailer::addrecipient(const std::string& newrecipient, short recipient_type)
       if(!recipients.size()) {
          server = getserveraddress(newrecipient);
       }
-
+      //收件人信息
       Address newaddress = parseaddress(newrecipient);
 
       if(recipient_type > Bcc || recipient_type < TO)
          recipient_type = Bcc; // default to blind copy on error(hidden is better)
-
+      // 存入收件人列表
       recipients.push_back(std::make_pair(newaddress, recipient_type));
       return true;
    }
@@ -921,9 +930,7 @@ bool mailer::removeattachment(const std::string& filename) {
    return false;
 }
 
-// returns everything after the '@' synbol in an email address
-
-// if there is no '@' symbol returns the empty string.
+// 返回"@"后面的内容，如果没有"@"，则返回空
 std::string mailer::getserveraddress(const std::string& toaddress) const{
    if(toaddress.length()) {
       std::string::size_type pos(toaddress.find("@"));
@@ -1206,6 +1213,7 @@ const std::string& mailer::response() const {
    return returnstring;
 }
 
+// 解析邮件，得到用户信息和邮件地址
 mailer::Address mailer::parseaddress(const std::string& addresstoparse) {
    Address newaddress; // return value
 
@@ -1213,6 +1221,7 @@ mailer::Address mailer::parseaddress(const std::string& addresstoparse) {
    if(!addresstoparse.length())
       return newaddress; // its empty, oops (this should fail at the server.)
 
+   // 如果Fromaddress 里没有"@"符号，可能为本地地址，如"root"
    if(!addresstoparse.find("@") == std::string::npos) {
       // no '@' symbol (could be a local address, e.g. root)
       // so just assume this. The SMTP server should just deny delivery if its messed up!
@@ -1221,6 +1230,7 @@ mailer::Address mailer::parseaddress(const std::string& addresstoparse) {
    }
    // we have one angle bracket but not the other
    // (this isn't strictly needed, just thought i'd throw it in)
+   // 判断是否有"< >"尖括号
    if(((addresstoparse.find('<') != std::string::npos) &&
       (addresstoparse.find('>') == std::string::npos)) ||
       ((addresstoparse.find('>') != std::string::npos) &&
@@ -1233,13 +1243,15 @@ mailer::Address mailer::parseaddress(const std::string& addresstoparse) {
    //        "foo@bar.com"
    // or     "foo bar <foo@bar.com>"
    // or     "<foo@bar.com> foo bar"
+   // 处理上面有尖括号的两种情形
    if((addresstoparse.find('<') != std::string::npos) &&
       (addresstoparse.find('>') != std::string::npos)) {
       std::string::size_type sta = addresstoparse.find('<');
       std::string::size_type end = addresstoparse.find('>');
 
       newaddress.address = addresstoparse.substr(sta + 1, end - sta - 1);
-
+      
+      // name在开头
       if(sta > 0) { // name at the beginning
          // we are cutting off the last character if the bracket address 
          // continues without a space into the bracketed address
@@ -1252,7 +1264,7 @@ mailer::Address mailer::parseaddress(const std::string& addresstoparse) {
          newaddress.name = addresstoparse.substr(0, sta);
          return newaddress;
       }
-      else { // name at the end
+      else { // name在末尾
          // no name to get
          if(end >= addresstoparse.length()-1)
             return newaddress;
@@ -1260,9 +1272,10 @@ mailer::Address mailer::parseaddress(const std::string& addresstoparse) {
          end += 2;
          if(end >= addresstoparse.length())
             return newaddress; 
-
+         // 将名字存入结构体
          newaddress.name = addresstoparse.substr(end, addresstoparse.length()- end);
          // remove whitespace from end if need be
+         // 如果末尾有空格，去掉空格
          if(newaddress.name[newaddress.name.length()-1] == ' ')
             newaddress.name = newaddress.name.substr(0, newaddress.name.length()-1);
          return newaddress;
@@ -1270,6 +1283,7 @@ mailer::Address mailer::parseaddress(const std::string& addresstoparse) {
    }
    // if we get here assume an address of the form: foo@bar.com
    // and just save it.
+   // 如"foo@bar.com"这种正常格式的邮件地址
    newaddress.address = addresstoparse;
 
    return newaddress;
