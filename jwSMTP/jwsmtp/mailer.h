@@ -218,8 +218,10 @@ private:
    Address parseaddress(const std::string& addresstoparse);
 
    // The addresses to send the mail to
+   // 收件人信息
    std::vector<std::pair<Address, short> > recipients;
    // The address the mail is from.
+   // 收件人名字和邮件地址 
    Address fromAddress;
    // Subject of the mail
    std::string subject;
@@ -227,16 +229,19 @@ private:
    // 存储邮件内容
    std::vector<char> message;
    // The contents of the mail message in html format.
+   // HTML形式的邮件内容 base64 编码
    std::vector<char> messageHTML;
    // attachments: the file as a stream of char's and the name of the file.
    std::vector<std::pair<std::vector<char>, std::string> > attachments;
    // This will be filled in from the toAddress by getserveraddress
+   // 目的Server
    std::string server;
    // Name of a nameserver to query
    std::string nameserver;
    // The port to mail to on the smtp server.
    const unsigned short port;
    // use dns to query for MX records
+   // 是否使用DNS查询MX记录
    const bool lookupMXRecord;
    // using authentication
    bool auth;

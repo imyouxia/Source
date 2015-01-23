@@ -69,10 +69,12 @@ mailer::mailer(const char* TOaddress, const char* FROMaddress,
    setsender(FROMaddress);
    addrecipient(TOaddress); //将收件人信息和recipient_type存入收件人列表
    setmessage(Message);
-
+ 
+   // 只适用于Win32
    initNetworking(); // in win32 init networking, else just does nothin'
 }
 
+// MXLookup默认为false
 mailer::mailer(bool MXLookup, unsigned short Port):
       type(LOGIN),
       port(htons(Port)),
@@ -92,6 +94,7 @@ bool mailer::setmessage(const std::string& newmessage) {
    for (std::string::size_type i = 0; i < newmessage.length(); ++i)
       message.push_back(newmessage[i]); //vector<char>类型
 
+   // 如果message或者messageHTML一行的内容超过1000个字符，则超过的部分重置为新行
    checkRFCcompat();
 
    return true;
@@ -104,6 +107,7 @@ bool mailer::setmessage(const std::vector<char>& newmessage) {
 
    message = newmessage;
 
+   // 如果message或者messageHTML一行的内容超过1000个字符，则超过的部分重置为新行
    checkRFCcompat();
 
    return true;
@@ -166,9 +170,11 @@ bool mailer::setmessageHTMLfile(const std::string& filename) {
 // Check line returns are in the form "\r\n"
 // (qmail balks otherwise, i.e. LAME server)
 // "lame server"指的是不能确信其是否具有域的授权的服务器。
+// 如果message或者messageHTML一行的内容超过1000个字符，则超过的部分重置为新行
 void mailer::checkRFCcompat() {
    // Check the line breaks.
    std::vector<char>::iterator it;
+   // 转换为CRLF（\r\n）形式
    for(it = message.begin(); it != message.end(); ++it) {
       // look for \n add \r before if not there. Pretty lame but still.
       // haven't thought of a better way yet.
@@ -189,6 +195,7 @@ void mailer::checkRFCcompat() {
    // if we get a period on a line by itself
    // add another period to stop the server ending the mail prematurely.
    // ( suggested by david Irwin )
+   // RFC821:http://www.rfc-editor.org/rfc/rfc821.txt 参见：4.5.2.  TRANSPARENCY
    if(message.size() == 1) {
       if(*(message.begin()) == '.')
          message.push_back('.');
@@ -216,6 +223,8 @@ void mailer::checkRFCcompat() {
    }
 
    // don't do anything if we are not longer than a 1000 characters
+   // The maximum total length of a text line including the <CRLF> is 1000 characters
+   // RFC821 的text line 可查看
    if(message.size() < 1000)
       return;
 
@@ -250,6 +259,7 @@ void mailer::checkRFCcompat() {
          count = 0; // reset for a new line.
       }
    }
+   // 原理同上
    count=1; // reset the count
    if(messageHTML.size()) {
       for(it = messageHTML.begin(); it < messageHTML.end(); ++it, ++count) {
@@ -394,6 +404,7 @@ void mailer::operator()() {
    }
 
    std::vector<SOCKADDR_IN> adds;
+   // 默认为false
    if(lookupMXRecord) {
       if(!gethostaddresses(adds)) {
          // error!! we are dead.
@@ -952,9 +963,10 @@ bool mailer::gethostaddresses(std::vector<SOCKADDR_IN>& adds) {
    SOCKADDR_IN addr(nameserver, htons(DNS_PORT), AF_INET);
 
    hostent* host = 0;
-   if(addr)
+   // operator bool()重载进行判断
+   if(addr) // 通过IP来获取主机的名称
       host = gethostbyaddr(addr.get_sin_addr(), sizeof(addr.ADDR.sin_addr), AF_INET);
-   else
+   else  //通过域名或主机名称来获取IP地址
       host = gethostbyname(nameserver.c_str());
 
    if(!host) { // couldn't get to dns, try to connect directly to 'server' instead.
@@ -984,7 +996,8 @@ bool mailer::gethostaddresses(std::vector<SOCKADDR_IN>& adds) {
    else
       //memcpy((char*)&addr.sin_addr, host->h_addr, host->h_length);
       std::copy(host->h_addr_list[0], host->h_addr_list[0] + host->h_length, addr.get_sin_addr());
-
+    
+   // 连接Servr
    SOCKET s;
    if(!Socket(s, AF_INET, SOCK_DGRAM, 0)) {
       returnstring = "451 Requested action aborted: socket function error";
@@ -1001,9 +1014,11 @@ bool mailer::gethostaddresses(std::vector<SOCKADDR_IN>& adds) {
    int dnspos = 12; // end of dns header
    std::string::size_type stringpos(0);
    std::string::size_type next(server.find("."));
+   // 以"."分割Server，之后将对应的长度和字符写入DNS数组中
    if(next != std::string::npos) { // multipart name e.g. "aserver.somewhere.net"
       while(stringpos < server.length()) {
          std::string part(server.substr(stringpos, next-stringpos));
+         // 将"."分割对应的字符串长度和字符串依次写入到dns数组里
          dns[dnspos] = part.length();
          ++dnspos;
          for(std::string::size_type i = 0; i < part.length(); ++i, ++dnspos) {
@@ -1012,6 +1027,7 @@ bool mailer::gethostaddresses(std::vector<SOCKADDR_IN>& adds) {
 
          stringpos = ++next;
          next = server.find(".", stringpos);
+         // "."最后一段，如"aserver.somewhere.net"表示"net"
          if(next == std::string::npos) {
             part = server.substr(stringpos, server.length() - stringpos);
             dns[dnspos] = part.length();

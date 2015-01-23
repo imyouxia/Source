@@ -103,7 +103,8 @@ void initNetworking() {
 		void shutdown(){WSACleanup();}
 		bool initialised;
 	};
-	static socks s;
+	// 实例化，注意此处
+    static socks s;
 #endif
 }
 

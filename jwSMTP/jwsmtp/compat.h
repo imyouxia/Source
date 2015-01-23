@@ -87,7 +87,8 @@ struct SOCKADDR_IN {
   // this is bad as we just assume that the address "addr" is valid here.
   // need a real check and set ok appropriately  
 //  SOCKADDR_IN(sockaddr_in addr):ADDR(addr), ok(true) {}
-  
+ 
+  // 构造函数 
   SOCKADDR_IN(const std::string& address, unsigned short port, short family = AF_INET) {
     ADDR.sin_port = port;
     ADDR.sin_family = family;
@@ -108,7 +109,7 @@ struct SOCKADDR_IN {
     ok = addr.ok;
     return *this;
   }
-
+  // operator bool() 重载，可以用if() 判断，cin就是这么干的，if(cin) ...
   operator bool() const {return ok;}
 
   operator const sockaddr_in () const {
