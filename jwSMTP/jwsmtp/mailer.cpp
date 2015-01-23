@@ -1012,6 +1012,8 @@ bool mailer::gethostaddresses(std::vector<SOCKADDR_IN>& adds) {
    // dnsheader info         id    flags   num queries
    unsigned char dns[512] = {1,1,   1,0,      0,1,      0,0, 0,0, 0,0};
    int dnspos = 12; // end of dns header
+   // 以下主要功能是将如"aserver.somewhere.net"按照
+   // 7"aserver"9"somewhere"3"net"写入
    std::string::size_type stringpos(0);
    std::string::size_type next(server.find("."));
    // 以"."分割Server，之后将对应的长度和字符写入DNS数组中
@@ -1039,6 +1041,7 @@ bool mailer::gethostaddresses(std::vector<SOCKADDR_IN>& adds) {
          }
       }
    }
+   //非域名形式，不带"."
    else { // just a single part name. e.g. "aserver"
       dns[dnspos] = server.length();
       ++dnspos;
@@ -1048,12 +1051,16 @@ bool mailer::gethostaddresses(std::vector<SOCKADDR_IN>& adds) {
       }
    }
    // in case the server string has a "." on the end
+   // 域名最后加不加点是表示绝对域名和相对域名的意思，可以使用不同的DNS
    if(server[server.length()-1] == '.')
       dns[dnspos] = 0;
    else
       dns[dnspos++] = 0;
 
    // add the class & type
+   // 简单的DNS头见此处：
+   // http://www.cnblogs.com/cobbliu/archive/2013/04/02/2996333.html
+   // 15表示MX http://www.zytrax.com/books/dns/apd/rfc1035.txt 见：3.2.2. TYPE values
    dns[dnspos++] = 0;
    dns[dnspos++] = 15;  // MX record.
 
