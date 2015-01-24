@@ -660,10 +660,12 @@ void mailer::operator()() {
    }
 }
 
+// 使用现在的消息和附件，创建header
 std::vector<char> mailer::makesmtpmessage() const {
    std::string sender(fromAddress.address);
    if(sender.length()) {
       std::string::size_type pos(sender.find("@"));
+      // 获得发送人
       if(pos != std::string::npos) { //found the server beginning
          sender = sender.substr(0, pos);
       }
@@ -736,11 +738,13 @@ std::vector<char> mailer::makesmtpmessage() const {
 
    const std::string boundary("bounds=_NextP_0056wi_0_8_ty789432_tp");
    bool MIME(false);
+   // 附件，char stream
    if(attachments.size() || messageHTML.size())
       MIME = true;
 
    if(MIME) { // we have attachments
       // use MIME 1.0
+      // 使用MIME头
       headerline = "MIME-Version: 1.0\r\n"
                  "Content-Type: multipart/mixed;\r\n"
                  "\tboundary=\"" + boundary + "\"\r\n";
@@ -820,6 +824,7 @@ std::vector<char> mailer::makesmtpmessage() const {
       headerline.clear();
       
       // now add each attachment.
+      // 添加附件
       for(vec_pair_char_str_const_iter it1 = attachments.begin();
                                        it1 != attachments.end(); ++ it1) {
          if(it1->second.length() > 3) { // long enough for an extension
@@ -882,6 +887,8 @@ std::vector<char> mailer::makesmtpmessage() const {
    return ret;
 }
 
+// 向Email添加附件
+// mail.attach("attach.png");
 bool mailer::attach(const std::string& filename) {
    if(!filename.length()) // do silly checks.
       return false;
@@ -914,6 +921,7 @@ bool mailer::attach(const std::string& filename) {
    return true;
 }
 
+// 去掉附件
 bool mailer::removeattachment(const std::string& filename) {
    if(!filename.length()) // do silly checks.
       return false;
@@ -931,6 +939,7 @@ bool mailer::removeattachment(const std::string& filename) {
    }
    // fn is now what is stored in the attachments pair as the second parameter
    // i.e.  it->second == fn
+   // erase掉附件
    std::vector<std::pair<std::vector<char>, std::string> >::iterator it;
    for(it = attachments.begin(); it < attachments.end(); ++it) {
       if((*it).second == fn) {
@@ -1079,10 +1088,15 @@ bool mailer::gethostaddresses(std::vector<SOCKADDR_IN>& adds) {
    if(Recv(ret, s, (char*)dns, 512, 0)) {
       Closesocket(s);
       // now parse the data sent back from the dns for MX records
+      // 解析返回的数据
       if(dnspos > 12) { // we got more than a dns header back
+         // 表示请求部分的条目数
          unsigned short numsitenames = ((unsigned short)dns[4]<<8) | dns[5];
+         // 标示响应部分的资源记录数。如果响应消息中没有记录，则设置为0
          unsigned short numanswerRR = ((unsigned short)dns[6]<<8) | dns[7];
+         // 标示权威部分的域名服务器资源记录数。如果响应消息中没有权威记录，则设置为0
          unsigned short numauthorityRR = ((unsigned short)dns[8]<<8) | dns[9];
+         // 标示额外部分的资源记录数。
          unsigned short numadditionalRR = ((unsigned short)dns[10]<<8) | dns[11];
 
          if(!(dns[3] & 0x0F)) { // check for an error
@@ -1152,6 +1166,7 @@ bool mailer::gethostaddresses(std::vector<SOCKADDR_IN>& adds) {
 }
 
 // we assume the array 'dns' must be 512 bytes in size!
+// 解析DNS资源记录
 bool mailer::parseRR(int& pos, const unsigned char dns[], std::string& name, in_addr& address) {
    if(pos < 12) // didn,t get more than a header.
       return false;
@@ -1191,6 +1206,8 @@ bool mailer::parseRR(int& pos, const unsigned char dns[], std::string& name, in_
       else
          parsename(pos, dns, name);
    }
+   // Type == 12 时，是pointer record，就是PTR记录，将IP地址映射会主机名
+   // http://www.zytrax.com/books/dns/ch8/ptr.html
    else if(Type == 12) { // pointer record
       pos += Datalen+1;
    }
@@ -1206,6 +1223,10 @@ bool mailer::parseRR(int& pos, const unsigned char dns[], std::string& name, in_
    return true;
 }
 
+// 解析DNS名字
+// Parses a dns name returned in a dns query
+// 其中某一个标识序列的首字符的长度若是0xC0的话，表示下一字节指示不是标识符序列，
+// 而是指示接下部分在本接收包内的偏移位置。
 void mailer::parsename(int& pos, const unsigned char dns[], std::string& name) {
    int len = dns[pos];
    if(len >= 192) {

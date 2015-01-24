@@ -232,6 +232,7 @@ private:
    // HTML形式的邮件内容 base64 编码
    std::vector<char> messageHTML;
    // attachments: the file as a stream of char's and the name of the file.
+   // 附件
    std::vector<std::pair<std::vector<char>, std::string> > attachments;
    // This will be filled in from the toAddress by getserveraddress
    // 目的Server
