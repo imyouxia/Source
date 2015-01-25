@@ -37,6 +37,7 @@
 
 namespace jwsmtp {
 
+// 构造函数，message为vector<char>类型 
 mailer::mailer(const char* TOaddress, const char* FROMaddress,
                const char* Subject, const std::vector<char>& Message,
                const char* Nameserver, unsigned short Port,
@@ -55,6 +56,7 @@ mailer::mailer(const char* TOaddress, const char* FROMaddress,
    initNetworking(); // in win32 init networking, else just does nothin'
 }
 
+// 构造函数，message为const char* 类型
 mailer::mailer(const char* TOaddress, const char* FROMaddress,
                const char* Subject, const char* Message,
                const char* Nameserver, unsigned short Port,
@@ -117,6 +119,7 @@ bool mailer::setmessage(const std::vector<char>& newmessage) {
     使用base64对data进行编码，
     设计此种编码是为了使二进制数据可以通过非纯8-bit的传输层传输
     例如电子邮件的主题
+    在MIME格式的电子邮件中，base64可以用来将binary的字节序列数据编码成ASCII字符序列构成的文本
 */
 
 bool mailer::setmessageHTML(const std::string& newmessage) {
@@ -132,9 +135,10 @@ bool mailer::setmessageHTML(const std::string& newmessage) {
    return true;
 }
 
-    /*
-      base64编码
-    */
+/*
+   设置HTML Message 
+   base64编码,同上
+*/
 
 bool mailer::setmessageHTML(const std::vector<char>& newmessage) {
    if(!newmessage.size())
@@ -145,6 +149,7 @@ bool mailer::setmessageHTML(const std::vector<char>& newmessage) {
    return true;
 }
 
+// 使用文件base64编码后作为数据
 bool mailer::setmessageHTMLfile(const std::string& filename) {
    if(!filename.length())
       return false;
@@ -231,6 +236,7 @@ void mailer::checkRFCcompat() {
    // now we have checked line breaks
    // check line lengths.
    int count(1);
+   // 一行不能超过1000个字符，包括\r\n,否则就另起一行
    for(it = message.begin(); it < message.end(); ++it, ++count) {
       if(*it == '\r') {
          count = 0; // reset for a new line.
@@ -293,6 +299,7 @@ void mailer::checkRFCcompat() {
    }
 }
 
+// 设置邮件主题
 bool mailer::setsubject(const std::string& newSubject) {
    if(!newSubject.length())
       return false;
@@ -301,6 +308,7 @@ bool mailer::setsubject(const std::string& newSubject) {
    return true;
 }
 
+// 设置查询MX Record服务器
 bool mailer::setserver(const std::string& nameserver_or_smtpserver) {
    if(!nameserver_or_smtpserver.length())
       return false;
@@ -309,6 +317,7 @@ bool mailer::setserver(const std::string& nameserver_or_smtpserver) {
    return true;
 }
 
+// 设置发件人和邮箱地址
 bool mailer::setsender(const std::string& newsender) {
    if(!newsender.length())
       return false;
@@ -320,7 +329,8 @@ bool mailer::setsender(const std::string& newsender) {
    return true;
 }
 
-// recipient_type 默认值为TO
+// 将收件人放入收件人列表，recipient_type 默认值为TO
+// TO：致，CC：副本抄送，BCC：密件抄送
 bool mailer::addrecipient(const std::string& newrecipient, short recipient_type) {
    // SMTP only allows 100 recipients max at a time.
    // rfc821
@@ -345,6 +355,7 @@ bool mailer::addrecipient(const std::string& newrecipient, short recipient_type)
    return false;
 }
 
+// 从收件人列表里移除收件人
 bool mailer::removerecipient(const std::string& recipient) {
    if(recipient.length()) { // there is something to remove
       std::vector<std::pair<Address, short> >::iterator it(recipients.begin());
@@ -359,14 +370,17 @@ bool mailer::removerecipient(const std::string& recipient) {
    return false;
 }
 
+// 清空收件人列表 
 void mailer::clearrecipients() {
    recipients.clear();
 }
 
+// 清空附件
 void mailer::clearattachments() {
    attachments.clear();
 }
 
+// 清空recipients, message, attachments，errors信息
 void mailer::reset() {
    recipients.clear();
    attachments.clear();
@@ -412,6 +426,7 @@ void mailer::operator()() {
          return;
       }
    }
+   // 默认为false，直接连接SMTP server
    else { // connect directly to an SMTP server.
       SOCKADDR_IN addr(nameserver, port, AF_INET);
       hostent* host = 0;
@@ -460,13 +475,15 @@ void mailer::operator()() {
 
       // get our hostname to pass to the smtp server
       char hn[buffsize] = "";
+      // 返回本地主机的标准主机名，无错误返回0
       if(gethostname(hn, buffsize)) {
          // no local hostname!!! make one up
          strcpy(hn, "flibbletoot");
       }
       std::string commandline(std::string("EHLO ") + hn + std::string("\r\n"));
       // say hello to the server
-
+      // 由客户端发送，指示 ESMTP 会话开始。服务器可以在它对 EHLO 的响应中表明自己支持 ESMTP 命令
+      // ehlo是对helo的扩展，即extend helo，可以支持authorization，即用户认证。
       if(!Send(len1, s, commandline.c_str(), commandline.length(), 0)) {
          returnstring = "554 Transaction failed: EHLO send";
          continue;
@@ -486,6 +503,7 @@ void mailer::operator()() {
          }
          // maybe we only do non extended smtp
          // send HELO instead.
+         // 由客户端发送，用于标识客户端（通常带一个域名），并指示标准 SMTP 会话开始
          commandline[0] = 'H';
          commandline[1] = 'E';
          if(!Send(len1, s, commandline.c_str(), commandline.length(), 0)) {
@@ -660,7 +678,7 @@ void mailer::operator()() {
    }
 }
 
-// 使用现在的消息和附件，创建header
+// 使用现在的消息和附件，创建smtp message
 std::vector<char> mailer::makesmtpmessage() const {
    std::string sender(fromAddress.address);
    if(sender.length()) {
@@ -735,7 +753,9 @@ std::vector<char> mailer::makesmtpmessage() const {
    //}
    ret.insert(ret.end(), headerline.begin(), headerline.end());
    // end adding To: Cc: Bcc: lines to the header
-
+   
+   // 边界，内容好像是可以自定义的，详细见此：
+   // http://www.w3.org/Protocols/rfc1341/7_2_Multipart.html 
    const std::string boundary("bounds=_NextP_0056wi_0_8_ty789432_tp");
    bool MIME(false);
    // 附件，char stream
@@ -950,6 +970,7 @@ bool mailer::removeattachment(const std::string& filename) {
    return false;
 }
 
+// 返回收件人邮箱的域名
 // 返回"@"后面的内容，如果没有"@"，则返回空
 std::string mailer::getserveraddress(const std::string& toaddress) const{
    if(toaddress.length()) {
@@ -983,6 +1004,7 @@ bool mailer::gethostaddresses(std::vector<SOCKADDR_IN>& adds) {
       // just try to deliver mail directly to "server"
       // as we didn't get an MX record.
       // addr.sin_family = AF_INET;
+      // 获取不到DNS Server地址，就用收件人域名server代替
       addr = SOCKADDR_IN(server, port);
       addr.ADDR.sin_port = port; // smtp port!! 25
       if(addr) {
@@ -1345,17 +1367,20 @@ void mailer::authtype(const enum authtype Type) {
 // To not use authentication after this, call again
 // with the empty string e.g.
 //    mailerobject.username("");
+// 认证时用户名
 void mailer::username(const std::string& User) {
    auth = (User.length() != 0);
    user = User;
 }
 
 // set the password for authentication
+// 认证时密码
 void mailer::password(const std::string& Pass) {
    pass = Pass;
 }
 
 // authenticate against a server.
+// 服务器验证 
 bool mailer::authenticate(const std::string& servergreeting, const SOCKET& s) {
    assert(auth && user.length()); // shouldn't be calling this function if this is not set!
    int len(0);
@@ -1367,6 +1392,8 @@ bool mailer::authenticate(const std::string& servergreeting, const SOCKET& s) {
    // now parse the servergreeting looking for the auth type 'type'
    // if 'type' is not present exit with error (return false)
    std::string at;
+   // 最初的SMTP协议不包含安全认证的，所谓的ESMTP在安全性方面扩展了SMTP，通过增加命令EHLO和AUTH。
+   // 认证方式有：LOGIN、PLAIN、CRAM-MD5，这里只支持2种
    if(type == LOGIN)
       at = "LOGIN";
    else if(type == PLAIN)
@@ -1394,6 +1421,7 @@ bool mailer::authenticate(const std::string& servergreeting, const SOCKET& s) {
    // ok try and authenticate to the server.
    const int buffsize(1024);
    char buff[buffsize];
+   // 原理见此：http://blog.csdn.net/mhfh611/article/details/9470599
    if(type == LOGIN) {
       greeting = "auth " + at + "\r\n";
       if(!Send(len, s, greeting.c_str(), greeting.length(), 0)) {

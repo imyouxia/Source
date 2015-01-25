@@ -95,13 +95,16 @@ public:
    
    // Set a new HTML message (replacing the old)
    // will return false and not change the message if newmessage is empty.
+   // 使用了base64编码
    bool setmessageHTML(const std::string& newmessage);
    bool setmessageHTML(const std::vector<char>& newmessage);
    // use a file for the data
+   // 使用文件base64编码后作为数据，messageHTML
    bool setmessageHTMLfile(const std::string& filename);
 
    // Set a new Subject for the mail (replacing the old)
    // will return false if newSubject is empty.
+   // 设置邮件主题
    bool setsubject(const std::string& newSubject);
 
    // sets the nameserver or smtp server to connect to
@@ -118,6 +121,7 @@ public:
    // recipient list, otherwise false.
    // recipient_type must be in the range mailer::TO -> mailer::BCC if
    // not recipient_type defaults to BCC (blind copy), see const enum below.
+   // TO：致，CC：副本抄送，BCC：密件抄送
    bool addrecipient(const std::string& newrecipient, short recipient_type = TO /*CC, BCC*/);
 
    // remove a recipient from the recipient list.
@@ -235,9 +239,11 @@ private:
    // 附件
    std::vector<std::pair<std::vector<char>, std::string> > attachments;
    // This will be filled in from the toAddress by getserveraddress
-   // 目的Server
+   // 目的Server，收件人的域名
    std::string server;
    // Name of a nameserver to query
+   // 设置查询MX Record服务器 
+   // 默认为“127.0.0.1”
    std::string nameserver;
    // The port to mail to on the smtp server.
    const unsigned short port;

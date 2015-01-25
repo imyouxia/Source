@@ -174,8 +174,11 @@ char getbase64character(const char& in)
  -然后将ASCII编码转换成8bit的二进制，得到一组3*8=24bit的字节
  -然后再将这24bit划分为4个6bit的字节，并在每个6bit的字节前面都填两个高位0，得到4个8bit的字节
  -然后将这4个8bit的字节转换成10进制，对照Base64编码表，得到对应编码后的字符。
+ -不是3的整数倍的，需要补齐而出现的0，转化成十进制的时候就不能按常规用base64编码表来对应，    
+ -可以理解成为一种特殊的“异常”，编码应该对应“=”。
  */
 
+// returns 默认为true
 std::vector<char> base64encode(const std::vector<char>& input, const bool returns) {
    std::vector<char> output;
 
@@ -191,6 +194,7 @@ std::vector<char> base64encode(const std::vector<char>& input, const bool return
       }
       if(p+2 < input.size()) {
          output.push_back(getbase64character(((input[p+1] & 0x0F) <<2) | ((input[p+2] & 0xC0) >>6)));
+         // 存入第四个
          output.push_back(getbase64character((input[p+2] & 0x3F)));
          ++count;
       }
@@ -202,6 +206,7 @@ std::vector<char> base64encode(const std::vector<char>& input, const bool return
          output.push_back(getbase64character(((input[p+1] & 0x0F) <<2)));
       }
 
+      // 一行又75个字符
       if(returns) {
          // 79 characters on a line.
          if(count > 75) {
@@ -225,6 +230,7 @@ std::vector<char> base64encode(const std::vector<char>& input, const bool return
    return output;
 }
 
+// returns 默认为true
 std::string base64encode(const std::string& input, const bool returns) {
    std::vector<char> in, out;
    for(std::string::const_iterator it = input.begin(); it != input.end(); ++it) {
