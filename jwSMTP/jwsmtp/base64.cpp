@@ -167,6 +167,15 @@ char getbase64character(const char& in)
 	return '\0'; // ?????? yikes
 }
 
+/*
+ *Base64编码方法：
+ -base64的编码都是按字符串长度，以每3个8bit的字符为一组，
+ -然后针对每组，首先获取每个字符的ASCII编码，
+ -然后将ASCII编码转换成8bit的二进制，得到一组3*8=24bit的字节
+ -然后再将这24bit划分为4个6bit的字节，并在每个6bit的字节前面都填两个高位0，得到4个8bit的字节
+ -然后将这4个8bit的字节转换成10进制，对照Base64编码表，得到对应编码后的字符。
+ */
+
 std::vector<char> base64encode(const std::vector<char>& input, const bool returns) {
    std::vector<char> output;
 
