@@ -200,7 +200,7 @@ void mailer::checkRFCcompat() {
    // if we get a period on a line by itself
    // add another period to stop the server ending the mail prematurely.
    // ( suggested by david Irwin )
-   // RFC821:http://www.rfc-editor.org/rfc/rfc821.txt 参见：4.5.2.  TRANSPARENCY
+   // RFC2821:https://www.ietf.org/rfc/rfc2821.txt 参见：4.5.2.  TRANSPARENCY
    if(message.size() == 1) {
       if(*(message.begin()) == '.')
          message.push_back('.');
@@ -229,7 +229,7 @@ void mailer::checkRFCcompat() {
 
    // don't do anything if we are not longer than a 1000 characters
    // The maximum total length of a text line including the <CRLF> is 1000 characters
-   // RFC821 的text line 可查看
+   // RFC2821 的text line 可查看
    if(message.size() < 1000)
       return;
 
