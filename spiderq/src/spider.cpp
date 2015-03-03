@@ -205,6 +205,7 @@ int attach_epoll_task()
     return 0;
 }
 
+// 控制系统资源的最大使用量
 static int set_nofile(rlim_t limit)
 {
     struct rlimit rl;
@@ -224,6 +225,7 @@ static int set_nofile(rlim_t limit)
     return 0;
 }
 
+// 守护进程
 static void daemonize()
 {
     int fd;

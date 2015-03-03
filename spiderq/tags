@@ -1,0 +1,258 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+BIN_SUFFIXES	src/url.cpp	/^static char * BIN_SUFFIXES = ".jpg.jpeg.gif.png.ico.bmp.swf";$/;"	v	file:
+BITSIZE_PER_BLOOM	src/bloomfilter.cpp	11;"	d	file:
+BLOOMFILTER_H	src/bloomfilter.h	2;"	d
+BLOOM_SIZE	src/bloomfilter.cpp	10;"	d	file:
+CONFPARSER_H	src/confparser.h	2;"	d
+CONF_FILE	src/confparser.h	8;"	d
+CRC32	src/crc32.cpp	/^static unsigned int   CRC32[256];$/;"	v	file:
+CRC32_H	src/crc32.h	2;"	d
+CXX	modules/Makefile	/^CXX:=g++$/;"	m
+CXX	src/Makefile	/^CXX:=g++$/;"	m
+CXXFLAGS	modules/Makefile	/^CXXFLAGS=-I..\/src$/;"	m
+Config	src/confparser.h	/^typedef struct Config {$/;"	s
+DSO_H	src/dso.h	2;"	d
+DYLIBMAJORSUFFIX	modules/Makefile	/^DYLIBMAJORSUFFIX=$(SPIDERQ_MAJOR)$/;"	m
+DYLIBMINORSUFFIX	modules/Makefile	/^DYLIBMINORSUFFIX=$(SPIDERQ_MAJOR).$(SPIDERQ_MINOR)$/;"	m
+DYLIBNAMES	modules/Makefile	/^DYLIBNAMES=$(patsubst %.cpp,%.$(DYLIBSUFFIX),$(SOURCES))$/;"	m
+DYLIBSUFFIX	modules/Makefile	/^DYLIBSUFFIX=so$/;"	m
+Dlnode	modules/domainlimit.cpp	/^typedef struct Dlnode {$/;"	s	file:
+Dlnode	modules/domainlimit.cpp	/^} Dlnode;$/;"	t	typeref:struct:Dlnode	file:
+F	src/md5.h	12;"	d
+F1	src/sha1.cpp	94;"	d	file:
+F2	src/sha1.cpp	95;"	d	file:
+F3	src/sha1.cpp	96;"	d	file:
+F4	src/sha1.cpp	97;"	d	file:
+FF	src/md5.h	17;"	d
+G	src/md5.h	13;"	d
+GG	src/md5.h	23;"	d
+H	src/md5.h	14;"	d
+HASHS_H	src/hashs.h	2;"	d
+HASH_FUNC_NUM	src/bloomfilter.cpp	9;"	d	file:
+HH	src/md5.h	29;"	d
+HREF_PATTERN	src/socket.cpp	/^static const char * HREF_PATTERN = "href=\\"\\\\s*\\\\([^ >\\"]*\\\\)\\\\s*\\"";$/;"	v	file:
+HTML_MAXLEN	src/socket.cpp	88;"	d	file:
+Header	src/socket.h	/^typedef struct Header {$/;"	s
+Header	src/socket.h	/^} Header;$/;"	t	typeref:struct:Header
+I	src/md5.h	15;"	d
+II	src/md5.h	35;"	d
+IMG_PATTERN	modules/saveimage.cpp	/^static const char * IMG_PATTERN = "<img [^>]*src=\\"\\\\s*\\\\([^ >\\"]*\\\\)\\\\s*\\"";$/;"	v	file:
+INF	src/confparser.cpp	5;"	d	file:
+INSTALL	modules/Makefile	/^  INSTALL?= cp -r$/;"	m
+INSTALL	modules/Makefile	/^INSTALL?= cp -af$/;"	m
+K1	src/sha1.cpp	90;"	d	file:
+K2	src/sha1.cpp	91;"	d	file:
+K3	src/sha1.cpp	92;"	d	file:
+K4	src/sha1.cpp	93;"	d	file:
+LIMIT	src/bloomfilter.cpp	12;"	d	file:
+LOG_STR	src/spider.h	/^static const char * LOG_STR[] = { $/;"	v
+M	src/sha1.cpp	100;"	d	file:
+MAGIC_MAJOR_NUMBER	src/dso.h	10;"	d
+MAGIC_MINOR_NUMBER	src/dso.h	11;"	d
+MAX_CONF_LEN	src/confparser.h	7;"	d
+MAX_LINK_LEN	src/url.h	18;"	d
+MAX_MESG_LEN	src/spider.h	13;"	d
+MD5Decode	src/md5.cpp	/^static void MD5Decode(unsigned int *output,unsigned char *input,unsigned int len)$/;"	f	file:
+MD5Encode	src/md5.cpp	/^static void MD5Encode(unsigned char *output,unsigned int *input,unsigned int len)$/;"	f	file:
+MD5Final	src/md5.cpp	/^void MD5Final(MD5_CTX *context,unsigned char digest[16])$/;"	f
+MD5Init	src/md5.cpp	/^void MD5Init(MD5_CTX *context)$/;"	f
+MD5Transform	src/md5.cpp	/^static void MD5Transform(unsigned int state[4],unsigned char block[64])$/;"	f	file:
+MD5Update	src/md5.cpp	/^void MD5Update(MD5_CTX *context,unsigned char *input,unsigned int inputlen)$/;"	f
+MD5_CTX	src/md5.h	/^}MD5_CTX;$/;"	t	typeref:struct:__anon2
+MD5_H	src/md5.h	2;"	d
+MODULEDIR	modules/Makefile	/^MODULEDIR=$(PREFIX)\/modules$/;"	m
+MODULE_ERR	src/dso.h	8;"	d
+MODULE_OK	src/dso.h	7;"	d
+Module	src/dso.h	/^typedef struct Module{$/;"	s
+Module	src/dso.h	/^} Module;$/;"	t	typeref:struct:Module
+OBJS	modules/Makefile	/^OBJS=$(patsubst %.cpp,%.o,$(SOURCES))$/;"	m
+OBJS	src/Makefile	/^OBJS=$(patsubst %.cpp,%.o,$(SOURCES))$/;"	m
+OPTIMIZATION	modules/Makefile	/^OPTIMIZATION?=-O2 -DNDEBUG$/;"	m
+OPTIMIZATION	src/Makefile	/^OPTIMIZATION?=-O2 -DNDEBUG$/;"	m
+PADDING	src/md5.cpp	/^static unsigned char PADDING[]={0x80,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,$/;"	v	file:
+PREFIX	modules/Makefile	/^PREFIX:=\/etc\/spiderq$/;"	m
+QSOCKET_H	src/socket.h	2;"	d
+QSTRING_H	src/qstring.h	2;"	d
+QTHREADS_H	src/threads.h	2;"	d
+QURL_H	src/url.h	2;"	d
+R	src/sha1.cpp	104;"	d	file:
+REAL_CXXFLAGS	modules/Makefile	/^REAL_CXXFLAGS=$(OPTIMIZATION) -fPIC $(CXXFLAGS) $(WARNINGS) $(DEBUG) $(PROF)$/;"	m
+REAL_CXXFLAGS	src/Makefile	/^REAL_CXXFLAGS=$(OPTIMIZATION) $(CXXFLAGS) $(WARNINGS) $(DEBUG) $(PROF) $/;"	m
+REAL_LDFLAGS	src/Makefile	/^REAL_LDFLAGS=$(LDFLAGS) $(PROF) -rdynamic -lpthread -levent -lcrypt -ldl$/;"	m
+ROTATE_LEFT	src/md5.h	16;"	d
+Response	src/socket.h	/^typedef struct Response {$/;"	s
+Response	src/socket.h	/^} Response;$/;"	t	typeref:struct:Response
+SHA1_CONTEXT	src/sha1.h	/^} SHA1_CONTEXT;$/;"	t	typeref:struct:__anon1
+SHA1_H	src/sha1.h	2;"	d
+SOURCES	modules/Makefile	/^SOURCES=$(wildcard *.cpp)$/;"	m
+SOURCES	src/Makefile	/^SOURCES=$(wildcard *.cpp)$/;"	m
+SPIDERQ_MAJOR	modules/Makefile	/^SPIDERQ_MAJOR=0$/;"	m
+SPIDERQ_MINOR	modules/Makefile	/^SPIDERQ_MINOR=1$/;"	m
+SPIDER_ADD_MODULE_POST_HEADER	src/dso.h	37;"	d
+SPIDER_ADD_MODULE_POST_HTML	src/dso.h	45;"	d
+SPIDER_ADD_MODULE_PRE_SURL	src/dso.h	29;"	d
+SPIDER_H	src/spider.h	2;"	d
+SPIDER_LEVEL_CRIT	src/spider.h	19;"	d
+SPIDER_LEVEL_DEBUG	src/spider.h	15;"	d
+SPIDER_LEVEL_ERROR	src/spider.h	18;"	d
+SPIDER_LEVEL_INFO	src/spider.h	16;"	d
+SPIDER_LEVEL_WARN	src/spider.h	17;"	d
+SPIDER_LOG	src/spider.h	31;"	d
+STANDARD_MODULE_STUFF	src/dso.h	14;"	d
+Surl	src/url.h	/^typedef struct Surl {$/;"	s
+Surl	src/url.h	/^} Surl;$/;"	t	typeref:struct:Surl
+TARGET	src/Makefile	/^TARGET=spider$/;"	m
+TYPE_HTML	src/url.h	20;"	d
+TYPE_IMAGE	src/url.h	21;"	d
+Url	src/url.h	/^typedef struct Url {$/;"	s
+Url	src/url.h	/^} Url;$/;"	t	typeref:struct:Url
+WARNINGS	modules/Makefile	/^WARNINGS=-Wall$/;"	m
+WARNINGS	src/Makefile	/^WARNINGS=-Wall$/;"	m
+X	src/sha1.cpp	285;"	d	file:
+X	src/sha1.cpp	295;"	d	file:
+accept_types	src/confparser.h	/^    vector<char *>   accept_types;$/;"	m	struct:Config
+aphash	src/hashs.cpp	/^unsigned int aphash(char *str)$/;"	f
+attach_domain	src/url.cpp	/^char * attach_domain(char *url, const char *domain)$/;"	f
+attach_epoll_task	src/spider.cpp	/^int attach_epoll_task()$/;"	f
+begin_thread	src/threads.cpp	/^void begin_thread()$/;"	f
+bloom_table	src/bloomfilter.cpp	/^static int bloom_table[BLOOM_SIZE] = {0};$/;"	v	file:
+body	src/socket.h	/^    char   *body;$/;"	m	struct:Response
+body_len	src/socket.h	/^    int     body_len;$/;"	m	struct:Response
+bt_lock	src/bloomfilter.cpp	/^pthread_mutex_t bt_lock = PTHREAD_MUTEX_INITIALIZER;$/;"	v
+buf	src/sha1.h	/^    unsigned char buf[64];$/;"	m	struct:__anon1
+buffer	src/md5.h	/^    unsigned char buffer[64];   $/;"	m	struct:__anon2
+build_connect	src/socket.cpp	/^int build_connect(int *fd, char *ip, int port)$/;"	f
+content_type	src/socket.h	/^    char      *content_type;$/;"	m	struct:Header
+count	src/md5.h	/^    unsigned int count[2];$/;"	m	struct:__anon2
+count	src/sha1.h	/^    int  count;$/;"	m	struct:__anon1
+crc32	src/crc32.cpp	/^unsigned int crc32( unsigned char *buf, int len)$/;"	f
+create_thread	src/threads.cpp	/^int create_thread(void *(*start_func)(void *), void * arg, pthread_t *pid, pthread_attr_t * pattr)$/;"	f
+daemonize	src/spider.cpp	/^static void daemonize()$/;"	f	file:
+dns_callback	src/url.cpp	/^static void dns_callback(int result, char type, int count, int ttl, void *addresses, void *arg) $/;"	f	file:
+domain	src/url.h	/^    char *domain;$/;"	m	struct:Url
+domainlimit	modules/domainlimit.cpp	/^Module domainlimit = {$/;"	v
+dso_load	src/dso.cpp	/^Module * dso_load(const char *path, const char *name)$/;"	f
+encrypt	src/bloomfilter.cpp	/^static unsigned int encrypt(char *key, unsigned int id)$/;"	f	file:
+end_thread	src/threads.cpp	/^void end_thread()$/;"	f
+evso_arg	src/url.h	/^typedef struct evso_arg {$/;"	s
+evso_arg	src/url.h	/^} evso_arg;$/;"	t	typeref:struct:evso_arg
+exclude_nodes	modules/domainlimit.cpp	/^static vector<Dlnode *> exclude_nodes;$/;"	v	file:
+exclude_prefixes	src/confparser.h	/^    char            *exclude_prefixes; $/;"	m	struct:Config
+extract_url	src/url.cpp	/^int extract_url(regex_t *re, char *str, Url *ourl)$/;"	f
+fd	src/url.h	/^    int     fd;$/;"	m	struct:evso_arg
+free_url	src/url.cpp	/^void free_url(Url * ourl)$/;"	f
+g_conf	src/spider.cpp	/^Config *g_conf;$/;"	v
+g_cur_thread_num	src/threads.cpp	/^int g_cur_thread_num = 0;$/;"	v
+g_epfd	src/spider.cpp	/^int g_epfd;$/;"	v
+gctn_lock	src/threads.cpp	/^pthread_mutex_t gctn_lock = PTHREAD_MUTEX_INITIALIZER;$/;"	v
+get_ourl_queue_size	src/url.cpp	/^int get_ourl_queue_size()$/;"	f
+get_surl_queue_size	src/url.cpp	/^int get_surl_queue_size()$/;"	f
+get_timespec	src/url.cpp	/^static void get_timespec(timespec * ts, int millisecond)$/;"	f	file:
+h0	src/sha1.h	/^    u32  h0,h1,h2,h3,h4;$/;"	m	struct:__anon1
+h1	src/sha1.h	/^    u32  h0,h1,h2,h3,h4;$/;"	m	struct:__anon1
+h2	src/sha1.h	/^    u32  h0,h1,h2,h3,h4;$/;"	m	struct:__anon1
+h3	src/sha1.h	/^    u32  h0,h1,h2,h3,h4;$/;"	m	struct:__anon1
+h4	src/sha1.h	/^    u32  h0,h1,h2,h3,h4;$/;"	m	struct:__anon1
+handle	src/dso.h	/^    int (*handle)(void *);$/;"	m	struct:Module
+handler	modules/domainlimit.cpp	/^static int handler(void * data) {$/;"	f	file:
+handler	modules/headerfilter.cpp	/^static int handler(void * data) {$/;"	f	file:
+handler	modules/maxdepth.cpp	/^static int handler(void * data) {$/;"	f	file:
+handler	modules/savehtml.cpp	/^static int handler(void * data) {$/;"	f	file:
+handler	modules/saveimage.cpp	/^static int handler(void * data) {$/;"	f	file:
+hash16777619	src/hashs.cpp	/^unsigned int hash16777619(char *str)$/;"	f
+header	src/socket.h	/^    Header *header;$/;"	m	struct:Response
+header_postcheck	src/socket.cpp	/^static int header_postcheck(Header *header)$/;"	f	file:
+headerfilter	modules/headerfilter.cpp	/^Module headerfilter = {$/;"	v
+host_ip_map	src/url.cpp	/^static map<string, string> host_ip_map;$/;"	v	file:
+include_nodes	modules/domainlimit.cpp	/^static vector<Dlnode *> include_nodes;$/;"	v	file:
+include_prefixes	src/confparser.h	/^    char            *include_prefixes; $/;"	m	struct:Config
+init	modules/domainlimit.cpp	/^static void init(Module *mod)$/;"	f	file:
+init	modules/headerfilter.cpp	/^static void init(Module *mod)$/;"	f	file:
+init	modules/maxdepth.cpp	/^static void init(Module *mod)$/;"	f	file:
+init	modules/savehtml.cpp	/^static void init(Module *mod)$/;"	f	file:
+init	modules/saveimage.cpp	/^static void init(Module *mod)$/;"	f	file:
+init	src/crc32.cpp	/^static char   init = 0;$/;"	v	file:
+init	src/dso.h	/^    void (*init)(Module *);$/;"	m	struct:Module
+init_table	src/crc32.cpp	/^static void init_table()$/;"	f	file:
+initconfig	src/confparser.cpp	/^Config * initconfig()$/;"	f
+ip	src/url.h	/^    char *ip;$/;"	m	struct:Url
+is_bin_url	src/url.cpp	/^static int is_bin_url(char *url)$/;"	f	file:
+is_ourlqueue_empty	src/url.cpp	/^int is_ourlqueue_empty() $/;"	f
+is_surlqueue_empty	src/url.cpp	/^int is_surlqueue_empty() $/;"	f
+iscrawled	src/url.cpp	/^int iscrawled(char * url) {$/;"	f
+len	modules/domainlimit.cpp	/^    int   len;$/;"	m	struct:Dlnode	file:
+level	src/url.h	/^    int    level;$/;"	m	struct:Surl
+level	src/url.h	/^    int  level;$/;"	m	struct:Url
+loadconfig	src/confparser.cpp	/^void loadconfig(Config *conf)$/;"	f
+log_level	src/confparser.h	/^    int              log_level;$/;"	m	struct:Config
+logfile	src/confparser.h	/^    char            *logfile; $/;"	m	struct:Config
+main	src/spider.cpp	/^int main(int argc, void *argv[]) $/;"	f
+make_hostdir	src/confparser.h	/^    int              make_hostdir;$/;"	m	struct:Config
+max_depth	src/confparser.h	/^    int              max_depth;$/;"	m	struct:Config
+max_job_num	src/confparser.h	/^    int              max_job_num;$/;"	m	struct:Config
+maxdepth	modules/maxdepth.cpp	/^Module maxdepth = {$/;"	v
+minor_version	src/dso.h	/^    int          minor_version;$/;"	m	struct:Module
+module_path	src/confparser.h	/^    char *           module_path;$/;"	m	struct:Config
+modules	src/confparser.h	/^    vector<char *>   modules;$/;"	m	struct:Config
+modules_post_header	src/dso.cpp	/^vector<Module *> modules_post_header;$/;"	v
+modules_post_html	src/dso.cpp	/^vector<Module *> modules_post_html;$/;"	v
+modules_pre_surl	src/dso.cpp	/^vector<Module *> modules_pre_surl;$/;"	v
+mysqlhash	src/hashs.cpp	/^unsigned int mysqlhash(char *str)$/;"	f
+name	src/dso.h	/^    const char  *name;$/;"	m	struct:Module
+nblocks	src/sha1.h	/^    u32  nblocks;$/;"	m	struct:__anon1
+oq_cond	src/url.cpp	/^pthread_cond_t  oq_cond = PTHREAD_COND_INITIALIZER;$/;"	v
+oq_lock	src/url.cpp	/^pthread_mutex_t oq_lock = PTHREAD_MUTEX_INITIALIZER;$/;"	v
+ourl_queue	src/url.cpp	/^static queue<Url *> ourl_queue;$/;"	v	file:
+parse_header	src/socket.cpp	/^static Header * parse_header(char *header)$/;"	f	file:
+path	src/url.h	/^    char *path;$/;"	m	struct:Url
+pop_ourlqueue	src/url.cpp	/^Url * pop_ourlqueue()$/;"	f
+port	src/url.h	/^    int  port;$/;"	m	struct:Url
+prefix	modules/domainlimit.cpp	/^    char *prefix;$/;"	m	struct:Dlnode	file:
+push_ourlqueue	src/url.cpp	/^static void push_ourlqueue(Url * ourl)$/;"	f	file:
+push_surlqueue	src/url.cpp	/^void push_surlqueue(Surl *url)$/;"	f
+recv_response	src/socket.cpp	/^void * recv_response(void * arg)$/;"	f
+rol	src/sha1.cpp	/^static inline u32 rol( u32 x, int n)  $/;"	f	file:
+rol	src/sha1.cpp	41;"	d	file:
+savehtml	modules/savehtml.cpp	/^Module savehtml = {$/;"	v
+saveimage	modules/saveimage.cpp	/^Module saveimage = {$/;"	v
+search	src/bloomfilter.cpp	/^int search(char *url)$/;"	f
+seeds	src/confparser.h	/^    char            *seeds;$/;"	m	struct:Config
+send_request	src/socket.cpp	/^int send_request(int fd, void *arg)$/;"	f
+set_nofile	src/spider.cpp	/^static int set_nofile(rlim_t limit)$/;"	f	file:
+set_nonblocking	src/socket.cpp	/^void set_nonblocking(int fd)$/;"	f
+set_ticker	src/spider.cpp	/^static int set_ticker(int second)$/;"	f	file:
+sha1_final	src/sha1.cpp	/^void sha1_final(SHA1_CONTEXT *hd)  $/;"	f
+sha1_init	src/sha1.cpp	/^void sha1_init( SHA1_CONTEXT *hd )  $/;"	f
+sha1_write	src/sha1.cpp	/^void sha1_write( SHA1_CONTEXT *hd, unsigned char *inbuf, size_t inlen)  $/;"	f
+sq_cond	src/url.cpp	/^pthread_cond_t  sq_cond = PTHREAD_COND_INITIALIZER;$/;"	v
+sq_lock	src/url.cpp	/^pthread_mutex_t sq_lock = PTHREAD_MUTEX_INITIALIZER;$/;"	v
+stat	src/spider.cpp	/^static void stat(int sig)$/;"	f	file:
+stat_interval	src/confparser.h	/^    int              stat_interval;$/;"	m	struct:Config
+state	src/md5.h	/^    unsigned int state[4];$/;"	m	struct:__anon2
+status_code	src/socket.h	/^    int        status_code;$/;"	m	struct:Header
+strcat2	src/qstring.cpp	/^char * strcat2(int argc, const char *str1, const char * str2, ...) $/;"	f
+strim	src/qstring.cpp	/^char * strim(char *str)$/;"	f
+strsplit	src/qstring.cpp	/^char ** strsplit(char *line, char delimeter, int *count, int limit)$/;"	f
+surl2ourl	src/url.cpp	/^static Url * surl2ourl(Surl * surl)$/;"	f	file:
+surl_precheck	src/url.cpp	/^static int surl_precheck(Surl *surl)$/;"	f	file:
+surl_queue	src/url.cpp	/^static queue <Surl *> surl_queue;$/;"	v	file:
+times33	src/hashs.cpp	/^unsigned int times33(char *str)$/;"	f
+timesnum	src/hashs.cpp	/^unsigned int timesnum(char *str, int num)$/;"	f
+transform	src/sha1.cpp	/^transform( SHA1_CONTEXT *hd, unsigned char *data )  $/;"	f	file:
+type	src/url.h	/^    int    type;$/;"	m	struct:Surl
+u32	src/sha1.h	/^typedef unsigned int u32;$/;"	t
+url	src/socket.h	/^    struct Url    *url;$/;"	m	struct:Response	typeref:struct:Response::Url
+url	src/url.h	/^    Url     *url;$/;"	m	struct:evso_arg
+url	src/url.h	/^    char  *url;$/;"	m	struct:Surl
+url2fn	src/url.cpp	/^char * url2fn(const Url * url)$/;"	f
+url_normalized	src/url.cpp	/^char * url_normalized(char *url) $/;"	f
+urlparser	src/url.cpp	/^void * urlparser(void *none)$/;"	f
+usage	src/spider.cpp	/^static void usage()$/;"	f	file:
+version	src/dso.h	/^    int          version;$/;"	m	struct:Module
+version	src/spider.cpp	/^static void version()$/;"	f	file:
+yesnotoi	src/qstring.cpp	/^int yesnotoi(char *str)$/;"	f

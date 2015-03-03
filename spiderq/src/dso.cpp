@@ -7,6 +7,7 @@ vector<Module *> modules_pre_surl;
 vector<Module *> modules_post_header;
 vector<Module *> modules_post_html;
 
+// 加载动态链接库
 Module * dso_load(const char *path, const char *name)
 {
     void *rv = NULL;
