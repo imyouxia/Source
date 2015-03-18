@@ -1,0 +1,219 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+BIN_SUFFIXES	url.cpp	/^static char * BIN_SUFFIXES = ".jpg.jpeg.gif.png.ico.bmp.swf";$/;"	v	file:
+BITSIZE_PER_BLOOM	bloomfilter.cpp	11;"	d	file:
+BLOOMFILTER_H	bloomfilter.h	2;"	d
+BLOOM_SIZE	bloomfilter.cpp	10;"	d	file:
+CONFPARSER_H	confparser.h	2;"	d
+CONF_FILE	confparser.h	8;"	d
+CRC32	crc32.cpp	/^static unsigned int   CRC32[256];$/;"	v	file:
+CRC32_H	crc32.h	2;"	d
+CXX	Makefile	/^CXX:=g++$/;"	m
+Config	confparser.h	/^typedef struct Config {$/;"	s
+DSO_H	dso.h	2;"	d
+F	md5.h	12;"	d
+F1	sha1.cpp	94;"	d	file:
+F2	sha1.cpp	95;"	d	file:
+F3	sha1.cpp	96;"	d	file:
+F4	sha1.cpp	97;"	d	file:
+FF	md5.h	17;"	d
+G	md5.h	13;"	d
+GG	md5.h	23;"	d
+H	md5.h	14;"	d
+HASHS_H	hashs.h	2;"	d
+HASH_FUNC_NUM	bloomfilter.cpp	9;"	d	file:
+HH	md5.h	29;"	d
+HREF_PATTERN	socket.cpp	/^static const char * HREF_PATTERN = "href=\\"\\\\s*\\\\([^ >\\"]*\\\\)\\\\s*\\"";$/;"	v	file:
+HTML_MAXLEN	socket.cpp	88;"	d	file:
+Header	socket.h	/^typedef struct Header {$/;"	s
+Header	socket.h	/^} Header;$/;"	t	typeref:struct:Header
+I	md5.h	15;"	d
+II	md5.h	35;"	d
+INF	confparser.cpp	5;"	d	file:
+K1	sha1.cpp	90;"	d	file:
+K2	sha1.cpp	91;"	d	file:
+K3	sha1.cpp	92;"	d	file:
+K4	sha1.cpp	93;"	d	file:
+LIMIT	bloomfilter.cpp	12;"	d	file:
+LOG_STR	spider.h	/^static const char * LOG_STR[] = { $/;"	v
+M	sha1.cpp	100;"	d	file:
+MAGIC_MAJOR_NUMBER	dso.h	10;"	d
+MAGIC_MINOR_NUMBER	dso.h	11;"	d
+MAX_CONF_LEN	confparser.h	7;"	d
+MAX_LINK_LEN	url.h	18;"	d
+MAX_MESG_LEN	spider.h	13;"	d
+MD5Decode	md5.cpp	/^static void MD5Decode(unsigned int *output,unsigned char *input,unsigned int len)$/;"	f	file:
+MD5Encode	md5.cpp	/^static void MD5Encode(unsigned char *output,unsigned int *input,unsigned int len)$/;"	f	file:
+MD5Final	md5.cpp	/^void MD5Final(MD5_CTX *context,unsigned char digest[16])$/;"	f
+MD5Init	md5.cpp	/^void MD5Init(MD5_CTX *context)$/;"	f
+MD5Transform	md5.cpp	/^static void MD5Transform(unsigned int state[4],unsigned char block[64])$/;"	f	file:
+MD5Update	md5.cpp	/^void MD5Update(MD5_CTX *context,unsigned char *input,unsigned int inputlen)$/;"	f
+MD5_CTX	md5.h	/^}MD5_CTX;$/;"	t	typeref:struct:__anon2
+MD5_H	md5.h	2;"	d
+MODULE_ERR	dso.h	8;"	d
+MODULE_OK	dso.h	7;"	d
+Module	dso.h	/^typedef struct Module{$/;"	s
+Module	dso.h	/^} Module;$/;"	t	typeref:struct:Module
+OBJS	Makefile	/^OBJS=$(patsubst %.cpp,%.o,$(SOURCES))$/;"	m
+OPTIMIZATION	Makefile	/^OPTIMIZATION?=-O2 -DNDEBUG$/;"	m
+PADDING	md5.cpp	/^static unsigned char PADDING[]={0x80,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,$/;"	v	file:
+QSOCKET_H	socket.h	2;"	d
+QSTRING_H	qstring.h	2;"	d
+QTHREADS_H	threads.h	2;"	d
+QURL_H	url.h	2;"	d
+R	sha1.cpp	104;"	d	file:
+REAL_CXXFLAGS	Makefile	/^REAL_CXXFLAGS=$(OPTIMIZATION) $(CXXFLAGS) $(WARNINGS) $(DEBUG) $(PROF) $/;"	m
+REAL_LDFLAGS	Makefile	/^REAL_LDFLAGS=$(LDFLAGS) $(PROF) -rdynamic -lpthread -levent -lcrypt -ldl$/;"	m
+ROTATE_LEFT	md5.h	16;"	d
+Response	socket.h	/^typedef struct Response {$/;"	s
+Response	socket.h	/^} Response;$/;"	t	typeref:struct:Response
+SHA1_CONTEXT	sha1.h	/^} SHA1_CONTEXT;$/;"	t	typeref:struct:__anon1
+SHA1_H	sha1.h	2;"	d
+SOURCES	Makefile	/^SOURCES=$(wildcard *.cpp)$/;"	m
+SPIDER_ADD_MODULE_POST_HEADER	dso.h	37;"	d
+SPIDER_ADD_MODULE_POST_HTML	dso.h	45;"	d
+SPIDER_ADD_MODULE_PRE_SURL	dso.h	29;"	d
+SPIDER_H	spider.h	2;"	d
+SPIDER_LEVEL_CRIT	spider.h	19;"	d
+SPIDER_LEVEL_DEBUG	spider.h	15;"	d
+SPIDER_LEVEL_ERROR	spider.h	18;"	d
+SPIDER_LEVEL_INFO	spider.h	16;"	d
+SPIDER_LEVEL_WARN	spider.h	17;"	d
+SPIDER_LOG	spider.h	31;"	d
+STANDARD_MODULE_STUFF	dso.h	14;"	d
+Surl	url.h	/^typedef struct Surl {$/;"	s
+Surl	url.h	/^} Surl;$/;"	t	typeref:struct:Surl
+TARGET	Makefile	/^TARGET=spider$/;"	m
+TYPE_HTML	url.h	20;"	d
+TYPE_IMAGE	url.h	21;"	d
+Url	url.h	/^typedef struct Url {$/;"	s
+Url	url.h	/^} Url;$/;"	t	typeref:struct:Url
+WARNINGS	Makefile	/^WARNINGS=-Wall$/;"	m
+X	sha1.cpp	285;"	d	file:
+X	sha1.cpp	295;"	d	file:
+accept_types	confparser.h	/^    vector<char *>   accept_types;$/;"	m	struct:Config
+aphash	hashs.cpp	/^unsigned int aphash(char *str)$/;"	f
+attach_domain	url.cpp	/^char * attach_domain(char *url, const char *domain)$/;"	f
+attach_epoll_task	spider.cpp	/^int attach_epoll_task()$/;"	f
+begin_thread	threads.cpp	/^void begin_thread()$/;"	f
+bloom_table	bloomfilter.cpp	/^static int bloom_table[BLOOM_SIZE] = {0};$/;"	v	file:
+body	socket.h	/^    char   *body;$/;"	m	struct:Response
+body_len	socket.h	/^    int     body_len;$/;"	m	struct:Response
+bt_lock	bloomfilter.cpp	/^pthread_mutex_t bt_lock = PTHREAD_MUTEX_INITIALIZER;$/;"	v
+buf	sha1.h	/^    unsigned char buf[64];$/;"	m	struct:__anon1
+buffer	md5.h	/^    unsigned char buffer[64];   $/;"	m	struct:__anon2
+build_connect	socket.cpp	/^int build_connect(int *fd, char *ip, int port)$/;"	f
+content_type	socket.h	/^    char      *content_type;$/;"	m	struct:Header
+count	md5.h	/^    unsigned int count[2];$/;"	m	struct:__anon2
+count	sha1.h	/^    int  count;$/;"	m	struct:__anon1
+crc32	crc32.cpp	/^unsigned int crc32( unsigned char *buf, int len)$/;"	f
+create_thread	threads.cpp	/^int create_thread(void *(*start_func)(void *), void * arg, pthread_t *pid, pthread_attr_t * pattr)$/;"	f
+daemonize	spider.cpp	/^static void daemonize()$/;"	f	file:
+dns_callback	url.cpp	/^static void dns_callback(int result, char type, int count, int ttl, void *addresses, void *arg) $/;"	f	file:
+domain	url.h	/^    char *domain;$/;"	m	struct:Url
+dso_load	dso.cpp	/^Module * dso_load(const char *path, const char *name)$/;"	f
+encrypt	bloomfilter.cpp	/^static unsigned int encrypt(char *key, unsigned int id)$/;"	f	file:
+end_thread	threads.cpp	/^void end_thread()$/;"	f
+evso_arg	url.h	/^typedef struct evso_arg {$/;"	s
+evso_arg	url.h	/^} evso_arg;$/;"	t	typeref:struct:evso_arg
+exclude_prefixes	confparser.h	/^    char            *exclude_prefixes; $/;"	m	struct:Config
+extract_url	url.cpp	/^int extract_url(regex_t *re, char *str, Url *ourl)$/;"	f
+fd	url.h	/^    int     fd;$/;"	m	struct:evso_arg
+free_url	url.cpp	/^void free_url(Url * ourl)$/;"	f
+g_conf	spider.cpp	/^Config *g_conf;$/;"	v
+g_cur_thread_num	threads.cpp	/^int g_cur_thread_num = 0;$/;"	v
+g_epfd	spider.cpp	/^int g_epfd;$/;"	v
+gctn_lock	threads.cpp	/^pthread_mutex_t gctn_lock = PTHREAD_MUTEX_INITIALIZER;$/;"	v
+get_ourl_queue_size	url.cpp	/^int get_ourl_queue_size()$/;"	f
+get_surl_queue_size	url.cpp	/^int get_surl_queue_size()$/;"	f
+get_timespec	url.cpp	/^static void get_timespec(timespec * ts, int millisecond)$/;"	f	file:
+h0	sha1.h	/^    u32  h0,h1,h2,h3,h4;$/;"	m	struct:__anon1
+h1	sha1.h	/^    u32  h0,h1,h2,h3,h4;$/;"	m	struct:__anon1
+h2	sha1.h	/^    u32  h0,h1,h2,h3,h4;$/;"	m	struct:__anon1
+h3	sha1.h	/^    u32  h0,h1,h2,h3,h4;$/;"	m	struct:__anon1
+h4	sha1.h	/^    u32  h0,h1,h2,h3,h4;$/;"	m	struct:__anon1
+handle	dso.h	/^    int (*handle)(void *);$/;"	m	struct:Module
+hash16777619	hashs.cpp	/^unsigned int hash16777619(char *str)$/;"	f
+header	socket.h	/^    Header *header;$/;"	m	struct:Response
+header_postcheck	socket.cpp	/^static int header_postcheck(Header *header)$/;"	f	file:
+host_ip_map	url.cpp	/^static map<string, string> host_ip_map;$/;"	v	file:
+include_prefixes	confparser.h	/^    char            *include_prefixes; $/;"	m	struct:Config
+init	crc32.cpp	/^static char   init = 0;$/;"	v	file:
+init	dso.h	/^    void (*init)(Module *);$/;"	m	struct:Module
+init_table	crc32.cpp	/^static void init_table()$/;"	f	file:
+initconfig	confparser.cpp	/^Config * initconfig()$/;"	f
+ip	url.h	/^    char *ip;$/;"	m	struct:Url
+is_bin_url	url.cpp	/^static int is_bin_url(char *url)$/;"	f	file:
+is_ourlqueue_empty	url.cpp	/^int is_ourlqueue_empty() $/;"	f
+is_surlqueue_empty	url.cpp	/^int is_surlqueue_empty() $/;"	f
+iscrawled	url.cpp	/^int iscrawled(char * url) {$/;"	f
+level	url.h	/^    int    level;$/;"	m	struct:Surl
+level	url.h	/^    int  level;$/;"	m	struct:Url
+loadconfig	confparser.cpp	/^void loadconfig(Config *conf)$/;"	f
+log_level	confparser.h	/^    int              log_level;$/;"	m	struct:Config
+logfile	confparser.h	/^    char            *logfile; $/;"	m	struct:Config
+main	spider.cpp	/^int main(int argc, void *argv[]) $/;"	f
+make_hostdir	confparser.h	/^    int              make_hostdir;$/;"	m	struct:Config
+max_depth	confparser.h	/^    int              max_depth;$/;"	m	struct:Config
+max_job_num	confparser.h	/^    int              max_job_num;$/;"	m	struct:Config
+minor_version	dso.h	/^    int          minor_version;$/;"	m	struct:Module
+module_path	confparser.h	/^    char *           module_path;$/;"	m	struct:Config
+modules	confparser.h	/^    vector<char *>   modules;$/;"	m	struct:Config
+modules_post_header	dso.cpp	/^vector<Module *> modules_post_header;$/;"	v
+modules_post_html	dso.cpp	/^vector<Module *> modules_post_html;$/;"	v
+modules_pre_surl	dso.cpp	/^vector<Module *> modules_pre_surl;$/;"	v
+mysqlhash	hashs.cpp	/^unsigned int mysqlhash(char *str)$/;"	f
+name	dso.h	/^    const char  *name;$/;"	m	struct:Module
+nblocks	sha1.h	/^    u32  nblocks;$/;"	m	struct:__anon1
+oq_cond	url.cpp	/^pthread_cond_t  oq_cond = PTHREAD_COND_INITIALIZER;$/;"	v
+oq_lock	url.cpp	/^pthread_mutex_t oq_lock = PTHREAD_MUTEX_INITIALIZER;$/;"	v
+ourl_queue	url.cpp	/^static queue<Url *> ourl_queue;$/;"	v	file:
+parse_header	socket.cpp	/^static Header * parse_header(char *header)$/;"	f	file:
+path	url.h	/^    char *path;$/;"	m	struct:Url
+pop_ourlqueue	url.cpp	/^Url * pop_ourlqueue()$/;"	f
+port	url.h	/^    int  port;$/;"	m	struct:Url
+push_ourlqueue	url.cpp	/^static void push_ourlqueue(Url * ourl)$/;"	f	file:
+push_surlqueue	url.cpp	/^void push_surlqueue(Surl *url)$/;"	f
+recv_response	socket.cpp	/^void * recv_response(void * arg)$/;"	f
+rol	sha1.cpp	/^static inline u32 rol( u32 x, int n)  $/;"	f	file:
+rol	sha1.cpp	41;"	d	file:
+search	bloomfilter.cpp	/^int search(char *url)$/;"	f
+seeds	confparser.h	/^    char            *seeds;$/;"	m	struct:Config
+send_request	socket.cpp	/^int send_request(int fd, void *arg)$/;"	f
+set_nofile	spider.cpp	/^static int set_nofile(rlim_t limit)$/;"	f	file:
+set_nonblocking	socket.cpp	/^void set_nonblocking(int fd)$/;"	f
+set_ticker	spider.cpp	/^static int set_ticker(int second)$/;"	f	file:
+sha1_final	sha1.cpp	/^void sha1_final(SHA1_CONTEXT *hd)  $/;"	f
+sha1_init	sha1.cpp	/^void sha1_init( SHA1_CONTEXT *hd )  $/;"	f
+sha1_write	sha1.cpp	/^void sha1_write( SHA1_CONTEXT *hd, unsigned char *inbuf, size_t inlen)  $/;"	f
+sq_cond	url.cpp	/^pthread_cond_t  sq_cond = PTHREAD_COND_INITIALIZER;$/;"	v
+sq_lock	url.cpp	/^pthread_mutex_t sq_lock = PTHREAD_MUTEX_INITIALIZER;$/;"	v
+stat	spider.cpp	/^static void stat(int sig)$/;"	f	file:
+stat_interval	confparser.h	/^    int              stat_interval;$/;"	m	struct:Config
+state	md5.h	/^    unsigned int state[4];$/;"	m	struct:__anon2
+status_code	socket.h	/^    int        status_code;$/;"	m	struct:Header
+strcat2	qstring.cpp	/^char * strcat2(int argc, const char *str1, const char * str2, ...) $/;"	f
+strim	qstring.cpp	/^char * strim(char *str)$/;"	f
+strsplit	qstring.cpp	/^char ** strsplit(char *line, char delimeter, int *count, int limit)$/;"	f
+surl2ourl	url.cpp	/^static Url * surl2ourl(Surl * surl)$/;"	f	file:
+surl_precheck	url.cpp	/^static int surl_precheck(Surl *surl)$/;"	f	file:
+surl_queue	url.cpp	/^static queue <Surl *> surl_queue;$/;"	v	file:
+times33	hashs.cpp	/^unsigned int times33(char *str)$/;"	f
+timesnum	hashs.cpp	/^unsigned int timesnum(char *str, int num)$/;"	f
+transform	sha1.cpp	/^transform( SHA1_CONTEXT *hd, unsigned char *data )  $/;"	f	file:
+type	url.h	/^    int    type;$/;"	m	struct:Surl
+u32	sha1.h	/^typedef unsigned int u32;$/;"	t
+url	socket.h	/^    struct Url    *url;$/;"	m	struct:Response	typeref:struct:Response::Url
+url	url.h	/^    Url     *url;$/;"	m	struct:evso_arg
+url	url.h	/^    char  *url;$/;"	m	struct:Surl
+url2fn	url.cpp	/^char * url2fn(const Url * url)$/;"	f
+url_normalized	url.cpp	/^char * url_normalized(char *url) $/;"	f
+urlparser	url.cpp	/^void * urlparser(void *none)$/;"	f
+usage	spider.cpp	/^static void usage()$/;"	f	file:
+version	dso.h	/^    int          version;$/;"	m	struct:Module
+version	spider.cpp	/^static void version()$/;"	f	file:
+yesnotoi	qstring.cpp	/^int yesnotoi(char *str)$/;"	f

@@ -38,6 +38,7 @@ char * strcat2(int argc, const char *str1, const char * str2, ...)
     return dest;
 }
 
+// 去掉空格
 char * strim(char *str)
 {
     char *end, *sp, *ep;
