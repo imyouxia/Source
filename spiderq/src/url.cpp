@@ -18,6 +18,7 @@ pthread_mutex_t sq_lock = PTHREAD_MUTEX_INITIALIZER;
 pthread_cond_t  oq_cond = PTHREAD_COND_INITIALIZER;
 pthread_cond_t  sq_cond = PTHREAD_COND_INITIALIZER;
 
+// Surl队列入队
 void push_surlqueue(Surl *url)
 {
     if (url != NULL && surl_precheck(url)) {
@@ -30,6 +31,7 @@ void push_surlqueue(Surl *url)
     }
 }
 
+// Url队列出队
 Url * pop_ourlqueue()
 {
     Url *url = NULL;
@@ -75,6 +77,7 @@ static int surl_precheck(Surl *surl)
     return 1;
 }
 
+// Url队列入队
 static void push_ourlqueue(Url * ourl)
 {
     pthread_mutex_lock(&oq_lock);
@@ -84,6 +87,7 @@ static void push_ourlqueue(Url * ourl)
     pthread_mutex_unlock(&oq_lock);
 }
 
+// 判断Url队列是否为空
 int is_ourlqueue_empty() 
 {
     pthread_mutex_lock(&oq_lock);
@@ -92,6 +96,7 @@ int is_ourlqueue_empty()
     return val;
 }
 
+// 判断Surl队列是否为空
 int is_surlqueue_empty() 
 {
     pthread_mutex_lock(&sq_lock);
@@ -100,6 +105,7 @@ int is_surlqueue_empty()
     return val;
 }
 
+// url解析
 void * urlparser(void *none)
 {
     Surl *url = NULL;
@@ -121,6 +127,7 @@ void * urlparser(void *none)
         ourl = surl2ourl(url);
 
         itr = host_ip_map.find(ourl->domain);
+        // 使用libevent做DNS解析
         if (itr == host_ip_map.end()) { /* not found */
             /* dns resolve */
             event_base * base = event_init();
@@ -281,6 +288,7 @@ static void dns_callback(int result, char type, int count, int ttl, void *addres
     event_loopexit(NULL); // not safe for multithreads 
 }
 
+// 解析URL
 static Url * surl2ourl(Surl * surl)
 {
     Url *ourl = (Url *)calloc(1, sizeof(Url));

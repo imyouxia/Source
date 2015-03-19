@@ -53,6 +53,7 @@ char * strim(char *str)
     return sp;
 }
 
+// 将 max_job_num=1 存到vector[0] vector[1]
 char ** strsplit(char *line, char delimeter, int *count, int limit)
 {
     char *ptr = NULL, *str = line;
