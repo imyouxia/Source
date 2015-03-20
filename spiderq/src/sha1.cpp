@@ -37,7 +37,8 @@ static inline u32 rol( u32 x, int n)
             :"0" (x),"c" (n));  
     return x;  
 }  
-#else  
+#else 
+// 循环左移
 #define rol(x,n) ( ((x) << (n)) | ((x) >> (32-(n))) )  
 #endif  
   

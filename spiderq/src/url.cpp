@@ -219,6 +219,7 @@ static int is_bin_url(char *url)
     return 0;
 }
 
+// 判断是绝对链接还是相对链接
 char * attach_domain(char *url, const char *domain)
 {
     if (url == NULL)
@@ -271,6 +272,7 @@ int iscrawled(char * url) {
     return search(url); /* use bloom filter algorithm */
 }
 
+// lookup返回的值
 static void dns_callback(int result, char type, int count, int ttl, void *addresses, void *arg) 
 {
     Url * ourl = (Url *)arg;
@@ -317,6 +319,7 @@ static Url * surl2ourl(Surl * surl)
     return ourl;
 }
 
+// 将url里的http和末尾的/去掉
 char * url_normalized(char *url) 
 {
     if (url == NULL) return NULL;

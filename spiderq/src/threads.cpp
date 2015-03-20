@@ -8,6 +8,8 @@ int g_cur_thread_num = 0;
 /* lock for changing g_cur_thread_num's value */
 pthread_mutex_t gctn_lock = PTHREAD_MUTEX_INITIALIZER;
 
+// 设置线程可分离
+// http://blog.csdn.net/lhf_tiger/article/details/8291984
 int create_thread(void *(*start_func)(void *), void * arg, pthread_t *pid, pthread_attr_t * pattr)
 {
     pthread_attr_t attr;

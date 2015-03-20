@@ -17,6 +17,7 @@ static Header * parse_header(char *header);
 /* call modules to check header */
 static int header_postcheck(Header *header);
 
+// create socket and connect
 int build_connect(int *fd, char *ip, int port)
 {
     struct sockaddr_in server_addr;
@@ -40,6 +41,7 @@ int build_connect(int *fd, char *ip, int port)
     return 0;
 }
 
+// write http request (GET请求) to socket
 int send_request(int fd, void *arg)
 {
     int need, begin, n;
@@ -73,6 +75,7 @@ int send_request(int fd, void *arg)
     return 0;
 }
 
+// set socket nonblock
 void set_nonblocking(int fd)
 {
     int flag;
@@ -87,6 +90,7 @@ void set_nonblocking(int fd)
 
 #define HTML_MAXLEN   1024*1024
 
+// read and deal data from socket triggered by epoll_wait
 void * recv_response(void * arg)
 {
     begin_thread();
