@@ -25,6 +25,7 @@ static void version()
     exit(1);
 }
 
+// 使用方法
 static void usage()
 {
     printf("Usage: ./spider [Options]\n"
@@ -57,14 +58,16 @@ int main(int argc, void *argv[])
         }
     }
 
-    /* parse log */
+    // 解析配置文件
     g_conf = initconfig();
     loadconfig(g_conf);
 
-    /* set max value of fd num to 1024 */
+    // 设置文件描述符 fd 最大值为 1024
     set_nofile(1024); 
 
-    /* load all modules */
+    // 加载所有模块
+    // Conf->modules.push_back(strdup(argv[1]))
+
     vector<char *>::iterator it = g_conf->modules.begin();
     for(; it != g_conf->modules.end(); it++) {
         dso_load(g_conf->module_path, *it); 

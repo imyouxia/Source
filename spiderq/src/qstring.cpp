@@ -76,6 +76,7 @@ char ** strsplit(char *line, char delimeter, int *count, int limit)
     return vector;
 }
 
+// yes or no
 int yesnotoi(char *str)
 {
     if (strcasecmp(str,"yes") == 0) return 1;
