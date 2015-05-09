@@ -1,0 +1,91 @@
+source_list=channel.cpp\
+         channelpool.cpp\
+         connection.cpp\
+         controlpacket.cpp\
+         defaultpacketstreamer.cpp\
+         epollsocketevent.cpp\
+         httppacketstreamer.cpp\
+         httprequestpacket.cpp\
+         httpresponsepacket.cpp\
+         iocomponent.cpp\
+         log.cpp\
+         packet.cpp\
+         packetqueue.cpp\
+         serversocket.cpp\
+         socket.cpp\
+         socketevent.cpp\
+         tcpacceptor.cpp\
+         tcpcomponent.cpp\
+         tcpconnection.cpp\
+         timeutil.cpp\
+         transport.cpp\
+         udpcomponent.cpp\
+         udpconnection.cpp\
+         stats.cpp\
+         defaultpacket.cpp\
+         httppacket.cpp\
+         streamingcontext.cpp\
+         httpstreamingcontext.cpp\
+         httppacketfactory.cpp\
+         httpstreamer.cpp\
+         aneterror.cpp\
+         defaultpacketfactory.cpp\
+         filecontrol.cpp\
+        $(NULL)
+
+AM_CPPFLAGS= -I $(top_srcdir)/src 
+
+LIBADD = -lpthread 
+
+lib_LTLIBRARIES=libanet.la
+libanet_la_SOURCES=$(source_list)
+libanet_la_LDFLAGS =-no-undefined -version-info @LT_VERSION_INFO@ -release @PACKAGE_VERSION@
+libanetincludedir=$(includedir)/anet
+libanetinclude_HEADERS=\
+         anet.h\
+         atomic.h\
+         channel.h\
+         channelpool.h\
+         connection.h\
+         controlpacket.h\
+         databuffer.h\
+         defaultpacketstreamer.h\
+         epollsocketevent.h\
+         httppacketstreamer.h\
+         httprequestpacket.h\
+         httpresponsepacket.h\
+         iocomponent.h\
+         ipacketfactory.h\
+         ipackethandler.h\
+         ipacketstreamer.h\
+         iserveradapter.h\
+         log.h\
+         packet.h\
+         packetqueue.h\
+         runnable.h\
+         serversocket.h\
+         socketevent.h\
+         socket.h\
+         stats.h\
+         tcpacceptor.h\
+         tcpcomponent.h\
+         tcpconnection.h\
+         threadcond.h\
+         thread.h\
+         threadmutex.h\
+         timeutil.h\
+         transport.h\
+         udpacceptor.h\
+         udpcomponent.h\
+         udpconnection.h\
+         defaultpacket.h\
+         httppacket.h\
+         streamingcontext.h\
+         httpstreamingcontext.h\
+         httppacketfactory.h\
+         httpstreamer.h\
+         aneterror.h\
+         defaultpacketfactory.h\
+         filecontrol.h\
+         $(top_builddir)/config/anet/logconfig.h\
+         $(NULL)

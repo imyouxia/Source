@@ -1,0 +1,2 @@
+/* Defined if logging with alog */
+#@ALOG_FLAG@

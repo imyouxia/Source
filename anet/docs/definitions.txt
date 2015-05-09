@@ -1,0 +1,86 @@
+generic-message = start-line
+                  *(message-header CRLF)
+                  CRLF
+                  [ message-body ]
+
+start-line      = Request-Line | Status-Line
+
+Request       = Request-Line              ; Section 5.1
+                *(( general-header        ; Section 4.5
+                 | request-header         ; Section 5.3
+                 | entity-header ) CRLF)  ; Section 7.1
+                CRLF
+                [ message-body ]          ; Section 4.3
+
+Request-Line   = Method SP Request-URI SP HTTP-Version CRLF
+
+Method         = "OPTIONS"                ; Section 9.2
+               | "GET"                    ; Section 9.3
+               | "HEAD"                   ; Section 9.4
+               | "POST"                   ; Section 9.5
+               | "PUT"                    ; Section 9.6
+               | "DELETE"                 ; Section 9.7
+               | "TRACE"                  ; Section 9.8
+               | "CONNECT"                ; Section 9.9
+               | extension-method
+extension-method = token
+
+token          = 1*<any CHAR except CTLs or separators>
+separators     = "(" | ")" | "<" | ">" | "@"
+               | "," | ";" | ":" | "\" | <">
+               | "/" | "[" | "]" | "?" | "="
+               | "{" | "}" | SP | HT
+
+
+request-header = Accept                   ; Section 14.1
+               | Accept-Charset           ; Section 14.2
+               | Accept-Encoding          ; Section 14.3
+               | Accept-Language          ; Section 14.4
+               | Authorization            ; Section 14.8
+               | Expect                   ; Section 14.20
+               | From                     ; Section 14.22
+               | Host                     ; Section 14.23
+               | If-Match                 ; Section 14.24
+
+Response      = Status-Line               ; Section 6.1
+                *(( general-header        ; Section 4.5
+                 | response-header        ; Section 6.2
+                 | entity-header ) CRLF)  ; Section 7.1
+                CRLF
+                [ message-body ]          ; Section 7.2
+
+Status-Line = HTTP-Version SP Status-Code SP Reason-Phrase CRLF
+
+response-header = Accept-Ranges           ; Section 14.5
+                | Age                     ; Section 14.6
+                | ETag                    ; Section 14.19
+                | Location                ; Section 14.30
+                | Proxy-Authenticate      ; Section 14.33
+
+message-header = field-name ":" [ field-value ]
+field-name     = token
+field-value    = *( field-content | LWS )
+field-content  = <the OCTETs making up the field-value
+                 and consisting of either *TEXT or combinations
+                 of token, separators, and quoted-string>
+
+message-body = entity-body
+               | <entity-body encoded as per Transfer-Encoding>
+
+entity-body    = *OCTET
+
+Chunked-Body   = *chunk
+                 last-chunk
+                 trailer
+                 CRLF
+
+chunk          = chunk-size [ chunk-extension ] CRLF
+                        chunk-data CRLF
+chunk-size     = 1*HEX
+last-chunk     = 1*("0") [ chunk-extension ] CRLF
+chunk-extension= *( ";" chunk-ext-name [ "=" chunk-ext-val ] )
+chunk-ext-name = token
+chunk-ext-val  = token | quoted-string
+chunk-data     = chunk-size(OCTET)
+trailer        = *(entity-header CRLF)
+		    

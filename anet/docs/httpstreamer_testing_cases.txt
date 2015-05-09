@@ -1,0 +1,139 @@
+HTTPStreamer Testing cases:
+DECODE:
+1. request decode
+   a. request-line
+      1. error request line
+         i. special character in token
+         ii. mandatory token missing
+         iii. invalid token
+         iv. closed by peer (EOF)
+	 v. more token than required
+      2. correct request line
+         i. GET/HEAD/POST decoding
+         ii. URI decoding
+         iii. HTTP version decoding
+         iv. using "LF" instead of "CRLF" (CRLF tolerance)
+         v. not enough data in input buffer
+             1. empty input buffer
+             2. one octet in data buffer
+             3. stop just before a token
+             4. stop in a token
+             5. stop just after a token
+             6. stop before a separator such as ":", ";", CRLF etc.
+             7. stop at a separator
+             8. stop after a separator
+   b. header 
+      1. error header
+         i. special character in key  (drop)
+         ii. separator missing (drop)
+         iii. space or tab follow key immediately (drop)
+         iv. invalid DIGITs in content length. (drop, broken)
+         v. closed by peer (EOF)
+      2. correct header
+         i. key : value CRLF 
+         ii. key : CRLF (empty value)
+         iii. key : "xxx\x00abc" ('\0' in header value)
+              [NOTE: we will replace '\0' with ' ' ]
+         iv. spaces/tabs after ":" or in value
+         vi. not enough data in input buffer 
+         vii. using "LF" instead of "CRLF" (CRLF tolerance)
+         viii. stop position
+             1. empty input buffer
+             2. one octet in data buffer
+             3. stop just before a token
+             4. stop in a token
+             5. stop just after a token
+             6. stop before a separator such as ":", ";", CRLF etc.
+             7. stop at a separator
+             8. stop after a separator
+         ix. no header
+         x.  two headers
+   c. message-body
+      1. error body
+         1. no message body
+            a. ignore. undefined!
+         2. content length
+            a. not enough data in message body
+            b. more data than content length. ignore data excess length.
+         3. chunk 
+            a. error chunk
+               i. invalid chunk-size
+                  a. negative chunk-size 
+                  b. too large chunk-size (1M defined as a macro)
+                  c. missing chunk-size
+                  d. non-digit in chunk-size
+               ii. chunk-extension (ignore)
+               iii. not enough data in chunk-data (close by peer)
+               iv. more data in chunk-size (broken)
+            b. error last-chunk
+               i. invalid last-chunk
+               ii. missing last-chunk
+            c. error trailer
+               i. invalid trailer(see header)
+            d. missing CRLF
+         4. EOF
+         5. closed by peer (EOF) [broken]
+      2. correct body
+         1. no message-body
+         2. content length
+            i. stop position
+               1. empty input buffer
+               2. one octet in data buffer
+               3. stop in message-body
+               4. stop after message body
+               5. stop after message body immediately
+         3. chunk
+            i. stop position
+               a. chunk
+                  1. empty input buffer
+                  2. stop in chunk-size
+                  3. stop in CRLF
+                  4. stop in chunk data
+                  5. more than two chunks in input buffer
+                  6. using "LF" instead of "CRLF" (CRLF tolerance)
+               b. last-chunk
+                  1. empty input buffer
+                  2. stop in "000"
+                  3. only one "0"
+                  4. no chunk-extension
+                  5. stop at chunk-extension
+                     i. stop at chunk-ext-name or ";"
+                     ii. stop at "="
+                     iii. stop at chunk-ext-val
+                     iv. more than one chunk-extension
+                  6. using "LF" instead of "CRLF" (CRLF tolerance)
+               c. trailer (see correct header)
+               d. CRLF
+                  1. using "LF" instead of "CRLF" (CRLF tolerance)
+                  2. stop between '\r' and '\n'
+
+2. response decode
+   a. status-line  
+      1. error request line
+         i. special character in token
+         ii. mandatory token missing
+         iii. invalid token
+         iv. invalid digit
+         v. closed by peer (EOF)
+      2. correct status line
+         i. HTTP version decoding
+         ii. status code decoding
+         iii. response phrase decoding
+         v. using "LF" instead of "CRLF" (CRLF tolerance)
+         vi. not enough data in input buffer
+             1. empty input buffer
+             2. one octet in data buffer
+             3. stop just before a token
+             4. stop in a token
+             5. stop just after a token
+             6. stop before a separator such as ":", ";", CRLF etc.
+             7. stop at a separator
+             8. stop after a separator      
+   b. header (see request)
+   c. message-body   (see request)
+3. error => start-line error
+   StreamerContext::isBrokne() return true;
+   HTTPStreamer::processData() return true;
+
+ENCODE:
+

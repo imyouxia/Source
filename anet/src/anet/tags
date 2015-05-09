@@ -1,0 +1,902 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ADMIN_CHANNLE_ID	channelpool.cpp	/^const uint32_t ChannelPool::ADMIN_CHANNLE_ID    = 0x10000001u;$/;"	m	class:anet::ChannelPool	file:
+ADMIN_CHANNLE_ID	channelpool.h	/^    static const uint32_t ADMIN_CHANNLE_ID;$/;"	m	class:anet::ChannelPool
+ANET_ALOG_DEBUG	log.h	47;"	d
+ANET_ALOG_ERROR	log.h	44;"	d
+ANET_ALOG_FATAL	log.h	43;"	d
+ANET_ALOG_INFO	log.h	46;"	d
+ANET_ALOG_SPAM	log.h	48;"	d
+ANET_ALOG_WARN	log.h	45;"	d
+ANET_ANETERROR_H_	aneterror.h	12;"	d
+ANET_ANET_H	anet.h	2;"	d
+ANET_ATOMIC_H	atomic.h	22;"	d
+ANET_CHANNEL_H_	channel.h	2;"	d
+ANET_CHANNEL_POOL_H_	channelpool.h	2;"	d
+ANET_CLOSED	iocomponent.h	/^        ANET_CLOSED,$/;"	e	enum:anet::IOComponent::IOCState
+ANET_CLOSING	iocomponent.h	/^        ANET_CLOSING,$/;"	e	enum:anet::IOComponent::IOCState
+ANET_COND_H_	threadcond.h	2;"	d
+ANET_CONNECTED	iocomponent.h	/^        ANET_CONNECTED,$/;"	e	enum:anet::IOComponent::IOCState
+ANET_CONNECTING	iocomponent.h	/^        ANET_CONNECTING,$/;"	e	enum:anet::IOComponent::IOCState
+ANET_CONNECTION_H_	connection.h	2;"	d
+ANET_CONTROL_PACKET_H_	controlpacket.h	2;"	d
+ANET_COUNT_DATA_READ	stats.h	28;"	d
+ANET_COUNT_DATA_WRITE	stats.h	29;"	d
+ANET_COUNT_PACKET_READ	stats.h	26;"	d
+ANET_COUNT_PACKET_WRITE	stats.h	27;"	d
+ANET_DATA_BUFFER_H_	databuffer.h	2;"	d
+ANET_DEFAULTPACKETFACTORY_H_	defaultpacketfactory.h	12;"	d
+ANET_DEFAULTPACKET_H_	defaultpacket.h	12;"	d
+ANET_DEFAULT_PACKET_STREAMER_H_	defaultpacketstreamer.h	2;"	d
+ANET_EPOLLSOCKETEVENT_H_	epollsocketevent.h	2;"	d
+ANET_FILECONTROL_H_	filecontrol.h	2;"	d
+ANET_GLOBAL_STAT	stats.h	25;"	d
+ANET_HTTPPACKETFACTORY_H_	httppacketfactory.h	12;"	d
+ANET_HTTPPACKET_H_	httppacket.h	2;"	d
+ANET_HTTPSTREAMER_H_	httpstreamer.h	12;"	d
+ANET_HTTPSTREAMINGCONTEXT_H_	httpstreamingcontext.h	2;"	d
+ANET_HTTP_CONN_CLOSE	httpresponsepacket.h	19;"	d
+ANET_HTTP_CONTENT_LENGTH	httpresponsepacket.h	21;"	d
+ANET_HTTP_CONTENT_TYPE	httpresponsepacket.h	20;"	d
+ANET_HTTP_KEEP_ALIVE	httpresponsepacket.h	18;"	d
+ANET_HTTP_PACKET_STREAMER_H	httppacketstreamer.h	2;"	d
+ANET_HTTP_REQUEST_PACKET_H	httprequestpacket.h	2;"	d
+ANET_HTTP_RESPONSE_PACKET_H	httpresponsepacket.h	2;"	d
+ANET_HTTP_STATUS_NOTFOUND	httpresponsepacket.h	17;"	d
+ANET_HTTP_STATUS_OK	httpresponsepacket.h	16;"	d
+ANET_IOCOMPONENT_H_	iocomponent.h	2;"	d
+ANET_IPACKETHANDLER_H_	ipackethandler.h	2;"	d
+ANET_IPACKETSTREAMER_H_	ipacketstreamer.h	2;"	d
+ANET_IPACKET_FACTORY_H_	ipacketfactory.h	2;"	d
+ANET_ISERVERADAPTER_H	iserveradapter.h	2;"	d
+ANET_LOG	log.h	36;"	d
+ANET_LOG	log.h	41;"	d
+ANET_LOG_H	log.h	2;"	d
+ANET_LOG_LEVEL_DEBUG	log.h	57;"	d
+ANET_LOG_LEVEL_ERROR	log.h	54;"	d
+ANET_LOG_LEVEL_INFO	log.h	56;"	d
+ANET_LOG_LEVEL_SPAM	log.h	58;"	d
+ANET_LOG_LEVEL_WARN	log.h	55;"	d
+ANET_MUTEX_H_	threadmutex.h	2;"	d
+ANET_PACKET_FLAG	packet.h	9;"	d
+ANET_PACKET_H_	packet.h	2;"	d
+ANET_PACKET_QUEUE_H_	packetqueue.h	2;"	d
+ANET_RUNNABLE_H_	runnable.h	2;"	d
+ANET_SERVERSOCKET_H_	serversocket.h	2;"	d
+ANET_SOCKETEVENT_H_	socketevent.h	2;"	d
+ANET_SOCKET_H_	socket.h	2;"	d
+ANET_STATS_H_	stats.h	2;"	d
+ANET_STREAMINGCONTEXT_H_	streamingcontext.h	2;"	d
+ANET_TCPACCEPTOR_H_	tcpacceptor.h	2;"	d
+ANET_TCPACCEPTOR_H_	udpacceptor.h	2;"	d
+ANET_TCPCOMPONENT_H_	tcpcomponent.h	2;"	d
+ANET_TCPCONNECTION_H_	tcpconnection.h	2;"	d
+ANET_THREAD_H_	thread.h	2;"	d
+ANET_TIMEUTIL_H_	timeutil.h	2;"	d
+ANET_TO_BE_CONNECTING	iocomponent.h	/^        ANET_TO_BE_CONNECTING = 1,$/;"	e	enum:anet::IOComponent::IOCState
+ANET_TRANSPORT_H_	transport.h	2;"	d
+ANET_UDPCOMPONENT_H_	udpcomponent.h	2;"	d
+ANET_UDPCONNECTION_H_	udpconnection.h	2;"	d
+ATOMIC_INIT	atomic.h	38;"	d
+AUTO_CHANNEL_ID_MAX	channelpool.cpp	/^const uint32_t ChannelPool::AUTO_CHANNEL_ID_MAX = 0x0FFFFFFFu;$/;"	m	class:anet::ChannelPool	file:
+AUTO_CHANNEL_ID_MAX	channelpool.h	/^    static const uint32_t AUTO_CHANNEL_ID_MAX;$/;"	m	class:anet::ChannelPool
+AnetError	aneterror.h	/^class AnetError$/;"	c	namespace:anet
+BadPacket	controlpacket.h	/^    static ControlPacket BadPacket;$/;"	m	class:anet::ControlPacket
+CHANNEL_CLUSTER_SIZE	channelpool.h	/^const size_t CHANNEL_CLUSTER_SIZE = 64lu;$/;"	m	namespace:anet
+CHUNK_DATA	httpstreamingcontext.h	/^        CHUNK_DATA,$/;"	e	enum:anet::HTTPStreamingContext::HTTPChunkedState
+CHUNK_DATA_CRLF	httpstreamingcontext.h	/^        CHUNK_DATA_CRLF,$/;"	e	enum:anet::HTTPStreamingContext::HTTPChunkedState
+CHUNK_SIZE	httpstreamingcontext.h	/^        CHUNK_SIZE = 0,$/;"	e	enum:anet::HTTPStreamingContext::HTTPChunkedState
+CLOSE_CHANNEL	ipackethandler.h	/^        CLOSE_CHANNEL = 1,$/;"	e	enum:anet::IPacketHandler::HPRetCode
+CMD_BAD_PACKET	controlpacket.h	/^        CMD_BAD_PACKET = 1,$/;"	e	enum:anet::ControlPacket::__anon1
+CMD_CONNECTION_CLOSED	controlpacket.h	/^	CMD_CONNECTION_CLOSED,$/;"	e	enum:anet::ControlPacket::__anon1
+CMD_END	controlpacket.h	/^        CMD_END$/;"	e	enum:anet::ControlPacket::__anon1
+CMD_TIMEOUT_PACKET	controlpacket.h	/^        CMD_TIMEOUT_PACKET,$/;"	e	enum:anet::ControlPacket::__anon1
+CONNECTING_TIMEOUT	iocomponent.h	/^const int64_t CONNECTING_TIMEOUT = 2000000;\/\/2 seconds$/;"	m	namespace:anet
+CONNECTION_CLOSE	packet.h	10;"	d
+CONNECTION_CLOSED	aneterror.cpp	/^const int AnetError::CONNECTION_CLOSED = 2;$/;"	m	class:anet::AnetError	file:
+CONNECTION_CLOSED	aneterror.h	/^    static const int   CONNECTION_CLOSED;$/;"	m	class:anet::AnetError
+CONNECTION_CLOSED_S	aneterror.cpp	/^const char* AnetError::CONNECTION_CLOSED_S = "Connection closed";$/;"	m	class:anet::AnetError	file:
+CONNECTION_CLOSED_S	aneterror.h	/^    static const char *CONNECTION_CLOSED_S;$/;"	m	class:anet::AnetError
+CONNECTION_KEEP_ALIVE	packet.h	11;"	d
+Channel	channel.cpp	/^Channel::Channel() {$/;"	f	class:anet::Channel
+Channel	channel.h	/^  class Channel {$/;"	c	namespace:anet
+ChannelPool	channelpool.cpp	/^ChannelPool::ChannelPool() {$/;"	f	class:anet::ChannelPool
+ChannelPool	channelpool.h	/^class ChannelPool {$/;"	c	namespace:anet
+CommandType	transport.h	/^    enum CommandType {$/;"	g	class:anet::Transport
+Connection	connection.cpp	/^Connection::Connection(Socket *socket, IPacketStreamer *streamer, $/;"	f	class:anet::Connection
+Connection	connection.h	/^class Connection {$/;"	c	namespace:anet
+ConnectionClosedPacket	controlpacket.h	/^    static ControlPacket ConnectionClosedPacket;$/;"	m	class:anet::ControlPacket
+ConstHeaderIterator	httppacket.h	/^    typedef HeadersType::const_iterator ConstHeaderIterator;$/;"	t	class:anet::HTTPPacket
+ControlPacket	controlpacket.cpp	/^ControlPacket::ControlPacket(int c, bool freeDelete) {$/;"	f	class:anet::ControlPacket
+ControlPacket	controlpacket.h	/^class ControlPacket : public Packet {$/;"	c	namespace:anet
+DataBuffer	databuffer.h	/^    DataBuffer() {$/;"	f	class:anet::DataBuffer
+DataBuffer	databuffer.h	/^  class DataBuffer {$/;"	c	namespace:anet
+DefaultHttpPacketFactory	httppacketstreamer.h	/^class DefaultHttpPacketFactory : public IPacketFactory {$/;"	c	namespace:anet
+DefaultPacket	defaultpacket.cpp	/^DefaultPacket::DefaultPacket() {$/;"	f	class:anet::DefaultPacket
+DefaultPacket	defaultpacket.h	/^class DefaultPacket : public Packet$/;"	c	namespace:anet
+DefaultPacketFactory	defaultpacketfactory.h	/^class DefaultPacketFactory : public IPacketFactory$/;"	c	namespace:anet
+DefaultPacketStreamer	defaultpacketstreamer.cpp	/^DefaultPacketStreamer::DefaultPacketStreamer(IPacketFactory *factory) : IPacketStreamer(factory) {}$/;"	f	class:anet::DefaultPacketStreamer
+DefaultPacketStreamer	defaultpacketstreamer.h	/^class DefaultPacketStreamer : public IPacketStreamer {$/;"	c	namespace:anet
+EPollSocketEvent	epollsocketevent.cpp	/^EPollSocketEvent::EPollSocketEvent() {$/;"	f	class:anet::EPollSocketEvent
+EPollSocketEvent	epollsocketevent.h	/^class EPollSocketEvent : public SocketEvent {$/;"	c	namespace:anet
+FREE_CHANNEL	ipackethandler.h	/^        FREE_CHANNEL  = 2$/;"	e	enum:anet::IPacketHandler::HPRetCode
+FileControl	filecontrol.h	/^class FileControl {$/;"	c	namespace:anet
+HEADERS_LIMIT	httpstreamer.cpp	/^const size_t HTTPStreamer::HEADERS_LIMIT = 128;$/;"	m	class:anet::HTTPStreamer	file:
+HEADERS_LIMIT	httpstreamer.h	/^    static const size_t HEADERS_LIMIT;$/;"	m	class:anet::HTTPStreamer
+HET_CHUNKED	httpstreamingcontext.h	/^        HET_CHUNKED,$/;"	e	enum:anet::HTTPStreamingContext::HTTPEncodingType
+HET_EOF	httpstreamingcontext.h	/^        HET_EOF$/;"	e	enum:anet::HTTPStreamingContext::HTTPEncodingType
+HET_LENGTH	httpstreamingcontext.h	/^        HET_LENGTH,$/;"	e	enum:anet::HTTPStreamingContext::HTTPEncodingType
+HET_NO_BODY	httpstreamingcontext.h	/^        HET_NO_BODY = 0,$/;"	e	enum:anet::HTTPStreamingContext::HTTPEncodingType
+HM_CONNECT	httppacket.h	/^        HM_CONNECT,$/;"	e	enum:anet::HTTPPacket::HTTPMethod
+HM_DELETE	httppacket.h	/^        HM_DELETE,$/;"	e	enum:anet::HTTPPacket::HTTPMethod
+HM_GET	httppacket.h	/^        HM_GET,$/;"	e	enum:anet::HTTPPacket::HTTPMethod
+HM_HEAD	httppacket.h	/^        HM_HEAD,$/;"	e	enum:anet::HTTPPacket::HTTPMethod
+HM_OPTIONS	httppacket.h	/^        HM_OPTIONS = 0,$/;"	e	enum:anet::HTTPPacket::HTTPMethod
+HM_POST	httppacket.h	/^        HM_POST,$/;"	e	enum:anet::HTTPPacket::HTTPMethod
+HM_PUT	httppacket.h	/^        HM_PUT,$/;"	e	enum:anet::HTTPPacket::HTTPMethod
+HM_TRACE	httppacket.h	/^        HM_TRACE,$/;"	e	enum:anet::HTTPPacket::HTTPMethod
+HM_UNSUPPORTED	httppacket.h	/^        HM_UNSUPPORTED$/;"	e	enum:anet::HTTPPacket::HTTPMethod
+HPRetCode	ipackethandler.h	/^    enum HPRetCode {$/;"	g	class:anet::IPacketHandler
+HSS_MESSAGE_BODY	httpstreamingcontext.h	/^        HSS_MESSAGE_BODY$/;"	e	enum:anet::HTTPStreamingContext::HTTPStreamingStep
+HSS_MESSAGE_HEADER	httpstreamingcontext.h	/^        HSS_MESSAGE_HEADER,$/;"	e	enum:anet::HTTPStreamingContext::HTTPStreamingStep
+HSS_START_LINE	httpstreamingcontext.h	/^        HSS_START_LINE = 0,$/;"	e	enum:anet::HTTPStreamingContext::HTTPStreamingStep
+HTTPChunkedState	httpstreamingcontext.h	/^    enum HTTPChunkedState {$/;"	g	class:anet::HTTPStreamingContext
+HTTPEncodingType	httpstreamingcontext.h	/^    enum HTTPEncodingType {$/;"	g	class:anet::HTTPStreamingContext
+HTTPMethod	httppacket.h	/^    enum HTTPMethod{$/;"	g	class:anet::HTTPPacket
+HTTPPacket	httppacket.cpp	/^HTTPPacket::HTTPPacket() {$/;"	f	class:anet::HTTPPacket
+HTTPPacket	httppacket.h	/^class HTTPPacket : public DefaultPacket$/;"	c	namespace:anet
+HTTPPacketFactory	httppacketfactory.cpp	/^HTTPPacketFactory::HTTPPacketFactory() {$/;"	f	class:anet::HTTPPacketFactory
+HTTPPacketFactory	httppacketfactory.h	/^class HTTPPacketFactory : public IPacketFactory$/;"	c	namespace:anet
+HTTPPacketType	httppacket.h	/^    enum HTTPPacketType $/;"	g	class:anet::HTTPPacket
+HTTPStreamer	httpstreamer.cpp	/^HTTPStreamer::HTTPStreamer(IPacketFactory *factory) $/;"	f	class:anet::HTTPStreamer
+HTTPStreamer	httpstreamer.h	/^class HTTPStreamer : public DefaultPacketStreamer$/;"	c	namespace:anet
+HTTPStreamingContext	httpstreamingcontext.cpp	/^HTTPStreamingContext::HTTPStreamingContext() {$/;"	f	class:anet::HTTPStreamingContext
+HTTPStreamingContext	httpstreamingcontext.h	/^class HTTPStreamingContext : public StreamingContext$/;"	c	namespace:anet
+HTTPStreamingStep	httpstreamingcontext.h	/^    enum HTTPStreamingStep $/;"	g	class:anet::HTTPStreamingContext
+HTTPVersion	httppacket.h	/^    enum HTTPVersion {$/;"	g	class:anet::HTTPPacket
+HTTP_1_0	httppacket.h	/^        HTTP_1_0  =  0,$/;"	e	enum:anet::HTTPPacket::HTTPVersion
+HTTP_1_1	httppacket.h	/^        HTTP_1_1,$/;"	e	enum:anet::HTTPPacket::HTTPVersion
+HTTP_CHANNLE_ID	channelpool.cpp	/^const uint32_t ChannelPool::HTTP_CHANNLE_ID     = 0x10000000u;$/;"	m	class:anet::ChannelPool	file:
+HTTP_CHANNLE_ID	channelpool.h	/^    static const uint32_t HTTP_CHANNLE_ID;$/;"	m	class:anet::ChannelPool
+HTTP_UNSUPPORTED	httppacket.h	/^        HTTP_UNSUPPORTED$/;"	e	enum:anet::HTTPPacket::HTTPVersion
+HeadersType	httppacket.h	/^    typedef std::map<char*, char*, keyCompareCaseInsensive> HeadersType;$/;"	t	class:anet::HTTPPacket
+HttpPacketStreamer	httppacketstreamer.cpp	/^HttpPacketStreamer::HttpPacketStreamer(IPacketFactory *factory) : DefaultPacketStreamer(factory) {$/;"	f	class:anet::HttpPacketStreamer
+HttpPacketStreamer	httppacketstreamer.h	/^class HttpPacketStreamer : public DefaultPacketStreamer {$/;"	c	namespace:anet
+HttpRequestPacket	httprequestpacket.cpp	/^HttpRequestPacket::HttpRequestPacket() {$/;"	f	class:anet::HttpRequestPacket
+HttpRequestPacket	httprequestpacket.h	/^class HttpRequestPacket : public Packet {$/;"	c	namespace:anet
+HttpResponsePacket	httpresponsepacket.cpp	/^HttpResponsePacket::HttpResponsePacket() {$/;"	f	class:anet::HttpResponsePacket
+HttpResponsePacket	httpresponsepacket.h	/^class HttpResponsePacket : public Packet {$/;"	c	namespace:anet
+INVALID_DATA	aneterror.cpp	/^const int AnetError::INVALID_DATA = 1;$/;"	m	class:anet::AnetError	file:
+INVALID_DATA	aneterror.h	/^    static const int   INVALID_DATA;$/;"	m	class:anet::AnetError
+INVALID_DATA_S	aneterror.cpp	/^const char* AnetError::INVALID_DATA_S = "Invalid Data";$/;"	m	class:anet::AnetError	file:
+INVALID_DATA_S	aneterror.h	/^    static const char *INVALID_DATA_S;$/;"	m	class:anet::AnetError
+IOCState	iocomponent.h	/^    enum IOCState {$/;"	g	class:anet::IOComponent
+IOComponent	iocomponent.cpp	/^IOComponent::IOComponent(Transport *owner, Socket *socket) {$/;"	f	class:anet::IOComponent
+IOComponent	iocomponent.h	/^class IOComponent {$/;"	c	namespace:anet
+IOEvent	socketevent.h	/^class IOEvent {$/;"	c	namespace:anet
+IPacketFactory	ipacketfactory.h	/^class IPacketFactory {$/;"	c	namespace:anet
+IPacketHandler	ipackethandler.h	/^class IPacketHandler {$/;"	c	namespace:anet
+IPacketStreamer	ipacketstreamer.h	/^    IPacketStreamer(IPacketFactory *factory) {$/;"	f	class:anet::IPacketStreamer
+IPacketStreamer	ipacketstreamer.h	/^class IPacketStreamer {$/;"	c	namespace:anet
+IServerAdapter	iserveradapter.h	/^class IServerAdapter {$/;"	c	namespace:anet
+KEEP_CHANNEL	ipackethandler.h	/^        KEEP_CHANNEL  = 0,$/;"	e	enum:anet::IPacketHandler::HPRetCode
+LENGTH_REQUIRED	aneterror.cpp	/^const int AnetError::LENGTH_REQUIRED = 411;$/;"	m	class:anet::AnetError	file:
+LENGTH_REQUIRED	aneterror.h	/^    static const int   LENGTH_REQUIRED;$/;"	m	class:anet::AnetError
+LENGTH_REQUIRED_S	aneterror.cpp	/^const char* AnetError::LENGTH_REQUIRED_S = "Length Required";$/;"	m	class:anet::AnetError	file:
+LENGTH_REQUIRED_S	aneterror.h	/^    static const char *LENGTH_REQUIRED_S;$/;"	m	class:anet::AnetError
+LOCK	atomic.h	29;"	d
+LOGLEVEL_DIFF	log.cpp	6;"	d	file:
+Logger	log.cpp	/^Logger::Logger() {}$/;"	f	class:anet::Logger
+Logger	log.h	/^class Logger {$/;"	c	namespace:anet
+MAX	timeutil.cpp	/^const int64_t TimeUtil::MAX = ~(1ll << 63);$/;"	m	class:anet::TimeUtil	file:
+MAX	timeutil.h	/^    static const int64_t MAX;$/;"	m	class:anet::TimeUtil
+MAX_BUFFER_SIZE	databuffer.h	8;"	d
+MAX_IDLE_TIME	iocomponent.h	/^const int64_t MAX_IDLE_TIME = 900000000;\/\/15 minutes$/;"	m	namespace:anet
+MAX_RECONNECTING_TIMES	iocomponent.h	/^const int MAX_RECONNECTING_TIMES = 30;$/;"	m	namespace:anet
+MAX_SOCKET_EVENTS	socketevent.h	9;"	d
+MIN	timeutil.cpp	/^const int64_t TimeUtil::MIN = (1ll << 63);$/;"	m	class:anet::TimeUtil	file:
+MIN	timeutil.h	/^    static const int64_t MIN;$/;"	m	class:anet::TimeUtil
+MutexGuard	threadmutex.h	/^    MutexGuard(ThreadMutex * mutex) {$/;"	f	class:anet::MutexGuard
+MutexGuard	threadmutex.h	/^class MutexGuard {$/;"	c	namespace:anet
+PKG_LIMIT	httpstreamer.cpp	/^const size_t HTTPStreamer::PKG_LIMIT = 67108864;$/;"	m	class:anet::HTTPStreamer	file:
+PKG_LIMIT	httpstreamer.h	/^    static const size_t PKG_LIMIT;$/;"	m	class:anet::HTTPStreamer
+PKG_TOO_LARGE	aneterror.cpp	/^const int AnetError::PKG_TOO_LARGE = 3;$/;"	m	class:anet::AnetError	file:
+PKG_TOO_LARGE	aneterror.h	/^    static const int   PKG_TOO_LARGE;$/;"	m	class:anet::AnetError
+PKG_TOO_LARGE_S	aneterror.cpp	/^const char* AnetError::PKG_TOO_LARGE_S = "Packet Too Large";$/;"	m	class:anet::AnetError	file:
+PKG_TOO_LARGE_S	aneterror.h	/^    static const char *PKG_TOO_LARGE_S;$/;"	m	class:anet::AnetError
+PRE_MAX	timeutil.cpp	/^const int64_t TimeUtil::PRE_MAX = ~(1ll << 63) - 1;$/;"	m	class:anet::TimeUtil	file:
+PRE_MAX	timeutil.h	/^    static const int64_t PRE_MAX;$/;"	m	class:anet::TimeUtil
+PSTR_MAP	httprequestpacket.h	/^typedef __gnu_cxx::hash_map<const char*, const char*, __gnu_cxx::hash<const char*>, eqstr> PSTR_MAP;$/;"	t	namespace:anet
+PSTR_MAP_ITER	httprequestpacket.h	/^typedef PSTR_MAP::iterator PSTR_MAP_ITER;$/;"	t	namespace:anet
+PT_INVALID	httppacket.h	/^        PT_INVALID$/;"	e	enum:anet::HTTPPacket::HTTPPacketType
+PT_REQUEST	httppacket.h	/^        PT_REQUEST = 0,$/;"	e	enum:anet::HTTPPacket::HTTPPacketType
+PT_RESPONSE	httppacket.h	/^        PT_RESPONSE,$/;"	e	enum:anet::HTTPPacket::HTTPPacketType
+Packet	packet.cpp	/^Packet::Packet() {$/;"	f	class:anet::Packet
+Packet	packet.h	/^class Packet {$/;"	c	namespace:anet
+PacketHeader	packet.h	/^class PacketHeader {$/;"	c	namespace:anet
+PacketQueue	packetqueue.cpp	/^PacketQueue::PacketQueue() {$/;"	f	class:anet::PacketQueue
+PacketQueue	packetqueue.h	/^  class PacketQueue {$/;"	c	namespace:anet
+READ_WRITE_SIZE	connection.h	4;"	d
+RECONNECTING_INTERVAL	iocomponent.h	/^const int64_t RECONNECTING_INTERVAL = 1000000;\/\/1 seconds$/;"	m	namespace:anet
+Runnable	runnable.h	/^  class Runnable {$/;"	c	namespace:anet
+STRING_MAP	httpresponsepacket.h	/^typedef __gnu_cxx::hash_map<std::string, std::string, str_hash> STRING_MAP;$/;"	t	namespace:anet
+STRING_MAP_ITER	httpresponsepacket.h	/^typedef STRING_MAP::iterator STRING_MAP_ITER;$/;"	t	namespace:anet
+ServerSocket	serversocket.cpp	/^ServerSocket::ServerSocket() {$/;"	f	class:anet::ServerSocket
+ServerSocket	serversocket.h	/^class ServerSocket : public Socket {$/;"	c	namespace:anet
+Socket	socket.cpp	/^Socket::Socket() {$/;"	f	class:anet::Socket
+Socket	socket.h	/^class Socket {$/;"	c	namespace:anet
+SocketEvent	socketevent.cpp	/^SocketEvent::SocketEvent() {$/;"	f	class:anet::SocketEvent
+SocketEvent	socketevent.h	/^class SocketEvent {$/;"	c	namespace:anet
+StatCounter	stats.cpp	/^StatCounter::StatCounter()$/;"	f	class:anet::StatCounter
+StatCounter	stats.h	/^class StatCounter$/;"	c	namespace:anet
+StreamingContext	streamingcontext.cpp	/^StreamingContext::StreamingContext() {$/;"	f	class:anet::StreamingContext
+StreamingContext	streamingcontext.h	/^class StreamingContext$/;"	c	namespace:anet
+SynStub	connection.cpp	/^    SynStub() {$/;"	f	class:anet::SynStub
+SynStub	connection.cpp	/^class SynStub : public IPacketHandler {$/;"	c	namespace:anet	file:
+TCPAcceptor	tcpacceptor.cpp	/^TCPAcceptor::TCPAcceptor(Transport *owner, Socket *socket,$/;"	f	class:anet::TCPAcceptor
+TCPAcceptor	tcpacceptor.h	/^class TCPAcceptor : public IOComponent {$/;"	c	namespace:anet
+TCPComponent	tcpcomponent.cpp	/^TCPComponent::TCPComponent(Transport *owner, Socket *socket)$/;"	f	class:anet::TCPComponent
+TCPComponent	tcpcomponent.h	/^  class TCPComponent : public IOComponent {$/;"	c	namespace:anet
+TCPConnection	tcpconnection.cpp	/^TCPConnection::TCPConnection(Socket *socket, IPacketStreamer *streamer,$/;"	f	class:anet::TCPConnection
+TCPConnection	tcpconnection.h	/^  class TCPConnection : public Connection {$/;"	c	namespace:anet
+TC_ADD_IOC	transport.h	/^        TC_ADD_IOC = 1,$/;"	e	enum:anet::Transport::CommandType
+TC_REMOVE_IOC	transport.h	/^        TC_REMOVE_IOC$/;"	e	enum:anet::Transport::CommandType
+TOO_MANY_HEADERS	aneterror.cpp	/^const int AnetError::TOO_MANY_HEADERS = 499;$/;"	m	class:anet::AnetError	file:
+TOO_MANY_HEADERS	aneterror.h	/^    static const int   TOO_MANY_HEADERS;$/;"	m	class:anet::AnetError
+TOO_MANY_HEADERS_S	aneterror.cpp	/^const char* AnetError::TOO_MANY_HEADERS_S = "Too Many Headers";$/;"	m	class:anet::AnetError	file:
+TOO_MANY_HEADERS_S	aneterror.h	/^    static const char *TOO_MANY_HEADERS_S;$/;"	m	class:anet::AnetError
+TRAILER	httpstreamingcontext.h	/^        TRAILER$/;"	e	enum:anet::HTTPStreamingContext::HTTPChunkedState
+Thread	thread.h	/^    Thread() {$/;"	f	class:anet::Thread
+Thread	thread.h	/^  class Thread {$/;"	c	namespace:anet
+ThreadCond	threadcond.h	/^    ThreadCond() {$/;"	f	class:anet::ThreadCond
+ThreadCond	threadcond.h	/^class ThreadCond : public ThreadMutex {$/;"	c	namespace:anet
+ThreadMutex	threadmutex.h	/^    ThreadMutex() {$/;"	f	class:anet::ThreadMutex
+ThreadMutex	threadmutex.h	/^class ThreadMutex {$/;"	c	namespace:anet
+TimeUtil	timeutil.h	/^class TimeUtil {$/;"	c	namespace:anet
+TimeoutPacket	controlpacket.h	/^    static ControlPacket TimeoutPacket;$/;"	m	class:anet::ControlPacket
+Transport	transport.cpp	/^Transport::Transport() {$/;"	f	class:anet::Transport
+Transport	transport.h	/^class Transport : public Runnable {$/;"	c	namespace:anet
+TransportCommand	transport.h	/^    struct TransportCommand {$/;"	s	class:anet::Transport
+UDPAcceptor	udpacceptor.h	/^class UDPAcceptor : public UDPComponent {$/;"	c	namespace:anet
+UDPComponent	udpcomponent.cpp	/^UDPComponent::UDPComponent(Transport *owner, Socket *socket, IPacketStreamer *streamer,$/;"	f	class:anet::UDPComponent
+UDPComponent	udpcomponent.h	/^class UDPComponent : public IOComponent {$/;"	c	namespace:anet
+UDPConnection	udpconnection.cpp	/^UDPConnection::UDPConnection(Socket *socket, IPacketStreamer *streamer,$/;"	f	class:anet::UDPConnection
+UDPConnection	udpconnection.h	/^  class UDPConnection : public Connection {$/;"	c	namespace:anet
+URI_LIMIT	httpstreamer.cpp	/^const size_t HTTPStreamer::URI_LIMIT = 4096;$/;"	m	class:anet::HTTPStreamer	file:
+URI_LIMIT	httpstreamer.h	/^    static const size_t URI_LIMIT;$/;"	m	class:anet::HTTPStreamer
+URI_TOO_LARGE	aneterror.cpp	/^const int AnetError::URI_TOO_LARGE = 414;$/;"	m	class:anet::AnetError	file:
+URI_TOO_LARGE	aneterror.h	/^    static const int   URI_TOO_LARGE;$/;"	m	class:anet::AnetError
+URI_TOO_LARGE_S	aneterror.cpp	/^const char* AnetError::URI_TOO_LARGE_S = "Request-URI Too Long";$/;"	m	class:anet::AnetError	file:
+URI_TOO_LARGE_S	aneterror.h	/^    static const char *URI_TOO_LARGE_S;$/;"	m	class:anet::AnetError
+VERSION_NOT_SUPPORT	aneterror.cpp	/^const int AnetError::VERSION_NOT_SUPPORT = 505;$/;"	m	class:anet::AnetError	file:
+VERSION_NOT_SUPPORT	aneterror.h	/^    static const int   VERSION_NOT_SUPPORT;$/;"	m	class:anet::AnetError
+VERSION_NOT_SUPPORT_S	aneterror.cpp	/^const char* AnetError::VERSION_NOT_SUPPORT_S = "HTTP Version Not Supported";$/;"	m	class:anet::AnetError	file:
+VERSION_NOT_SUPPORT_S	aneterror.h	/^    static const char *VERSION_NOT_SUPPORT_S;$/;"	m	class:anet::AnetError
+_URI	httppacket.h	/^    char *_URI;$/;"	m	class:anet::HTTPPacket
+_address	socket.h	/^    struct sockaddr_in  _address; \/\/ 地址$/;"	m	class:anet::Socket	typeref:struct:anet::Socket::sockaddr_in
+_addressValid	socket.h	/^    bool _addressValid;$/;"	m	class:anet::Socket
+_args	channel.h	/^    void *_args;    \/\/ 回传参数$/;"	m	class:anet::Channel
+_autoReconn	iocomponent.h	/^    int _autoReconn;   \/\/ 是否重连$/;"	m	class:anet::IOComponent
+_backLog	serversocket.h	/^    int _backLog; \/\/ backlog$/;"	m	class:anet::ServerSocket
+_body	defaultpacket.h	/^    char *_body;$/;"	m	class:anet::DefaultPacket
+_body	httpresponsepacket.h	/^    char *_body;                    \/\/ 返回的内容$/;"	m	class:anet::HttpResponsePacket
+_bodyLen	httpresponsepacket.h	/^    int _bodyLen;                   \/\/ 返回内容找长度$/;"	m	class:anet::HttpResponsePacket
+_bodyLength	defaultpacket.h	/^    size_t _bodyLength;$/;"	m	class:anet::DefaultPacket
+_broken	streamingcontext.h	/^    bool _broken;$/;"	m	class:anet::StreamingContext
+_capacity	defaultpacket.h	/^    size_t _capacity;$/;"	m	class:anet::DefaultPacket
+_channel	packet.h	/^    Channel *_channel;$/;"	m	class:anet::Packet
+_channelPool	connection.h	/^    ChannelPool _channelPool;$/;"	m	class:anet::Connection
+_checkingList	transport.h	/^    std::list<IOComponent*> _checkingList;      \/\/ timeout checking list$/;"	m	class:anet::Transport
+_chid	packet.h	/^    uint32_t _chid;         \/\/ 通道ID$/;"	m	class:anet::PacketHeader
+_chunkState	httpstreamingcontext.h	/^    HTTPChunkedState _chunkState;$/;"	m	class:anet::HTTPStreamingContext
+_closed	connection.h	/^    bool _closed;$/;"	m	class:anet::Connection
+_clusterList	channelpool.h	/^    std::list<Channel*> _clusterList;                \/\/ cluster list$/;"	m	class:anet::ChannelPool
+_command	controlpacket.h	/^    int _command;$/;"	m	class:anet::ControlPacket
+_commands	transport.h	/^    std::vector<TransportCommand> _commands;    \/\/ command list$/;"	m	class:anet::Transport
+_completed	streamingcontext.h	/^    bool _completed;$/;"	m	class:anet::StreamingContext
+_cond	connection.cpp	/^    ThreadCond _cond;$/;"	m	class:anet::SynStub	file:
+_cond	threadcond.h	/^    pthread_cond_t _cond;$/;"	m	class:anet::ThreadCond
+_connection	tcpcomponent.h	/^    Connection *_connection;$/;"	m	class:anet::TCPComponent
+_connections	udpcomponent.h	/^    __gnu_cxx::hash_map<int, UDPConnection*> _connections;  \/\/ UDP连接集合$/;"	m	class:anet::UDPComponent
+_context	connection.h	/^    StreamingContext *_context;$/;"	m	class:anet::Connection
+_dataLen	packet.h	/^    int32_t _dataLen;           \/\/ 数据包body长度(除头信息外)$/;"	m	class:anet::PacketHeader
+_dataLength	httpstreamingcontext.h	/^    size_t _dataLength;$/;"	m	class:anet::HTTPStreamingContext
+_dataReadCnt	stats.h	/^    uint32_t _dataReadCnt;    \/\/ # bytes read$/;"	m	class:anet::StatCounter
+_dataWriteCnt	stats.h	/^    uint32_t _dataWriteCnt;   \/\/ # bytes written$/;"	m	class:anet::StatCounter
+_defaultPacketHandler	connection.h	/^    IPacketHandler *_defaultPacketHandler;  \/\/ connection的默认的packet handler$/;"	m	class:anet::Connection
+_dnsMutex	socket.cpp	/^ThreadMutex Socket::_dnsMutex;$/;"	m	class:anet::Socket	file:
+_dnsMutex	socket.h	/^    static ThreadMutex _dnsMutex; \/\/　多实例用一个dnsMutex$/;"	m	class:anet::Socket
+_drainedLength	httpstreamingcontext.h	/^    size_t _drainedLength;$/;"	m	class:anet::HTTPStreamingContext
+_enableRead	iocomponent.h	/^    bool _enableRead;$/;"	m	class:anet::IOComponent
+_enableWrite	iocomponent.h	/^    bool _enableWrite;$/;"	m	class:anet::IOComponent
+_encodingType	httpstreamingcontext.h	/^    HTTPEncodingType _encodingType;$/;"	m	class:anet::HTTPStreamingContext
+_eof	streamingcontext.h	/^    bool _eof;$/;"	m	class:anet::StreamingContext
+_errorNo	streamingcontext.h	/^    int _errorNo;$/;"	m	class:anet::StreamingContext
+_errorOccurred	socketevent.h	/^    bool _errorOccurred;  \/\/ 错误发生$/;"	m	class:anet::IOEvent
+_errorString	streamingcontext.h	/^    const char *_errorString;$/;"	m	class:anet::StreamingContext
+_existPacketHeader	ipacketstreamer.h	/^    bool _existPacketHeader;    \/\/ 是否有packet header, 如http有自己协议就不需要输出头信息$/;"	m	class:anet::IPacketStreamer
+_expireTime	channel.h	/^    int64_t _expireTime; \/\/ 到期时间$/;"	m	class:anet::Channel
+_expireTime	packet.h	/^    int64_t _expireTime;        \/\/ 到期时间$/;"	m	class:anet::Packet
+_extendMethod	httppacket.h	/^    char *_extendMethod;$/;"	m	class:anet::HTTPPacket
+_factory	ipacketstreamer.h	/^    IPacketFactory *_factory;   \/\/ 产生packet$/;"	m	class:anet::IPacketStreamer
+_freeDelete	controlpacket.h	/^    bool _freeDelete;$/;"	m	class:anet::ControlPacket
+_freeListHead	channelpool.h	/^    Channel *_freeListHead;             \/\/ 空的链表$/;"	m	class:anet::ChannelPool
+_freeListTail	channelpool.h	/^    Channel *_freeListTail;$/;"	m	class:anet::ChannelPool
+_gStatCounter	stats.cpp	/^StatCounter StatCounter::_gStatCounter;$/;"	m	class:anet::StatCounter	file:
+_gStatCounter	stats.h	/^    static StatCounter _gStatCounter; \/\/ 静态$/;"	m	class:anet::StatCounter
+_globalChannelId	channelpool.cpp	/^atomic_t ChannelPool::_globalChannelId = {0};$/;"	m	class:anet::ChannelPool	file:
+_globalChannelId	channelpool.h	/^    static atomic_t _globalChannelId;   \/\/ 生成统一的id$/;"	m	class:anet::ChannelPool
+_gotHeader	tcpconnection.h	/^    bool _gotHeader;            \/\/ packet header已经取过$/;"	m	class:anet::TCPConnection
+_handler	channel.h	/^    IPacketHandler *_handler;$/;"	m	class:anet::Channel
+_head	packetqueue.h	/^    Packet *_head;  \/\/ 链头$/;"	m	class:anet::PacketQueue
+_headerMap	httprequestpacket.h	/^    PSTR_MAP _headerMap;    \/\/ 其他头信息的map$/;"	m	class:anet::HttpRequestPacket
+_headerMap	httpresponsepacket.h	/^    STRING_MAP _headerMap;          \/\/ 返回其他头信息$/;"	m	class:anet::HttpResponsePacket
+_headers	httppacket.h	/^    HeadersType _headers;$/;"	m	class:anet::HTTPPacket
+_headersCount	httpstreamingcontext.h	/^    size_t _headersCount;$/;"	m	class:anet::HTTPStreamingContext
+_id	channel.h	/^    uint32_t _id;      \/\/ channel id$/;"	m	class:anet::Channel
+_iepfd	epollsocketevent.h	/^    int _iepfd;    \/\/ epoll的fd$/;"	m	class:anet::EPollSocketEvent
+_input	tcpconnection.h	/^    DataBuffer _input;      	\/\/ 读入的buffer$/;"	m	class:anet::TCPConnection
+_ioc	socketevent.h	/^    IOComponent *_ioc;  \/\/ 回传参数$/;"	m	class:anet::IOEvent
+_iocListHead	transport.h	/^    IOComponent *_iocListHead, *_iocListTail;   \/\/ IOComponent集合$/;"	m	class:anet::Transport
+_iocListTail	transport.h	/^    IOComponent *_iocListHead, *_iocListTail;   \/\/ IOComponent集合$/;"	m	class:anet::Transport
+_iocomponent	connection.h	/^    IOComponent *_iocomponent;$/;"	m	class:anet::Connection
+_iocomponent	socket.h	/^    IOComponent *_iocomponent;$/;"	m	class:anet::Socket
+_isKeepAlive	httprequestpacket.h	/^    bool _isKeepAlive;      \/\/ 是否支持keepalive$/;"	m	class:anet::HttpRequestPacket
+_isKeepAlive	httpresponsepacket.h	/^    bool _isKeepAlive;              \/\/ 是否keepalive$/;"	m	class:anet::HttpResponsePacket
+_isServer	connection.h	/^    bool _isServer;                         $/;"	m	class:anet::Connection
+_isServer	iocomponent.h	/^    bool _isServer;     \/\/ 是否为服务器端$/;"	m	class:anet::IOComponent
+_lastUseTime	iocomponent.h	/^    int64_t _lastUseTime;   \/\/ 最近使用的系统时间    $/;"	m	class:anet::IOComponent
+_method	httppacket.h	/^    HTTPMethod _method;$/;"	m	class:anet::HTTPPacket
+_method	httprequestpacket.h	/^    int _method;            \/\/ get - 1$/;"	m	class:anet::HttpRequestPacket
+_mutex	channelpool.h	/^    ThreadMutex _mutex;$/;"	m	class:anet::ChannelPool
+_mutex	iocomponent.h	/^    ThreadMutex _mutex;$/;"	m	class:anet::IOComponent
+_mutex	threadmutex.h	/^    ThreadMutex *_mutex;$/;"	m	class:anet::MutexGuard
+_mutex	threadmutex.h	/^    pthread_mutex_t _mutex;$/;"	m	class:anet::ThreadMutex
+_mutex	transport.h	/^    ThreadMutex _mutex;$/;"	m	class:anet::Transport
+_myQueue	connection.h	/^    PacketQueue _myQueue;	            \/\/ temporary queue used in write data$/;"	m	class:anet::Connection
+_newCheckingList	transport.h	/^    std::vector<IOComponent*> _newCheckingList; \/\/ new timeout checking list$/;"	m	class:anet::Transport
+_next	channel.h	/^    Channel *_next;$/;"	m	class:anet::Channel
+_next	iocomponent.h	/^    IOComponent *_next; \/\/ 用于链表$/;"	m	class:anet::IOComponent
+_next	packet.h	/^    Packet *_next;              \/\/ 用在packetqueue链表$/;"	m	class:anet::Packet
+_nextCheckTime	transport.h	/^    int64_t _nextCheckTime; $/;"	m	class:anet::Transport
+_now	timeutil.cpp	/^int64_t TimeUtil::_now = 0;$/;"	m	class:anet::TimeUtil	file:
+_now	timeutil.h	/^    static int64_t _now;$/;"	m	class:anet::TimeUtil
+_output	tcpconnection.h	/^    DataBuffer _output;     	\/\/ 输出的buffer$/;"	m	class:anet::TCPConnection
+_outputCond	connection.h	/^    ThreadCond _outputCond;                 \/\/ output condition$/;"	m	class:anet::Connection
+_outputQueue	connection.h	/^    PacketQueue  _outputQueue;              \/\/ Output Queue$/;"	m	class:anet::Connection
+_owner	iocomponent.h	/^    Transport *_owner;$/;"	m	class:anet::IOComponent
+_packet	streamingcontext.h	/^    Packet *_packet;$/;"	m	class:anet::StreamingContext
+_packetHandledCount	connection.h	/^    uint32_t _packetHandledCount;$/;"	m	class:anet::Connection
+_packetHeader	packet.h	/^    PacketHeader _packetHeader; \/\/ 数据包的头信息$/;"	m	class:anet::Packet
+_packetHeader	tcpconnection.h	/^    PacketHeader _packetHeader; \/\/ 读入的packet header$/;"	m	class:anet::TCPConnection
+_packetPostedCount	connection.h	/^    uint32_t _packetPostedCount;$/;"	m	class:anet::Connection
+_packetReadCnt	stats.h	/^    uint32_t _packetReadCnt;  \/\/ # packets read$/;"	m	class:anet::StatCounter
+_packetWriteCnt	stats.h	/^    uint32_t _packetWriteCnt; \/\/ # packets written$/;"	m	class:anet::StatCounter
+_pcode	packet.h	/^    int32_t _pcode;             \/\/ 数据包类型$/;"	m	class:anet::PacketHeader
+_pdata	databuffer.h	/^    unsigned char *_pdata;        \/\/ data部分$/;"	m	class:anet::DataBuffer
+_pend	databuffer.h	/^    unsigned char *_pend;        \/\/ buffer结束$/;"	m	class:anet::DataBuffer
+_pfree	databuffer.h	/^    unsigned char *_pfree;        \/\/ free部分$/;"	m	class:anet::DataBuffer
+_pipes	epollsocketevent.h	/^    int _pipes[2];  \/\/ pipe for wakeup$/;"	m	class:anet::EPollSocketEvent
+_prev	channel.h	/^    Channel *_prev;     \/\/ 用在链表$/;"	m	class:anet::Channel
+_prev	iocomponent.h	/^    IOComponent *_prev; \/\/ 用于链表$/;"	m	class:anet::IOComponent
+_promotePriority	transport.h	/^    bool _promotePriority;$/;"	m	class:anet::Transport
+_pstart	databuffer.h	/^    unsigned char *_pstart;      \/\/ buffer开始$/;"	m	class:anet::DataBuffer
+_queueLimit	connection.h	/^    size_t _queueLimit;                     \/\/ max pending set packet allowed$/;"	m	class:anet::Connection
+_queueTimeout	connection.h	/^    int _queueTimeout;                      \/\/ tiemout spesification (millseconds)$/;"	m	class:anet::Connection
+_readOccurred	socketevent.h	/^    bool _readOccurred;  \/\/ 读发生$/;"	m	class:anet::IOEvent
+_readWriteThread	transport.h	/^    Thread _readWriteThread;      $/;"	m	class:anet::Transport
+_reasonPhrase	httppacket.h	/^    char *_reasonPhrase;$/;"	m	class:anet::HTTPPacket
+_refByRreadWriteThread	iocomponent.h	/^    bool _refByRreadWriteThread;$/;"	m	class:anet::IOComponent
+_refcount	iocomponent.h	/^    atomic_t _refcount; \/\/ 引用计数$/;"	m	class:anet::IOComponent
+_reply	connection.cpp	/^    Packet *_reply;$/;"	m	class:anet::SynStub	file:
+_serverAdapter	connection.h	/^    IServerAdapter *_serverAdapter;         \/\/ Server Adapter$/;"	m	class:anet::Connection
+_serverAdapter	tcpacceptor.h	/^    IServerAdapter  *_serverAdapter; \/\/ 服务器适配器$/;"	m	class:anet::TCPAcceptor
+_serverAdapter	udpcomponent.h	/^    IServerAdapter *_serverAdapter;                         \/\/ serveradapter$/;"	m	class:anet::UDPComponent
+_size	packetqueue.h	/^    size_t _size;      \/\/ 元素数量$/;"	m	class:anet::PacketQueue
+_socket	connection.h	/^    Socket *_socket;                        $/;"	m	class:anet::Connection
+_socket	iocomponent.h	/^    Socket *_socket;    \/\/ 一个Socket的文件句柄$/;"	m	class:anet::IOComponent
+_socketEvent	iocomponent.h	/^    SocketEvent *_socketEvent;$/;"	m	class:anet::IOComponent
+_socketEvent	transport.h	/^    EPollSocketEvent _socketEvent;   $/;"	m	class:anet::Transport
+_socketHandle	socket.h	/^    int _socketHandle;    \/\/ socket文件句柄$/;"	m	class:anet::Socket
+_startConnectTime	tcpcomponent.h	/^    int64_t _startConnectTime;$/;"	m	class:anet::TCPComponent
+_started	transport.h	/^    bool _started;$/;"	m	class:anet::Transport
+_state	iocomponent.h	/^    IOCState _state;         \/\/ 连接状态$/;"	m	class:anet::IOComponent
+_status	httpresponsepacket.h	/^    bool _status;                   \/\/ 返回的状态, true => 200, false => 404$/;"	m	class:anet::HttpResponsePacket
+_statusCode	httppacket.h	/^    int _statusCode;$/;"	m	class:anet::HTTPPacket
+_step	httpstreamingcontext.h	/^    HTTPStreamingStep _step;$/;"	m	class:anet::HTTPStreamingContext
+_stop	transport.h	/^    bool _stop;              \/\/ stopping flag$/;"	m	class:anet::Transport
+_stopMutex	transport.h	/^    ThreadMutex _stopMutex;$/;"	m	class:anet::Transport
+_strHeader	httprequestpacket.h	/^    char *_strHeader;       \/\/ 保存头内容的buffer$/;"	m	class:anet::HttpRequestPacket
+_strQuery	httprequestpacket.h	/^    char *_strQuery;        \/\/ 查询串$/;"	m	class:anet::HttpRequestPacket
+_streamer	connection.h	/^    IPacketStreamer *_streamer;             \/\/ Packet Streamer$/;"	m	class:anet::Connection
+_streamer	tcpacceptor.h	/^    IPacketStreamer *_streamer;      \/\/ 数据包解析器$/;"	m	class:anet::TCPAcceptor
+_streamer	udpcomponent.h	/^    IPacketStreamer *_streamer;                             \/\/ streamer$/;"	m	class:anet::UDPComponent
+_table	httpstreamer.cpp	/^const char HTTPStreamer::_table[256] = {$/;"	m	class:anet::HTTPStreamer	file:
+_table	httpstreamer.h	/^    static const char _table[256];$/;"	m	class:anet::HTTPStreamer
+_tail	packetqueue.h	/^    Packet *_tail;  \/\/ 链尾$/;"	m	class:anet::PacketQueue
+_timeout	tcpacceptor.h	/^    int _timeout;$/;"	m	class:anet::TCPAcceptor
+_timeoutThread	transport.h	/^    Thread _timeoutThread;   $/;"	m	class:anet::Transport
+_type	httppacket.h	/^    HTTPPacketType _type;$/;"	m	class:anet::HTTPPacket
+_useListCount	channelpool.h	/^    size_t _useListCount;                  \/\/ 被用链表的长度$/;"	m	class:anet::ChannelPool
+_useListHead	channelpool.h	/^    Channel *_useListHead;              \/\/ 被使用的链表$/;"	m	class:anet::ChannelPool
+_useListTail	channelpool.h	/^    Channel *_useListTail;$/;"	m	class:anet::ChannelPool
+_useMap	channelpool.h	/^    __gnu_cxx::hash_map<uint32_t, Channel*> _useMap; \/\/ 使用的map$/;"	m	class:anet::ChannelPool
+_version	httppacket.h	/^    HTTPVersion _version;$/;"	m	class:anet::HTTPPacket
+_version	httprequestpacket.h	/^    int _version;           \/\/ http version 1-"HTTP\/1.0"; 2="HTTP\/1.1+"$/;"	m	class:anet::HttpRequestPacket
+_waitingThreads	connection.h	/^    int _waitingThreads;$/;"	m	class:anet::Connection
+_writeFinishClose	tcpconnection.h	/^    bool _writeFinishClose;     \/\/ 写完断开$/;"	m	class:anet::TCPConnection
+_writeOccurred	socketevent.h	/^    bool _writeOccurred;  \/\/ 写发生$/;"	m	class:anet::IOEvent
+accept	serversocket.cpp	/^Socket *ServerSocket::accept() {$/;"	f	class:anet::ServerSocket
+addComponent	transport.cpp	/^void Transport::addComponent(IOComponent *ioc) {$/;"	f	class:anet::Transport
+addEvent	epollsocketevent.cpp	/^bool EPollSocketEvent::addEvent(Socket *socket, bool enableRead, bool enableWrite) {$/;"	f	class:anet::EPollSocketEvent
+addHeader	httppacket.cpp	/^bool HTTPPacket::addHeader(const char *key, const char *value) {$/;"	f	class:anet::HTTPPacket
+addRef	connection.cpp	/^void Connection::addRef() {$/;"	f	class:anet::Connection
+addRef	iocomponent.cpp	/^void IOComponent::addRef() {$/;"	f	class:anet::IOComponent
+addToCheckingList	transport.cpp	/^void Transport::addToCheckingList(IOComponent *ioc) {$/;"	f	class:anet::Transport
+afterCallback	connection.cpp	/^void Connection::afterCallback() {$/;"	f	class:anet::Connection
+allocChannel	channelpool.cpp	/^Channel *ChannelPool::allocChannel(uint32_t chid) {$/;"	f	class:anet::ChannelPool
+anet	aneterror.cpp	/^namespace anet {$/;"	n	file:
+anet	aneterror.h	/^namespace anet {$/;"	n
+anet	channel.cpp	/^namespace anet {$/;"	n	file:
+anet	channel.h	/^namespace anet {$/;"	n
+anet	channelpool.cpp	/^namespace anet {$/;"	n	file:
+anet	channelpool.h	/^namespace anet {$/;"	n
+anet	connection.cpp	/^namespace anet {$/;"	n	file:
+anet	connection.h	/^namespace anet {$/;"	n
+anet	controlpacket.cpp	/^namespace anet {$/;"	n	file:
+anet	controlpacket.h	/^namespace anet {$/;"	n
+anet	databuffer.h	/^namespace anet {$/;"	n
+anet	defaultpacket.cpp	/^namespace anet {$/;"	n	file:
+anet	defaultpacket.h	/^namespace anet {$/;"	n
+anet	defaultpacketfactory.cpp	/^namespace anet {$/;"	n	file:
+anet	defaultpacketfactory.h	/^namespace anet {$/;"	n
+anet	defaultpacketstreamer.cpp	/^namespace anet {$/;"	n	file:
+anet	defaultpacketstreamer.h	/^namespace anet {$/;"	n
+anet	epollsocketevent.cpp	/^namespace anet {$/;"	n	file:
+anet	epollsocketevent.h	/^namespace anet {$/;"	n
+anet	filecontrol.cpp	/^namespace anet {$/;"	n	file:
+anet	filecontrol.h	/^namespace anet {$/;"	n
+anet	httppacket.cpp	/^namespace anet {$/;"	n	file:
+anet	httppacket.h	/^namespace anet {$/;"	n
+anet	httppacketfactory.cpp	/^namespace anet {$/;"	n	file:
+anet	httppacketfactory.h	/^namespace anet {$/;"	n
+anet	httppacketstreamer.cpp	/^namespace anet {$/;"	n	file:
+anet	httppacketstreamer.h	/^namespace anet {$/;"	n
+anet	httprequestpacket.cpp	/^namespace anet {$/;"	n	file:
+anet	httprequestpacket.h	/^namespace anet {$/;"	n
+anet	httpresponsepacket.cpp	/^namespace anet {$/;"	n	file:
+anet	httpresponsepacket.h	/^namespace anet {$/;"	n
+anet	httpstreamer.cpp	/^namespace anet {$/;"	n	file:
+anet	httpstreamer.h	/^namespace anet {$/;"	n
+anet	httpstreamingcontext.cpp	/^namespace anet {$/;"	n	file:
+anet	httpstreamingcontext.h	/^namespace anet {$/;"	n
+anet	iocomponent.cpp	/^namespace anet {$/;"	n	file:
+anet	iocomponent.h	/^namespace anet {$/;"	n
+anet	ipacketfactory.h	/^namespace anet {$/;"	n
+anet	ipackethandler.h	/^namespace anet {$/;"	n
+anet	ipacketstreamer.h	/^namespace anet {$/;"	n
+anet	iserveradapter.h	/^namespace anet {$/;"	n
+anet	log.cpp	/^namespace anet {$/;"	n	file:
+anet	log.h	/^namespace anet {$/;"	n
+anet	packet.cpp	/^namespace anet {$/;"	n	file:
+anet	packet.h	/^namespace anet {$/;"	n
+anet	packetqueue.cpp	/^namespace anet {$/;"	n	file:
+anet	packetqueue.h	/^namespace anet {$/;"	n
+anet	runnable.h	/^namespace anet {$/;"	n
+anet	serversocket.cpp	/^namespace anet {$/;"	n	file:
+anet	serversocket.h	/^namespace anet {$/;"	n
+anet	socket.cpp	/^namespace anet {$/;"	n	file:
+anet	socket.h	/^namespace anet {$/;"	n
+anet	socketevent.cpp	/^namespace anet {$/;"	n	file:
+anet	socketevent.h	/^namespace anet {$/;"	n
+anet	stats.cpp	/^namespace anet {$/;"	n	file:
+anet	stats.h	/^namespace anet {$/;"	n
+anet	streamingcontext.cpp	/^namespace anet {$/;"	n	file:
+anet	streamingcontext.h	/^namespace anet {$/;"	n
+anet	tcpacceptor.cpp	/^namespace anet {$/;"	n	file:
+anet	tcpacceptor.h	/^namespace anet {$/;"	n
+anet	tcpcomponent.cpp	/^namespace anet {$/;"	n	file:
+anet	tcpcomponent.h	/^namespace anet {$/;"	n
+anet	tcpconnection.cpp	/^namespace anet {$/;"	n	file:
+anet	tcpconnection.h	/^namespace anet {$/;"	n
+anet	thread.h	/^namespace anet {$/;"	n
+anet	threadcond.h	/^namespace anet {$/;"	n
+anet	threadmutex.h	/^namespace anet {$/;"	n
+anet	timeutil.cpp	/^namespace anet {$/;"	n	file:
+anet	timeutil.h	/^namespace anet {$/;"	n
+anet	transport.cpp	/^namespace anet {$/;"	n	file:
+anet	transport.h	/^namespace anet {$/;"	n
+anet	udpacceptor.h	/^namespace anet {$/;"	n
+anet	udpcomponent.cpp	/^namespace anet {$/;"	n	file:
+anet	udpcomponent.h	/^namespace anet {$/;"	n
+anet	udpconnection.cpp	/^namespace anet {$/;"	n	file:
+anet	udpconnection.h	/^namespace anet {$/;"	n
+anetLogger	log.cpp	/^alog::Logger *Logger::anetLogger = alog::Logger::getLogger("anet");$/;"	m	class:anet::Logger	file:
+anetLogger	log.h	/^    static alog::Logger *anetLogger;$/;"	m	class:anet::Logger
+appendBody	defaultpacket.cpp	/^bool DefaultPacket::appendBody(const char *str, size_t length) {$/;"	f	class:anet::DefaultPacket
+appendFreeList	channelpool.cpp	/^bool ChannelPool::appendFreeList(Channel *addList) {$/;"	f	class:anet::ChannelPool
+args	thread.h	/^    void *args;$/;"	m	class:anet::Thread
+atomic_add	atomic.h	/^static __inline__ void atomic_add(int i, atomic_t *v)$/;"	f
+atomic_add_negative	atomic.h	/^static __inline__ int atomic_add_negative(int i, atomic_t *v)$/;"	f
+atomic_add_return	atomic.h	/^static __inline__ int atomic_add_return(int i, atomic_t *v)$/;"	f
+atomic_clear_mask	atomic.h	220;"	d
+atomic_dec	atomic.h	/^static __inline__ void atomic_dec(atomic_t *v)$/;"	f
+atomic_dec_and_test	atomic.h	/^static __inline__ int atomic_dec_and_test(atomic_t *v)$/;"	f
+atomic_dec_return	atomic.h	229;"	d
+atomic_inc	atomic.h	/^static __inline__ void atomic_inc(atomic_t *v)$/;"	f
+atomic_inc_and_test	atomic.h	/^static __inline__ int atomic_inc_and_test(atomic_t *v)$/;"	f
+atomic_inc_return	atomic.h	228;"	d
+atomic_read	atomic.h	46;"	d
+atomic_set	atomic.h	55;"	d
+atomic_set_mask	atomic.h	224;"	d
+atomic_sub	atomic.h	/^static __inline__ void atomic_sub(int i, atomic_t *v)$/;"	f
+atomic_sub_and_test	atomic.h	/^static __inline__ int atomic_sub_and_test(int i, atomic_t *v)$/;"	f
+atomic_sub_return	atomic.h	/^static __inline__ int atomic_sub_return(int i, atomic_t *v)$/;"	f
+atomic_t	atomic.h	/^typedef struct { volatile int counter; } atomic_t;$/;"	t	typeref:struct:__anon2
+beforeCallback	connection.cpp	/^void Connection::beforeCallback() {$/;"	f	class:anet::Connection
+broadcast	threadcond.h	/^    void broadcast() {$/;"	f	class:anet::ThreadCond
+checkSocketHandle	socket.cpp	/^bool Socket::checkSocketHandle() {$/;"	f	class:anet::Socket
+checkTimeout	connection.cpp	/^bool Connection::checkTimeout(int64_t now) {$/;"	f	class:anet::Connection
+checkTimeout	tcpacceptor.cpp	/^bool TCPAcceptor::checkTimeout(int64_t now) {return true;}$/;"	f	class:anet::TCPAcceptor
+checkTimeout	tcpcomponent.cpp	/^bool TCPComponent::checkTimeout(int64_t now) {$/;"	f	class:anet::TCPComponent
+clear	databuffer.h	/^    void clear() {$/;"	f	class:anet::DataBuffer
+clear	stats.cpp	/^void StatCounter::clear()$/;"	f	class:anet::StatCounter
+clearCloseOnExec	filecontrol.cpp	/^bool FileControl::clearCloseOnExec(int fd) {$/;"	f	class:anet::FileControl
+clearInputBuffer	connection.h	/^    virtual void clearInputBuffer() {$/;"	f	class:anet::Connection
+clearInputBuffer	tcpconnection.h	/^    void clearInputBuffer() {$/;"	f	class:anet::TCPConnection
+clearOutputBuffer	connection.h	/^    virtual void clearOutputBuffer() {$/;"	f	class:anet::Connection
+clearOutputBuffer	tcpconnection.h	/^    void clearOutputBuffer() {$/;"	f	class:anet::TCPConnection
+close	connection.cpp	/^void Connection::close() {$/;"	f	class:anet::Connection
+close	iocomponent.h	/^    virtual void close() {}$/;"	f	class:anet::IOComponent
+close	socket.cpp	/^void Socket::close() {$/;"	f	class:anet::Socket
+close	tcpacceptor.cpp	/^void TCPAcceptor::close() {$/;"	f	class:anet::TCPAcceptor
+close	tcpcomponent.cpp	/^void TCPComponent::close() {$/;"	f	class:anet::TCPComponent
+close	udpcomponent.cpp	/^void UDPComponent::close() {}$/;"	f	class:anet::UDPComponent
+closeComponents	transport.cpp	/^void Transport::closeComponents() {$/;"	f	class:anet::Transport
+closeConnection	iocomponent.cpp	/^void IOComponent::closeConnection(Connection *conn) {$/;"	f	class:anet::IOComponent
+closeConnection	tcpcomponent.cpp	/^void TCPComponent::closeConnection(Connection *conn) {$/;"	f	class:anet::TCPComponent
+closeHook	connection.cpp	/^void Connection::closeHook() {$/;"	f	class:anet::Connection
+closeSocket	iocomponent.cpp	/^void IOComponent::closeSocket() {$/;"	f	class:anet::IOComponent
+closeSocketNoLock	iocomponent.cpp	/^void IOComponent::closeSocketNoLock() {$/;"	f	class:anet::IOComponent
+collectNewComponets	transport.cpp	/^void Transport::collectNewComponets() {$/;"	f	class:anet::Transport
+connect	socket.cpp	/^bool Socket::connect() {$/;"	f	class:anet::Socket
+connect	transport.cpp	/^Connection *Transport::connect(const char *spec, $/;"	f	class:anet::Transport
+countDataLen	controlpacket.h	/^    void countDataLen() {}$/;"	f	class:anet::ControlPacket
+counter	atomic.h	/^typedef struct { volatile int counter; } atomic_t;$/;"	m	struct:__anon2
+createConnection	iocomponent.h	/^    virtual Connection *createConnection(IPacketStreamer *streamer,$/;"	f	class:anet::IOComponent
+createConnection	tcpcomponent.cpp	/^Connection* TCPComponent::createConnection(IPacketStreamer *streamer,$/;"	f	class:anet::TCPComponent
+createContext	defaultpacketstreamer.cpp	/^StreamingContext* DefaultPacketStreamer::createContext() {$/;"	f	class:anet::DefaultPacketStreamer
+createContext	httpstreamer.cpp	/^StreamingContext* HTTPStreamer::createContext() {$/;"	f	class:anet::HTTPStreamer
+createPacket	defaultpacketfactory.cpp	/^Packet *DefaultPacketFactory::createPacket(int pcode) {$/;"	f	class:anet::DefaultPacketFactory
+createPacket	httppacketfactory.cpp	/^Packet* HTTPPacketFactory::createPacket(int pcode) {$/;"	f	class:anet::HTTPPacketFactory
+createPacket	httppacketstreamer.h	/^    Packet *createPacket(int pcode) {$/;"	f	class:anet::DefaultHttpPacketFactory
+createUDP	socket.cpp	/^bool Socket::createUDP() {$/;"	f	class:anet::Socket
+decode	controlpacket.h	/^    bool decode(DataBuffer *input, PacketHeader *header) {$/;"	f	class:anet::ControlPacket
+decode	defaultpacket.cpp	/^bool DefaultPacket::decode(DataBuffer *input, PacketHeader *header) {$/;"	f	class:anet::DefaultPacket
+decode	defaultpacketstreamer.cpp	/^Packet *DefaultPacketStreamer::decode(DataBuffer *input, PacketHeader *header) {$/;"	f	class:anet::DefaultPacketStreamer
+decode	httppacket.h	/^    bool decode(DataBuffer *input, PacketHeader *header) {$/;"	f	class:anet::HTTPPacket
+decode	httprequestpacket.cpp	/^bool HttpRequestPacket::decode(DataBuffer *input, PacketHeader *header) {$/;"	f	class:anet::HttpRequestPacket
+decode	httpresponsepacket.cpp	/^bool HttpResponsePacket::decode(DataBuffer *input, PacketHeader *header) {$/;"	f	class:anet::HttpResponsePacket
+decode	httpstreamer.h	/^    Packet *decode(DataBuffer *input, PacketHeader *header) {$/;"	f	class:anet::HTTPStreamer
+drainData	databuffer.h	/^    void drainData(int len) {$/;"	f	class:anet::DataBuffer
+empty	httppacket.cpp	/^const char* HTTPPacket::empty = "";$/;"	m	class:anet::HTTPPacket	file:
+empty	httppacket.h	/^    static const char *empty;$/;"	m	class:anet::HTTPPacket
+empty	packetqueue.cpp	/^bool PacketQueue::empty() {$/;"	f	class:anet::PacketQueue
+enableRead	iocomponent.cpp	/^void IOComponent::enableRead(bool on) {$/;"	f	class:anet::IOComponent
+enableWrite	iocomponent.cpp	/^void IOComponent::enableWrite(bool on) {$/;"	f	class:anet::IOComponent
+encode	controlpacket.h	/^    bool encode(DataBuffer *output) {$/;"	f	class:anet::ControlPacket
+encode	defaultpacket.cpp	/^bool DefaultPacket::encode(DataBuffer *output) {$/;"	f	class:anet::DefaultPacket
+encode	defaultpacketstreamer.cpp	/^bool DefaultPacketStreamer::encode(Packet *packet, DataBuffer *output) {$/;"	f	class:anet::DefaultPacketStreamer
+encode	httppacket.cpp	/^bool HTTPPacket::encode(DataBuffer *output) {$/;"	f	class:anet::HTTPPacket
+encode	httprequestpacket.cpp	/^bool HttpRequestPacket::encode(DataBuffer *output) {$/;"	f	class:anet::HttpRequestPacket
+encode	httpresponsepacket.cpp	/^bool HttpResponsePacket::encode(DataBuffer *output) {$/;"	f	class:anet::HttpResponsePacket
+encodeBody	httppacket.cpp	/^bool HTTPPacket::encodeBody(DataBuffer *output) {$/;"	f	class:anet::HTTPPacket
+encodeHeaders	httppacket.cpp	/^bool HTTPPacket::encodeHeaders(DataBuffer *output) {$/;"	f	class:anet::HTTPPacket
+encodeStartLine	httppacket.cpp	/^bool HTTPPacket::encodeStartLine(DataBuffer *output) {$/;"	f	class:anet::HTTPPacket
+ensureFree	databuffer.h	/^    void ensureFree(int len) {$/;"	f	class:anet::DataBuffer
+eqstr	httprequestpacket.h	/^struct eqstr {$/;"	s	namespace:anet
+eventIteration	transport.cpp	/^void Transport::eventIteration( int64_t &now) {$/;"	f	class:anet::Transport
+eventLoop	transport.cpp	/^void Transport::eventLoop(SocketEvent *socketEvent) {$/;"	f	class:anet::Transport
+existPacketHeader	ipacketstreamer.h	/^    virtual bool existPacketHeader() {$/;"	f	class:anet::IPacketStreamer
+expand	databuffer.h	/^    inline void expand(int need) {$/;"	f	class:anet::DataBuffer
+fillInt32	databuffer.h	/^    void fillInt32(unsigned char *dst, uint32_t n) {$/;"	f	class:anet::DataBuffer
+findBytes	databuffer.h	/^    int findBytes(const char *findstr, int len) {$/;"	f	class:anet::DataBuffer
+findCRLF	httpstreamer.cpp	/^bool HTTPStreamer::findCRLF(char *start, char *end, char *&CR,  size_t &length) {$/;"	f	class:anet::HTTPStreamer
+findChannel	channelpool.cpp	/^Channel *ChannelPool::findChannel(uint32_t id) {$/;"	f	class:anet::ChannelPool
+findHeader	httprequestpacket.cpp	/^const char *HttpRequestPacket::findHeader(const char *name) {$/;"	f	class:anet::HttpRequestPacket
+findNextWhiteSpace	httpstreamer.cpp	/^char* HTTPStreamer::findNextWhiteSpace(char *begin, char *end) {$/;"	f	class:anet::HTTPStreamer
+findNextWhiteSpaceAndReplaceZero	httpstreamer.cpp	/^char* HTTPStreamer::findNextWhiteSpaceAndReplaceZero(char *begin, char *end ) {$/;"	f	class:anet::HTTPStreamer
+free	controlpacket.cpp	/^void  ControlPacket::free() {$/;"	f	class:anet::ControlPacket
+free	packet.h	/^  virtual void free() {$/;"	f	class:anet::Packet
+freeChannel	channelpool.cpp	/^bool ChannelPool::freeChannel(Channel *channel) {$/;"	f	class:anet::ChannelPool
+g_errstr	log.cpp	/^static const char *g_errstr[] = {"ERROR","WARN","INFO","DEBUG","SPAM"$/;"	m	namespace:anet	file:
+g_level	log.cpp	/^static int g_level = 1;$/;"	m	namespace:anet	file:
+getAddr	socket.cpp	/^char *Socket::getAddr(char *dest, int len, bool active) {$/;"	f	class:anet::Socket
+getArgs	channel.cpp	/^void *Channel::getArgs() {$/;"	f	class:anet::Channel
+getArgs	thread.h	/^    void *getArgs() {$/;"	f	class:anet::Thread
+getBody	defaultpacket.cpp	/^char* DefaultPacket::getBody() {$/;"	f	class:anet::DefaultPacket
+getBody	defaultpacket.cpp	/^char* DefaultPacket::getBody(size_t &length) {$/;"	f	class:anet::DefaultPacket
+getBody	defaultpacket.cpp	/^const char* DefaultPacket::getBody() const {$/;"	f	class:anet::DefaultPacket
+getBody	defaultpacket.cpp	/^const char* DefaultPacket::getBody(size_t &length) const {$/;"	f	class:anet::DefaultPacket
+getBodyLen	defaultpacket.cpp	/^size_t DefaultPacket::getBodyLen() {$/;"	f	class:anet::DefaultPacket
+getCRLF	httpstreamer.cpp	/^bool HTTPStreamer::getCRLF(DataBuffer *databuffer,$/;"	f	class:anet::HTTPStreamer
+getCapacity	defaultpacket.cpp	/^size_t DefaultPacket::getCapacity() {$/;"	f	class:anet::DefaultPacket
+getChannel	packet.h	/^    Channel *getChannel()$/;"	f	class:anet::Packet
+getChannelId	packet.h	/^    uint32_t getChannelId() {$/;"	f	class:anet::Packet
+getCommand	controlpacket.h	/^    int getCommand() {$/;"	f	class:anet::ControlPacket
+getConnection	tcpcomponent.h	/^    Connection *getConnection() {$/;"	f	class:anet::TCPComponent
+getContext	connection.h	/^    StreamingContext* getContext() {$/;"	f	class:anet::Connection
+getData	databuffer.h	/^    char *getData() {$/;"	f	class:anet::DataBuffer
+getDataLen	databuffer.h	/^    int getDataLen() {$/;"	f	class:anet::DataBuffer
+getErrorNo	streamingcontext.cpp	/^int StreamingContext::getErrorNo() {$/;"	f	class:anet::StreamingContext
+getErrorString	streamingcontext.cpp	/^const char* StreamingContext::getErrorString() {$/;"	f	class:anet::StreamingContext
+getEvents	epollsocketevent.cpp	/^int EPollSocketEvent::getEvents(int timeout, IOEvent *ioevents, int cnt) {$/;"	f	class:anet::EPollSocketEvent
+getExpireTime	packet.h	/^    int64_t getExpireTime() {$/;"	f	class:anet::Packet
+getFree	databuffer.h	/^    char *getFree() {$/;"	f	class:anet::DataBuffer
+getFreeLen	databuffer.h	/^    int getFreeLen() {$/;"	f	class:anet::DataBuffer
+getHandler	channel.cpp	/^IPacketHandler *Channel::getHandler() {$/;"	f	class:anet::Channel
+getHeader	httppacket.cpp	/^const char* HTTPPacket::getHeader(const char *key) {$/;"	f	class:anet::HTTPPacket
+getIOComponent	connection.h	/^    IOComponent *getIOComponent() {$/;"	f	class:anet::Connection
+getIOComponent	socket.cpp	/^IOComponent *Socket::getIOComponent() {$/;"	f	class:anet::Socket
+getId	channel.cpp	/^uint32_t Channel::getId() {$/;"	f	class:anet::Channel
+getIpAddress	socket.cpp	/^uint32_t Socket::getIpAddress(bool active) {$/;"	f	class:anet::Socket
+getLastError	socket.h	/^    static int getLastError() {$/;"	f	class:anet::Socket
+getMethod	httppacket.cpp	/^HTTPPacket::HTTPMethod HTTPPacket::getMethod() {$/;"	f	class:anet::HTTPPacket
+getMethodString	httppacket.cpp	/^const char* HTTPPacket::getMethodString() {$/;"	f	class:anet::HTTPPacket
+getNext	channel.h	/^    Channel *getNext() {$/;"	f	class:anet::Channel
+getNext	packet.h	/^    Packet *getNext()$/;"	f	class:anet::Packet
+getPacket	streamingcontext.cpp	/^Packet* StreamingContext::getPacket() {$/;"	f	class:anet::StreamingContext
+getPacketHandledCount	connection.h	/^    uint32_t getPacketHandledCount() {return _packetHandledCount;}$/;"	f	class:anet::Connection
+getPacketHeader	packet.h	/^    PacketHeader *getPacketHeader() {$/;"	f	class:anet::Packet
+getPacketInfo	defaultpacketstreamer.cpp	/^bool DefaultPacketStreamer::getPacketInfo(DataBuffer *input, PacketHeader *header, bool *broken) {$/;"	f	class:anet::DefaultPacketStreamer
+getPacketInfo	httppacketstreamer.cpp	/^bool HttpPacketStreamer::getPacketInfo(DataBuffer *input, PacketHeader *header, bool *broken) {$/;"	f	class:anet::HttpPacketStreamer
+getPacketInfo	httpstreamer.h	/^    bool getPacketInfo(DataBuffer *input, PacketHeader *header, bool *broken) {$/;"	f	class:anet::HTTPStreamer
+getPacketPostedCount	connection.h	/^    uint32_t getPacketPostedCount() {return _packetPostedCount;}$/;"	f	class:anet::Connection
+getPacketType	httppacket.cpp	/^HTTPPacket::HTTPPacketType HTTPPacket::getPacketType() {$/;"	f	class:anet::HTTPPacket
+getPort	socket.cpp	/^int Socket::getPort(bool active) {$/;"	f	class:anet::Socket
+getQuery	httprequestpacket.cpp	/^char *HttpRequestPacket::getQuery() {$/;"	f	class:anet::HttpRequestPacket
+getQueueLimit	connection.cpp	/^size_t Connection::getQueueLimit() {$/;"	f	class:anet::Connection
+getReasonPhrase	httppacket.cpp	/^const char* HTTPPacket::getReasonPhrase() {$/;"	f	class:anet::HTTPPacket
+getRef	connection.cpp	/^int Connection::getRef() {$/;"	f	class:anet::Connection
+getRef	iocomponent.cpp	/^int IOComponent::getRef() {$/;"	f	class:anet::IOComponent
+getRunnable	thread.h	/^    Runnable *getRunnable() {$/;"	f	class:anet::Thread
+getSoError	socket.cpp	/^int Socket::getSoError () {$/;"	f	class:anet::Socket
+getSockAddr	socket.cpp	/^bool Socket::getSockAddr(sockaddr_in &addr, bool active) {$/;"	f	class:anet::Socket
+getSocket	iocomponent.h	/^    inline Socket *getSocket() {$/;"	f	class:anet::IOComponent
+getSocketEvent	transport.cpp	/^SocketEvent* Transport::getSocketEvent() {$/;"	f	class:anet::Transport
+getSocketHandle	socket.cpp	/^int Socket::getSocketHandle() {$/;"	f	class:anet::Socket
+getState	iocomponent.h	/^    inline IOCState getState() {$/;"	f	class:anet::IOComponent
+getStatusCode	httppacket.cpp	/^int HTTPPacket::getStatusCode() {$/;"	f	class:anet::HTTPPacket
+getTime	timeutil.cpp	/^int64_t TimeUtil::getTime() {$/;"	f	class:anet::TimeUtil
+getTimeoutList	channelpool.cpp	/^Channel* ChannelPool::getTimeoutList(int64_t now) {$/;"	f	class:anet::ChannelPool
+getTimeoutList	packetqueue.cpp	/^Packet *PacketQueue::getTimeoutList(int64_t now)$/;"	f	class:anet::PacketQueue
+getURI	httppacket.cpp	/^const char* HTTPPacket::getURI() {$/;"	f	class:anet::HTTPPacket
+getUseListCount	channelpool.h	/^    size_t getUseListCount() {$/;"	f	class:anet::ChannelPool
+getVersion	httppacket.cpp	/^HTTPPacket::HTTPVersion HTTPPacket::getVersion() {$/;"	f	class:anet::HTTPPacket
+handleErrorEvent	tcpacceptor.cpp	/^bool TCPAcceptor::handleErrorEvent() {$/;"	f	class:anet::TCPAcceptor
+handleErrorEvent	tcpcomponent.cpp	/^bool TCPComponent::handleErrorEvent() {$/;"	f	class:anet::TCPComponent
+handlePacket	connection.cpp	/^    HPRetCode handlePacket(Packet *packet, void *args) {$/;"	f	class:anet::SynStub
+handlePacket	connection.cpp	/^bool Connection::handlePacket(Packet *packet) {$/;"	f	class:anet::Connection
+handleReadEvent	tcpacceptor.cpp	/^bool TCPAcceptor::handleReadEvent() {$/;"	f	class:anet::TCPAcceptor
+handleReadEvent	tcpcomponent.cpp	/^bool TCPComponent::handleReadEvent() {$/;"	f	class:anet::TCPComponent
+handleReadEvent	udpcomponent.cpp	/^bool UDPComponent::handleReadEvent() {$/;"	f	class:anet::UDPComponent
+handleWriteEvent	tcpacceptor.h	/^    bool handleWriteEvent() {$/;"	f	class:anet::TCPAcceptor
+handleWriteEvent	tcpcomponent.cpp	/^bool TCPComponent::handleWriteEvent() {$/;"	f	class:anet::TCPComponent
+handleWriteEvent	udpacceptor.h	/^    bool handleWriteEvent() {$/;"	f	class:anet::UDPAcceptor
+handleWriteEvent	udpcomponent.cpp	/^bool UDPComponent::handleWriteEvent() {$/;"	f	class:anet::UDPComponent
+headerBegin	httppacket.cpp	/^HTTPPacket::ConstHeaderIterator HTTPPacket::headerBegin() {$/;"	f	class:anet::HTTPPacket
+headerEnd	httppacket.cpp	/^HTTPPacket::ConstHeaderIterator HTTPPacket::headerEnd() {$/;"	f	class:anet::HTTPPacket
+hook	thread.h	/^    static void *hook(void *arg) {$/;"	f	class:anet::Thread
+init	tcpacceptor.cpp	/^bool TCPAcceptor::init(bool isServer) {$/;"	f	class:anet::TCPAcceptor
+init	tcpcomponent.cpp	/^bool TCPComponent::init(bool isServer) {$/;"	f	class:anet::TCPComponent
+init	udpcomponent.cpp	/^bool UDPComponent::init(bool isServer) {$/;"	f	class:anet::UDPComponent
+ioc	transport.h	/^        IOComponent *ioc;$/;"	m	struct:anet::Transport::TransportCommand
+isAddressValid	socket.h	/^    inline bool isAddressValid() {$/;"	f	class:anet::Socket
+isAutoReconn	iocomponent.h	/^    inline bool isAutoReconn() {$/;"	f	class:anet::IOComponent
+isBroken	streamingcontext.cpp	/^bool StreamingContext::isBroken() {$/;"	f	class:anet::StreamingContext
+isCloseOnExec	filecontrol.cpp	/^bool FileControl::isCloseOnExec(int fd) {$/;"	f	class:anet::FileControl
+isClosed	connection.cpp	/^bool Connection::isClosed() {$/;"	f	class:anet::Connection
+isClosed	iocomponent.h	/^    inline bool isClosed() {$/;"	f	class:anet::IOComponent
+isCompleted	streamingcontext.cpp	/^bool StreamingContext::isCompleted() {$/;"	f	class:anet::StreamingContext
+isConnectState	iocomponent.h	/^    inline bool isConnectState() {$/;"	f	class:anet::IOComponent
+isEndOfFile	streamingcontext.cpp	/^bool StreamingContext::isEndOfFile() {$/;"	f	class:anet::StreamingContext
+isKeepAlive	httppacket.cpp	/^bool HTTPPacket::isKeepAlive() {$/;"	f	class:anet::HTTPPacket
+isKeepAlive	httprequestpacket.cpp	/^bool HttpRequestPacket::isKeepAlive() {$/;"	f	class:anet::HttpRequestPacket
+isReferencedByReadWriteThread	iocomponent.h	/^    bool isReferencedByReadWriteThread() {$/;"	f	class:anet::IOComponent
+isRegularPacket	controlpacket.h	/^    bool isRegularPacket() {$/;"	f	class:anet::ControlPacket
+isRegularPacket	packet.h	/^    virtual bool isRegularPacket() {$/;"	f	class:anet::Packet
+isServer	connection.h	/^    bool isServer() {$/;"	f	class:anet::Connection
+isTokenCharacter	httpstreamer.h	/^    inline bool isTokenCharacter(unsigned char c) {$/;"	f	class:anet::HTTPStreamer
+isValidDigits	httpstreamer.cpp	/^bool HTTPStreamer::isValidDigits(const char *dist) {$/;"	f	class:anet::HTTPStreamer
+isValidStatusCode	httpstreamer.cpp	/^bool HTTPStreamer::isValidStatusCode(char *p) {$/;"	f	class:anet::HTTPStreamer
+isValidToken	httpstreamer.cpp	/^bool HTTPStreamer::isValidToken(char *begin, char *end) {$/;"	f	class:anet::HTTPStreamer
+join	thread.h	/^    void join() {$/;"	f	class:anet::Thread
+keyCompareCaseInsensive	httppacket.h	/^struct keyCompareCaseInsensive {$/;"	s	namespace:anet
+listen	serversocket.cpp	/^bool ServerSocket::listen() {$/;"	f	class:anet::ServerSocket
+listen	transport.cpp	/^IOComponent *Transport::listen (const char *spec, IPacketStreamer *streamer, $/;"	f	class:anet::Transport
+lock	iocomponent.cpp	/^void IOComponent::lock() {$/;"	f	class:anet::IOComponent
+lock	threadmutex.h	/^    void lock () {$/;"	f	class:anet::ThreadMutex
+lock	transport.cpp	/^void Transport::lock() {$/;"	f	class:anet::Transport
+log	stats.cpp	/^void StatCounter::log()$/;"	f	class:anet::StatCounter
+logMessage	log.cpp	/^void Logger::logMessage(int level, const char *file, int line, const char *function, const char *fmt, ...) {$/;"	f	class:anet::Logger
+logSetup	log.cpp	/^void Logger::logSetup() {$/;"	f	class:anet::Logger
+logTearDown	log.cpp	/^void Logger::logTearDown() {$/;"	f	class:anet::Logger
+messageHeadersEnd	httpstreamer.cpp	/^bool HTTPStreamer::messageHeadersEnd(HTTPStreamingContext *context) {$/;"	f	class:anet::HTTPStreamer
+moveBack	packetqueue.cpp	/^void PacketQueue::moveBack(PacketQueue *srcQueue) {$/;"	f	class:anet::PacketQueue
+moveTo	packetqueue.cpp	/^void PacketQueue::moveTo(PacketQueue *destQueue) {$/;"	f	class:anet::PacketQueue
+operator ()	httppacket.h	/^    bool operator()(const char *s1, const char *s2) {$/;"	f	struct:anet::keyCompareCaseInsensive
+operator ()	httppacket.h	/^    bool operator()(const std::string &s1, $/;"	f	struct:anet::keyCompareCaseInsensive
+operator ()	httprequestpacket.h	/^    bool operator()(const char* s1, const char* s2) const {$/;"	f	struct:anet::eqstr
+operator ()	httpresponsepacket.h	/^    size_t operator()(const std::string& str) const {$/;"	f	struct:anet::str_hash
+parseAddr	transport.cpp	/^int Transport::parseAddr(char *src, char **args, int cnt) {$/;"	f	class:anet::Transport
+pop	packetqueue.cpp	/^Packet *PacketQueue::pop() {$/;"	f	class:anet::PacketQueue
+postCommand	transport.cpp	/^void Transport::postCommand(const CommandType type, IOComponent *ioc) {$/;"	f	class:anet::Transport
+postPacket	connection.cpp	/^bool Connection::postPacket(Packet *packet, IPacketHandler *packetHandler,$/;"	f	class:anet::Connection
+pourData	databuffer.h	/^    void pourData(int len) {$/;"	f	class:anet::DataBuffer
+processBody	httpstreamer.cpp	/^bool HTTPStreamer::processBody(DataBuffer *databuffer,$/;"	f	class:anet::HTTPStreamer
+processChunkSize	httpstreamer.cpp	/^bool HTTPStreamer::processChunkSize(DataBuffer *databuffer,$/;"	f	class:anet::HTTPStreamer
+processChunkedBody	httpstreamer.cpp	/^bool HTTPStreamer::processChunkedBody(DataBuffer *databuffer, $/;"	f	class:anet::HTTPStreamer
+processCommands	transport.cpp	/^void Transport::processCommands() {$/;"	f	class:anet::Transport
+processData	defaultpacketstreamer.cpp	/^bool DefaultPacketStreamer::processData(DataBuffer *dataBuffer,$/;"	f	class:anet::DefaultPacketStreamer
+processData	httpstreamer.cpp	/^bool HTTPStreamer::processData(DataBuffer *dataBuffer, $/;"	f	class:anet::HTTPStreamer
+processEOFBody	httpstreamer.cpp	/^bool HTTPStreamer::processEOFBody(DataBuffer *databuffer, $/;"	f	class:anet::HTTPStreamer
+processHeaders	httpstreamer.cpp	/^bool HTTPStreamer::processHeaders(DataBuffer *databuffer, $/;"	f	class:anet::HTTPStreamer
+processHeadersOrTrailers	httpstreamer.cpp	/^bool HTTPStreamer::processHeadersOrTrailers(DataBuffer *databuffer, $/;"	f	class:anet::HTTPStreamer
+processLengthBody	httpstreamer.cpp	/^bool HTTPStreamer::processLengthBody(DataBuffer *databuffer,$/;"	f	class:anet::HTTPStreamer
+processPerHeaderLine	httpstreamer.cpp	/^bool HTTPStreamer::processPerHeaderLine(char *pstart, char *pend, $/;"	f	class:anet::HTTPStreamer
+processRequestLine	httpstreamer.cpp	/^bool HTTPStreamer::processRequestLine(HTTPStreamingContext *context, $/;"	f	class:anet::HTTPStreamer
+processStartLine	httpstreamer.cpp	/^bool HTTPStreamer::processStartLine(DataBuffer *databuffer, $/;"	f	class:anet::HTTPStreamer
+processStatusLine	httpstreamer.cpp	/^bool HTTPStreamer::processStatusLine(HTTPStreamingContext *context, $/;"	f	class:anet::HTTPStreamer
+push	packetqueue.cpp	/^void PacketQueue::push(Packet *packet) {$/;"	f	class:anet::PacketQueue
+read	socket.cpp	/^int Socket::read (void *data, int len) {$/;"	f	class:anet::Socket
+readBytes	databuffer.h	/^    void readBytes(void *dst, int len) {$/;"	f	class:anet::DataBuffer
+readData	tcpconnection.cpp	/^bool TCPConnection::readData() {$/;"	f	class:anet::TCPConnection
+readData	udpconnection.cpp	/^bool UDPConnection::readData() {$/;"	f	class:anet::UDPConnection
+readInt16	databuffer.h	/^    int16_t readInt16() {$/;"	f	class:anet::DataBuffer
+readInt32	databuffer.h	/^    int32_t readInt32() {$/;"	f	class:anet::DataBuffer
+readInt64	databuffer.h	/^    int64_t readInt64() {$/;"	f	class:anet::DataBuffer
+readInt8	databuffer.h	/^    int8_t readInt8() {$/;"	f	class:anet::DataBuffer
+reconnect	socket.cpp	/^bool Socket::reconnect() {$/;"	f	class:anet::Socket
+referencedByReadWriteThread	iocomponent.h	/^    inline void referencedByReadWriteThread(bool flag) {$/;"	f	class:anet::IOComponent
+removeComponent	transport.cpp	/^void Transport::removeComponent(IOComponent *ioc) {$/;"	f	class:anet::Transport
+removeEvent	epollsocketevent.cpp	/^bool EPollSocketEvent::removeEvent(Socket *socket) {$/;"	f	class:anet::EPollSocketEvent
+removeHeader	httppacket.cpp	/^bool HTTPPacket::removeHeader(const char *key) {$/;"	f	class:anet::HTTPPacket
+replaceZero	httpstreamer.cpp	/^void HTTPStreamer::replaceZero(char *begin, char *end) {$/;"	f	class:anet::HTTPStreamer
+reset	httpstreamingcontext.cpp	/^void HTTPStreamingContext::reset() {$/;"	f	class:anet::HTTPStreamingContext
+reset	streamingcontext.cpp	/^void StreamingContext::reset() {$/;"	f	class:anet::StreamingContext
+resetContext	connection.cpp	/^void Connection::resetContext() {$/;"	f	class:anet::Connection
+rotateLog	log.cpp	/^void Logger::rotateLog(const char *filename) {$/;"	f	class:anet::Logger
+run	transport.cpp	/^void Transport::run() {$/;"	f	class:anet::Transport
+run	transport.cpp	/^void Transport::run(Thread *thread, void *arg) {$/;"	f	class:anet::Transport
+runIteration	transport.cpp	/^void Transport::runIteration(int64_t &now) {$/;"	f	class:anet::Transport
+runnable	thread.h	/^    Runnable *runnable;$/;"	m	class:anet::Thread
+sendPacket	connection.cpp	/^Packet *Connection::sendPacket(Packet *packet) {$/;"	f	class:anet::Connection
+setAddress	socket.cpp	/^bool Socket::setAddress (const char *address, const int port) {$/;"	f	class:anet::Socket
+setArgs	channel.cpp	/^void Channel::setArgs(void *args) {$/;"	f	class:anet::Channel
+setAutoReconn	iocomponent.h	/^    inline void setAutoReconn(bool on) {$/;"	f	class:anet::IOComponent
+setBody	defaultpacket.cpp	/^bool DefaultPacket::setBody(const char *str, size_t length) {$/;"	f	class:anet::DefaultPacket
+setBody	httpresponsepacket.cpp	/^void HttpResponsePacket::setBody(const char *body, int len) {$/;"	f	class:anet::HttpResponsePacket
+setBroken	streamingcontext.cpp	/^void StreamingContext::setBroken(bool broken) {$/;"	f	class:anet::StreamingContext
+setCapacity	defaultpacket.cpp	/^bool DefaultPacket::setCapacity(size_t capacity) {$/;"	f	class:anet::DefaultPacket
+setChannel	packet.cpp	/^void Packet::setChannel(Channel *channel) {$/;"	f	class:anet::Packet
+setChannelId	packet.h	/^    void setChannelId(uint32_t chid) {$/;"	f	class:anet::Packet
+setCloseOnExec	filecontrol.cpp	/^bool FileControl::setCloseOnExec(int fd) {$/;"	f	class:anet::FileControl
+setCompleted	streamingcontext.cpp	/^void StreamingContext::setCompleted(bool completed) {$/;"	f	class:anet::StreamingContext
+setDefaultPacketHandler	connection.h	/^    void setDefaultPacketHandler(IPacketHandler *ph) {$/;"	f	class:anet::Connection
+setEndOfFile	streamingcontext.cpp	/^void StreamingContext::setEndOfFile(bool eof) {$/;"	f	class:anet::StreamingContext
+setErrorNo	httpstreamingcontext.cpp	/^void HTTPStreamingContext::setErrorNo(int errorNo) {$/;"	f	class:anet::HTTPStreamingContext
+setErrorNo	streamingcontext.cpp	/^void StreamingContext::setErrorNo(int errorNo) {$/;"	f	class:anet::StreamingContext
+setErrorString	streamingcontext.cpp	/^void StreamingContext::setErrorString(const char *errorString) {$/;"	f	class:anet::StreamingContext
+setEvent	epollsocketevent.cpp	/^bool EPollSocketEvent::setEvent(Socket *socket, bool enableRead, bool enableWrite) {$/;"	f	class:anet::EPollSocketEvent
+setExpireTime	channel.cpp	/^void Channel::setExpireTime(int64_t expireTime) {$/;"	f	class:anet::Channel
+setExpireTime	packet.cpp	/^void Packet::setExpireTime(int milliseconds) {$/;"	f	class:anet::Packet
+setHandler	channel.cpp	/^void Channel::setHandler(IPacketHandler *handler) {$/;"	f	class:anet::Channel
+setHeader	httpresponsepacket.cpp	/^void HttpResponsePacket::setHeader(const char *name, const char *value) {$/;"	f	class:anet::HttpResponsePacket
+setIOComponent	connection.h	/^    void setIOComponent(IOComponent *ioc) {$/;"	f	class:anet::Connection
+setIOComponent	socket.cpp	/^void Socket::setIOComponent(IOComponent *ioc) {$/;"	f	class:anet::Socket
+setId	channel.cpp	/^void Channel::setId(uint32_t id) {$/;"	f	class:anet::Channel
+setIntOption	socket.cpp	/^bool Socket::setIntOption (int option, int value) {$/;"	f	class:anet::Socket
+setKeepAlive	httppacket.cpp	/^void HTTPPacket::setKeepAlive(bool keepAlive) {$/;"	f	class:anet::HTTPPacket
+setKeepAlive	httpresponsepacket.cpp	/^void HttpResponsePacket::setKeepAlive(bool keepAlive) {$/;"	f	class:anet::HttpResponsePacket
+setKeepAlive	socket.h	/^    bool setKeepAlive(bool on) {$/;"	f	class:anet::Socket
+setLogLevel	log.cpp	/^void Logger::setLogLevel(const char *level) {$/;"	f	class:anet::Logger
+setLogLevel	log.cpp	/^void Logger::setLogLevel(const int level) {$/;"	f	class:anet::Logger
+setMethod	httppacket.cpp	/^void HTTPPacket::setMethod(HTTPMethod method) {$/;"	f	class:anet::HTTPPacket
+setMethod	httppacket.cpp	/^void HTTPPacket::setMethod(const char *method) {$/;"	f	class:anet::HTTPPacket
+setNow	timeutil.cpp	/^void TimeUtil::setNow() {$/;"	f	class:anet::TimeUtil
+setPacket	streamingcontext.cpp	/^void StreamingContext::setPacket(Packet *packet) {$/;"	f	class:anet::StreamingContext
+setPacketHeader	packet.h	/^    void setPacketHeader(PacketHeader *header) {$/;"	f	class:anet::Packet
+setPacketType	httppacket.cpp	/^void HTTPPacket::setPacketType(HTTPPacketType type) {$/;"	f	class:anet::HTTPPacket
+setPriority	thread.h	/^    bool setPriority(int priority, int policy = SCHED_OTHER) {$/;"	f	class:anet::Thread
+setQueueLimit	connection.cpp	/^bool Connection::setQueueLimit(size_t limit) {$/;"	f	class:anet::Connection
+setQueueTimeout	connection.h	/^    void setQueueTimeout(int queueTimeout) {$/;"	f	class:anet::Connection
+setReasonPhrase	httppacket.cpp	/^void HTTPPacket::setReasonPhrase(const char *reasonPhrase) {$/;"	f	class:anet::HTTPPacket
+setReuseAddress	socket.h	/^    bool setReuseAddress(bool on) {$/;"	f	class:anet::Socket
+setServer	connection.h	/^    void setServer(bool isServer) {$/;"	f	class:anet::Connection
+setSoBlocking	socket.cpp	/^bool Socket::setSoBlocking(bool blockingEnabled) {$/;"	f	class:anet::Socket
+setSoLinger	socket.cpp	/^bool Socket::setSoLinger(bool doLinger, int seconds) {$/;"	f	class:anet::Socket
+setSocketEvent	iocomponent.cpp	/^void IOComponent::setSocketEvent(SocketEvent *socketEvent) {$/;"	f	class:anet::IOComponent
+setState	iocomponent.cpp	/^bool IOComponent::setState(IOCState state) {$/;"	f	class:anet::IOComponent
+setState	tcpcomponent.cpp	/^bool TCPComponent::setState(IOCState state) {$/;"	f	class:anet::TCPComponent
+setStatus	httpresponsepacket.cpp	/^void HttpResponsePacket::setStatus(bool status) {$/;"	f	class:anet::HttpResponsePacket
+setStatusCode	httppacket.cpp	/^void HTTPPacket::setStatusCode(int statusCode) {$/;"	f	class:anet::HTTPPacket
+setTcpNoDelay	socket.cpp	/^bool Socket::setTcpNoDelay(bool noDelay) {$/;"	f	class:anet::Socket
+setURI	httppacket.cpp	/^void HTTPPacket::setURI(const char *URI) {$/;"	f	class:anet::HTTPPacket
+setUp	socket.cpp	/^void Socket::setUp(int socketHandle, struct sockaddr *hostAddress) {$/;"	f	class:anet::Socket
+setVersion	httppacket.cpp	/^void HTTPPacket::setVersion(HTTPVersion version) {$/;"	f	class:anet::HTTPPacket
+setWriteFinishClose	connection.h	/^    virtual void setWriteFinishClose(bool v) {$/;"	f	class:anet::Connection
+setWriteFinishClose	tcpconnection.h	/^    void setWriteFinishClose(bool v) {$/;"	f	class:anet::TCPConnection
+shrink	databuffer.h	/^    void shrink() {$/;"	f	class:anet::DataBuffer
+shutdown	socket.cpp	/^void Socket::shutdown() {$/;"	f	class:anet::Socket
+signal	threadcond.h	/^    void signal() {$/;"	f	class:anet::ThreadCond
+size	packetqueue.cpp	/^size_t PacketQueue::size() {$/;"	f	class:anet::PacketQueue
+skipWhiteSpaces	httpstreamer.cpp	/^char* HTTPStreamer::skipWhiteSpaces(char *begin, char *end ) {$/;"	f	class:anet::HTTPStreamer
+socketConnect	tcpcomponent.cpp	/^bool TCPComponent::socketConnect() {$/;"	f	class:anet::TCPComponent
+start	thread.h	/^    void start(Runnable *r, void *a) {$/;"	f	class:anet::Thread
+start	transport.cpp	/^bool Transport::start(bool promotePriority) {$/;"	f	class:anet::Transport
+stealPacket	streamingcontext.cpp	/^Packet* StreamingContext::stealPacket() {$/;"	f	class:anet::StreamingContext
+stop	transport.cpp	/^bool Transport::stop() {$/;"	f	class:anet::Transport
+stopRun	transport.cpp	/^void Transport::stopRun() {$/;"	f	class:anet::Transport
+str_hash	httpresponsepacket.h	/^struct str_hash {$/;"	s	namespace:anet
+strdupTrimed	httppacket.cpp	/^char* HTTPPacket::strdupTrimed(const char *str, bool front, bool end) {$/;"	f	class:anet::HTTPPacket
+stripData	databuffer.h	/^    void stripData(int len) {$/;"	f	class:anet::DataBuffer
+subRef	connection.cpp	/^void Connection::subRef() {$/;"	f	class:anet::Connection
+subRef	iocomponent.cpp	/^void IOComponent::subRef() {$/;"	f	class:anet::IOComponent
+tid	thread.h	/^    pthread_t tid;$/;"	m	class:anet::Thread
+timeoutIteration	transport.cpp	/^void Transport::timeoutIteration(int64_t now) {$/;"	f	class:anet::Transport
+timeoutLoop	transport.cpp	/^void Transport::timeoutLoop() {$/;"	f	class:anet::Transport
+toLowerCase	httppacket.cpp	/^bool HTTPPacket::toLowerCase(char *str, int length) {$/;"	f	class:anet::HTTPPacket
+trim	httpstreamer.cpp	/^void HTTPStreamer::trim(char *&begin, char *&end, bool left, bool right) {$/;"	f	class:anet::HTTPStreamer
+type	transport.h	/^        CommandType type;$/;"	m	struct:anet::Transport::TransportCommand
+unlock	iocomponent.cpp	/^void IOComponent::unlock() {$/;"	f	class:anet::IOComponent
+unlock	threadmutex.h	/^    void unlock() {$/;"	f	class:anet::ThreadMutex
+unlock	transport.cpp	/^void Transport::unlock() {$/;"	f	class:anet::Transport
+updateUseTime	iocomponent.h	/^    inline void updateUseTime(int64_t now) {$/;"	f	class:anet::IOComponent
+wait	threadcond.h	/^    bool wait(int milliseconds = 0) {$/;"	f	class:anet::ThreadCond
+wait	transport.cpp	/^bool Transport::wait() {$/;"	f	class:anet::Transport
+waitReply	connection.cpp	/^    Packet* waitReply() {$/;"	f	class:anet::SynStub
+wakeUp	epollsocketevent.cpp	/^void EPollSocketEvent::wakeUp() {$/;"	f	class:anet::EPollSocketEvent
+wakeUpSender	connection.cpp	/^void Connection::wakeUpSender() {$/;"	f	class:anet::Connection
+what	controlpacket.h	/^    const char* what() {$/;"	f	class:anet::ControlPacket
+write	socket.cpp	/^int Socket::write (const void *data, int len) {$/;"	f	class:anet::Socket
+writeBytes	databuffer.h	/^    void writeBytes(const void *src, int len) {$/;"	f	class:anet::DataBuffer
+writeData	tcpconnection.cpp	/^bool TCPConnection::writeData() {$/;"	f	class:anet::TCPConnection
+writeData	udpconnection.cpp	/^bool UDPConnection::writeData() {$/;"	f	class:anet::UDPConnection
+writeInt16	databuffer.h	/^    void writeInt16(int16_t n) {$/;"	f	class:anet::DataBuffer
+writeInt32	databuffer.h	/^    void writeInt32(int32_t n) {$/;"	f	class:anet::DataBuffer
+writeInt64	databuffer.h	/^    void writeInt64(int64_t n) {$/;"	f	class:anet::DataBuffer
+writeInt8	databuffer.h	/^    void writeInt8(int8_t n) {$/;"	f	class:anet::DataBuffer
+~ChannelPool	channelpool.cpp	/^ChannelPool::~ChannelPool() {$/;"	f	class:anet::ChannelPool
+~Connection	connection.cpp	/^Connection::~Connection() {$/;"	f	class:anet::Connection
+~DataBuffer	databuffer.h	/^    ~DataBuffer() {$/;"	f	class:anet::DataBuffer
+~DefaultPacket	defaultpacket.cpp	/^DefaultPacket::~DefaultPacket() {$/;"	f	class:anet::DefaultPacket
+~DefaultPacketStreamer	defaultpacketstreamer.cpp	/^DefaultPacketStreamer::~DefaultPacketStreamer() {}$/;"	f	class:anet::DefaultPacketStreamer
+~EPollSocketEvent	epollsocketevent.cpp	/^EPollSocketEvent::~EPollSocketEvent() {$/;"	f	class:anet::EPollSocketEvent
+~HTTPPacket	httppacket.cpp	/^HTTPPacket::~HTTPPacket() {$/;"	f	class:anet::HTTPPacket
+~HTTPStreamingContext	httpstreamingcontext.cpp	/^HTTPStreamingContext:: ~HTTPStreamingContext() {$/;"	f	class:anet::HTTPStreamingContext
+~HttpRequestPacket	httprequestpacket.cpp	/^HttpRequestPacket::~HttpRequestPacket() {$/;"	f	class:anet::HttpRequestPacket
+~HttpResponsePacket	httpresponsepacket.cpp	/^HttpResponsePacket::~HttpResponsePacket() {$/;"	f	class:anet::HttpResponsePacket
+~IOComponent	iocomponent.cpp	/^IOComponent::~IOComponent() {$/;"	f	class:anet::IOComponent
+~IPacketFactory	ipacketfactory.h	/^    virtual ~IPacketFactory(){}$/;"	f	class:anet::IPacketFactory
+~IPacketStreamer	ipacketstreamer.h	/^    virtual ~IPacketStreamer() {}$/;"	f	class:anet::IPacketStreamer
+~Logger	log.cpp	/^Logger::~Logger() {}$/;"	f	class:anet::Logger
+~MutexGuard	threadmutex.h	/^    ~MutexGuard(){$/;"	f	class:anet::MutexGuard
+~Packet	packet.cpp	/^Packet::~Packet() {$/;"	f	class:anet::Packet
+~PacketQueue	packetqueue.cpp	/^PacketQueue::~PacketQueue() {$/;"	f	class:anet::PacketQueue
+~Runnable	runnable.h	/^    virtual ~Runnable() {}$/;"	f	class:anet::Runnable
+~Socket	socket.cpp	/^Socket::~Socket() {$/;"	f	class:anet::Socket
+~SocketEvent	socketevent.cpp	/^SocketEvent::~SocketEvent() {}$/;"	f	class:anet::SocketEvent
+~StatCounter	stats.cpp	/^StatCounter::~StatCounter()$/;"	f	class:anet::StatCounter
+~StreamingContext	streamingcontext.cpp	/^StreamingContext::~StreamingContext() {$/;"	f	class:anet::StreamingContext
+~SynStub	connection.cpp	/^    virtual ~SynStub() {}$/;"	f	class:anet::SynStub
+~TCPComponent	tcpcomponent.cpp	/^TCPComponent::~TCPComponent() {$/;"	f	class:anet::TCPComponent
+~TCPConnection	tcpconnection.cpp	/^TCPConnection::~TCPConnection() {$/;"	f	class:anet::TCPConnection
+~ThreadCond	threadcond.h	/^    ~ThreadCond() {$/;"	f	class:anet::ThreadCond
+~ThreadMutex	threadmutex.h	/^    ~ThreadMutex() {$/;"	f	class:anet::ThreadMutex
+~Transport	transport.cpp	/^Transport::~Transport() {$/;"	f	class:anet::Transport
+~UDPComponent	udpcomponent.cpp	/^UDPComponent::~UDPComponent() {}$/;"	f	class:anet::UDPComponent
+~UDPConnection	udpconnection.cpp	/^UDPConnection::~UDPConnection() {}$/;"	f	class:anet::UDPConnection
