@@ -4,12 +4,13 @@
 
 namespace anet {
 
+// ¼Ì³ÐPacket
 class ControlPacket : public Packet {
 public:
     enum {
         CMD_BAD_PACKET = 1,
         CMD_TIMEOUT_PACKET,
-	CMD_CONNECTION_CLOSED,
+	    CMD_CONNECTION_CLOSED,
         CMD_END
     };
 

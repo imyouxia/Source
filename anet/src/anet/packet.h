@@ -6,6 +6,7 @@
 
 namespace anet {
 
+// 通信包的Magic Number
 #define ANET_PACKET_FLAG 0x416e4574  // AnEt
 #define CONNECTION_CLOSE "close"
 #define CONNECTION_KEEP_ALIVE "Keep-Alive"
@@ -87,6 +88,7 @@ public:
      * @param output target DataBuffer
      * @return Return true when decode success! Else return false.
      */
+    //controlpacket.h 实现 
     virtual bool encode(DataBuffer *output) = 0;
 
     /**
