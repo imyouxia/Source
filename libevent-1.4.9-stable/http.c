@@ -2256,6 +2256,7 @@ evhttp_accept_socket(struct evhttp *http, int fd)
 	return (0);
 }
 
+
 static struct evhttp*
 evhttp_new_object(void)
 {
@@ -2600,6 +2601,7 @@ addr_from_name(char *address)
 }
 #endif
 
+// 获得主机和端口
 static void
 name_from_addr(struct sockaddr *sa, socklen_t salen,
     char **phost, char **pport)
@@ -2633,6 +2635,8 @@ name_from_addr(struct sockaddr *sa, socklen_t salen,
 
 /* Create a non-blocking socket and bind it */
 /* todo: rename this function */
+
+// socket bind
 static int
 bind_socket_ai(struct addrinfo *ai, int reuse)
 {
@@ -2645,7 +2649,7 @@ bind_socket_ai(struct addrinfo *ai, int reuse)
                 event_warn("socket");
                 return (-1);
         }
-
+        // 设置非阻塞
         if (evutil_make_socket_nonblocking(fd) < 0)
                 goto out;
 
@@ -2655,7 +2659,7 @@ bind_socket_ai(struct addrinfo *ai, int reuse)
                 goto out;
         }
 #endif
-
+    // 检测对方主机是否崩溃
         setsockopt(fd, SOL_SOCKET, SO_KEEPALIVE, (void *)&on, sizeof(on));
 	if (reuse) {
 		setsockopt(fd, SOL_SOCKET, SO_REUSEADDR,
@@ -2741,6 +2745,7 @@ bind_socket(const char *address, u_short port, int reuse)
 	return (fd);
 }
 
+// connect
 static int
 socket_connect(int fd, const char *address, unsigned short port)
 {
