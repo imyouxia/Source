@@ -1,0 +1,332 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+DATA_MAX_SIZE	echoclient.cpp	18;"	d	file:
+DATA_MAX_SIZE	echoclient_syn.cpp	10;"	d	file:
+DATA_MAX_SIZE	signal_test.cpp	18;"	d	file:
+EchoClient	echoclient.cpp	/^EchoClient::EchoClient(char *spec)$/;"	f	class:EchoClient
+EchoClient	echoclient.cpp	/^class EchoClient : public Runnable {$/;"	c	file:
+EchoClient	echoclient_syn.cpp	/^    EchoClient(char *spec, int threads_count) {$/;"	f	class:EchoClient
+EchoClient	echoclient_syn.cpp	/^class EchoClient {$/;"	c	file:
+EchoClient	fork_test.cpp	/^class EchoClient : public IPacketHandler$/;"	c	file:
+EchoClient	signal_test.cpp	/^EchoClient::EchoClient(char *spec)$/;"	f	class:EchoClient
+EchoClient	signal_test.cpp	/^class EchoClient : public Runnable {$/;"	c	file:
+EchoPacketHandler	echoclient.cpp	/^    EchoPacketHandler() {$/;"	f	class:EchoPacketHandler
+EchoPacketHandler	echoclient.cpp	/^class EchoPacketHandler : public IPacketHandler$/;"	c	file:
+EchoPacketHandler	signal_test.cpp	/^    EchoPacketHandler() {$/;"	f	class:EchoPacketHandler
+EchoPacketHandler	signal_test.cpp	/^class EchoPacketHandler : public IPacketHandler$/;"	c	file:
+EchoRunnable	echoclient_syn.cpp	/^    EchoRunnable() {$/;"	f	class:EchoRunnable
+EchoRunnable	echoclient_syn.cpp	/^class EchoRunnable : public Runnable $/;"	c	file:
+EchoServer	echoserver.cpp	/^    EchoServer(std::string spec) : _spec(spec) {}$/;"	f	class:EchoServer
+EchoServer	echoserver.cpp	/^class EchoServer : public IServerAdapter {$/;"	c	file:
+EchoServer	fork_test.cpp	/^class EchoServer : public IServerAdapter $/;"	c	file:
+HTTPRequestEntry	helloworld_httpd.cpp	/^    HTTPRequestEntry() : _connection(NULL), _packet(NULL) {}$/;"	f	struct:HTTPRequestEntry
+HTTPRequestEntry	helloworld_httpd.cpp	/^struct HTTPRequestEntry {$/;"	s	file:
+HTTPRequestEntry	helloworld_httpd_2.cpp	/^    HTTPRequestEntry() : _connection(NULL), _packet(NULL) {}$/;"	f	struct:HTTPRequestEntry
+HTTPRequestEntry	helloworld_httpd_2.cpp	/^struct HTTPRequestEntry {$/;"	s	file:
+HTTPRequestEntry	httpserver_new.cpp	/^    HTTPRequestEntry() : _connection(NULL), _packet(NULL) {}$/;"	f	struct:HTTPRequestEntry
+HTTPRequestEntry	httpserver_new.cpp	/^struct HTTPRequestEntry {$/;"	s	file:
+HTTPServerAdapter	helloworld_httpd.cpp	/^class HTTPServerAdapter : public IServerAdapter {$/;"	c	file:
+HTTPServerAdapter	helloworld_httpd_2.cpp	/^class HTTPServerAdapter : public IServerAdapter {$/;"	c	file:
+HTTPServerAdapter	httpserver_new.cpp	/^class HTTPServerAdapter : public IServerAdapter {$/;"	c	file:
+HandleResult	helloworld_wget.cpp	/^class HandleResult : public IPacketHandler {$/;"	c	file:
+HelloWorldPacketHandler	benchmark.cpp	/^    HelloWorldPacketHandler() {$/;"	f	class:HelloWorldPacketHandler
+HelloWorldPacketHandler	benchmark.cpp	/^class HelloWorldPacketHandler : public IPacketHandler {$/;"	c	file:
+HelloWorldPacketHandler	helloworld_c.cpp	/^    HelloWorldPacketHandler() {$/;"	f	class:HelloWorldPacketHandler
+HelloWorldPacketHandler	helloworld_c.cpp	/^class HelloWorldPacketHandler : public IPacketHandler {$/;"	c	file:
+HelloWorldServerAdapter	helloworld_s.cpp	/^class HelloWorldServerAdapter : public IServerAdapter {$/;"	c	file:
+HttpRequest	httpserver.cpp	/^struct HttpRequest {$/;"	s	file:
+HttpServer	httpserver.cpp	/^HttpServer::HttpServer(char *spec)$/;"	f	class:HttpServer
+HttpServer	httpserver.cpp	/^class HttpServer {$/;"	c	file:
+HttpServerAdapter	httpserver.cpp	/^    HttpServerAdapter(IPacketFactory *factory) {$/;"	f	class:HttpServerAdapter
+HttpServerAdapter	httpserver.cpp	/^class HttpServerAdapter : public IServerAdapter$/;"	c	file:
+MyServerAdapter	helloworld_s_2.cpp	/^class MyServerAdapter : public IServerAdapter {$/;"	c	file:
+RequestEntry	benchmark.cpp	/^struct RequestEntry {$/;"	s	file:
+RequestEntry	helloworld_s_2.cpp	/^    RequestEntry() $/;"	f	struct:RequestEntry
+RequestEntry	helloworld_s_2.cpp	/^struct RequestEntry {$/;"	s	file:
+RequestProcessor	helloworld_httpd.cpp	/^    RequestProcessor() {$/;"	f	class:RequestProcessor
+RequestProcessor	helloworld_httpd.cpp	/^class RequestProcessor : public Runnable {$/;"	c	file:
+RequestProcessor	helloworld_httpd_2.cpp	/^    RequestProcessor() {$/;"	f	class:RequestProcessor
+RequestProcessor	helloworld_httpd_2.cpp	/^class RequestProcessor : public Runnable {$/;"	c	file:
+RequestProcessor	helloworld_s_2.cpp	/^    RequestProcessor() {$/;"	f	class:RequestProcessor
+RequestProcessor	helloworld_s_2.cpp	/^class RequestProcessor : public Runnable {$/;"	c	file:
+RequestProcessor	httpserver.cpp	/^class RequestProcessor : public Runnable {$/;"	c	file:
+RequestProcessor	httpserver_new.cpp	/^class RequestProcessor : public Runnable {$/;"	c	file:
+RequestQueue	helloworld_httpd.cpp	/^    RequestQueue() : _queueLimit(200), _waitCount(0) {}$/;"	f	struct:RequestQueue
+RequestQueue	helloworld_httpd.cpp	/^struct RequestQueue {$/;"	s	file:
+RequestQueue	helloworld_httpd_2.cpp	/^    RequestQueue() : _queueLimit(200), _waitCount(0) {}$/;"	f	struct:RequestQueue
+RequestQueue	helloworld_httpd_2.cpp	/^struct RequestQueue {$/;"	s	file:
+RequestQueue	helloworld_s_2.cpp	/^    RequestQueue()$/;"	f	class:RequestQueue
+RequestQueue	helloworld_s_2.cpp	/^class RequestQueue {$/;"	c	file:
+RequestQueue	httpserver_new.cpp	/^    RequestQueue() : _queueLimit(200), _waitCount(0) {}$/;"	f	struct:RequestQueue
+RequestQueue	httpserver_new.cpp	/^struct RequestQueue {$/;"	s	file:
+Run	fork_test.cpp	/^    void Run()$/;"	f	class:EchoClient
+Wget	helloworld_wget.cpp	/^  Wget(const char *sepc, const char *path) {$/;"	f	class:Wget
+Wget	helloworld_wget.cpp	/^class Wget {$/;"	c	file:
+_badCount	echoclient.cpp	/^    atomic_t _badCount;$/;"	m	class:EchoPacketHandler	file:
+_badCount	echoclient_syn.cpp	/^    int _badCount;$/;"	m	class:EchoClient	file:
+_badCount	echoclient_syn.cpp	/^    int _badCount;$/;"	m	class:EchoRunnable	file:
+_badCount	signal_test.cpp	/^    atomic_t _badCount;$/;"	m	class:EchoPacketHandler	file:
+_closeCount	echoclient.cpp	/^    atomic_t _closeCount;$/;"	m	class:EchoPacketHandler	file:
+_closeCount	echoclient_syn.cpp	/^    int _closeCount;$/;"	m	class:EchoClient	file:
+_closeCount	echoclient_syn.cpp	/^    int _closeCount;$/;"	m	class:EchoRunnable	file:
+_closeCount	signal_test.cpp	/^    atomic_t _closeCount;$/;"	m	class:EchoPacketHandler	file:
+_condition	helloworld_httpd.cpp	/^    ThreadCond _condition;$/;"	m	struct:RequestQueue	file:
+_condition	helloworld_httpd_2.cpp	/^    ThreadCond _condition;$/;"	m	struct:RequestQueue	file:
+_condition	helloworld_s_2.cpp	/^    ThreadCond _condition;$/;"	m	class:RequestQueue	file:
+_condition	httpserver_new.cpp	/^    ThreadCond _condition;$/;"	m	struct:RequestQueue	file:
+_connection	echoclient_syn.cpp	/^    Connection *_connection;$/;"	m	class:EchoRunnable	file:
+_connection	helloworld_httpd.cpp	/^    Connection * _connection;$/;"	m	struct:HTTPRequestEntry	file:
+_connection	helloworld_httpd_2.cpp	/^    Connection * _connection;$/;"	m	struct:HTTPRequestEntry	file:
+_connection	helloworld_s_2.cpp	/^    Connection * _connection;$/;"	m	struct:RequestEntry	file:
+_connection	httpserver.cpp	/^    Connection * _connection;$/;"	m	struct:HttpRequest	file:
+_connection	httpserver_new.cpp	/^    Connection * _connection;$/;"	m	struct:HTTPRequestEntry	file:
+_count	echoclient.cpp	/^    atomic_t _count;$/;"	m	class:EchoPacketHandler	file:
+_count	echoclient_syn.cpp	/^    int _count;$/;"	m	class:EchoClient	file:
+_count	echoclient_syn.cpp	/^    int _count;$/;"	m	class:EchoRunnable	file:
+_count	signal_test.cpp	/^    atomic_t _count;$/;"	m	class:EchoPacketHandler	file:
+_endTime	echoclient.cpp	/^    int64_t _endTime;$/;"	m	class:EchoClient	file:
+_endTime	echoclient.cpp	/^    int64_t _endTime;$/;"	m	class:EchoPacketHandler	file:
+_endTime	signal_test.cpp	/^    int64_t _endTime;$/;"	m	class:EchoClient	file:
+_endTime	signal_test.cpp	/^    int64_t _endTime;$/;"	m	class:EchoPacketHandler	file:
+_errorcount	echoclient.cpp	/^    atomic_t _errorcount;$/;"	m	class:EchoPacketHandler	file:
+_errorcount	echoclient_syn.cpp	/^    int _errorcount;$/;"	m	class:EchoClient	file:
+_errorcount	echoclient_syn.cpp	/^    int _errorcount;$/;"	m	class:EchoRunnable	file:
+_errorcount	signal_test.cpp	/^    atomic_t _errorcount;$/;"	m	class:EchoPacketHandler	file:
+_factory	httpserver.cpp	/^    IPacketFactory *_factory;$/;"	m	class:HttpServerAdapter	file:
+_httpServer	httpserver.cpp	/^HttpServer *_httpServer;$/;"	v
+_id	httpserver.cpp	/^    long _id;$/;"	m	class:RequestProcessor	file:
+_id	httpserver_new.cpp	/^    long _id;$/;"	m	class:RequestProcessor	file:
+_ioComponent	fork_test.cpp	/^    IOComponent* _ioComponent;$/;"	m	class:EchoServer	file:
+_mutex	helloworld_c.cpp	/^    ThreadMutex _mutex;$/;"	m	class:HelloWorldPacketHandler	file:
+_packet	helloworld_httpd.cpp	/^    HTTPPacket * _packet;$/;"	m	struct:HTTPRequestEntry	file:
+_packet	helloworld_httpd_2.cpp	/^    HTTPPacket * _packet;$/;"	m	struct:HTTPRequestEntry	file:
+_packet	helloworld_s_2.cpp	/^    DefaultPacket * _packet;$/;"	m	struct:RequestEntry	file:
+_packet	httpserver.cpp	/^    Packet * _packet;$/;"	m	struct:HttpRequest	file:
+_packet	httpserver_new.cpp	/^    HTTPPacket * _packet;$/;"	m	struct:HTTPRequestEntry	file:
+_packetsToSend	echoclient_syn.cpp	/^    int _packetsToSend;$/;"	m	class:EchoRunnable	file:
+_path	helloworld_wget.cpp	/^  char *_path;$/;"	m	class:Wget	file:
+_queue	helloworld_httpd.cpp	/^    queue<HTTPRequestEntry> _queue;$/;"	m	struct:RequestQueue	file:
+_queue	helloworld_httpd_2.cpp	/^    queue<HTTPRequestEntry> _queue;$/;"	m	struct:RequestQueue	file:
+_queue	helloworld_s_2.cpp	/^    queue<RequestEntry> _queue;$/;"	m	class:RequestQueue	file:
+_queue	httpserver_new.cpp	/^    queue<HTTPRequestEntry> _queue;$/;"	m	struct:RequestQueue	file:
+_queueLimit	helloworld_httpd.cpp	/^    size_t _queueLimit;$/;"	m	struct:RequestQueue	file:
+_queueLimit	helloworld_httpd_2.cpp	/^    size_t _queueLimit;$/;"	m	struct:RequestQueue	file:
+_queueLimit	httpserver_new.cpp	/^    size_t _queueLimit;$/;"	m	struct:RequestQueue	file:
+_recvlen	echoclient.cpp	/^    int64_t _recvlen;$/;"	m	class:EchoPacketHandler	file:
+_recvlen	echoclient_syn.cpp	/^    int64_t _recvlen;$/;"	m	class:EchoClient	file:
+_recvlen	echoclient_syn.cpp	/^    int64_t _recvlen;$/;"	m	class:EchoRunnable	file:
+_recvlen	signal_test.cpp	/^    int64_t _recvlen;$/;"	m	class:EchoPacketHandler	file:
+_replyCount	benchmark.cpp	/^    int _replyCount;$/;"	m	class:HelloWorldPacketHandler	file:
+_replyCount	helloworld_c.cpp	/^    int _replyCount;$/;"	m	class:HelloWorldPacketHandler	file:
+_runnalbes	echoclient_syn.cpp	/^    EchoRunnable *_runnalbes;$/;"	m	class:EchoClient	file:
+_sendlen	echoclient_syn.cpp	/^    int64_t _sendlen;$/;"	m	class:EchoClient	file:
+_sendlen	echoclient_syn.cpp	/^    int64_t _sendlen;$/;"	m	class:EchoRunnable	file:
+_sepc	helloworld_wget.cpp	/^  char *_sepc;$/;"	m	class:Wget	file:
+_spec	echoclient.cpp	/^    char *_spec;$/;"	m	class:EchoClient	file:
+_spec	echoclient_syn.cpp	/^    char *_spec;$/;"	m	class:EchoClient	file:
+_spec	echoserver.cpp	/^    std::string _spec;$/;"	m	class:EchoServer	file:
+_spec	httpserver.cpp	/^    char *_spec;$/;"	m	class:HttpServer	file:
+_spec	signal_test.cpp	/^    char *_spec;$/;"	m	class:EchoClient	file:
+_startTime	echoclient.cpp	/^    int64_t _startTime;$/;"	m	class:EchoClient	file:
+_startTime	signal_test.cpp	/^    int64_t _startTime;$/;"	m	class:EchoClient	file:
+_threads	echoclient_syn.cpp	/^    Thread *_threads;$/;"	m	class:EchoClient	file:
+_threads_count	echoclient_syn.cpp	/^    int _threads_count;$/;"	m	class:EchoClient	file:
+_tid	echoclient_syn.cpp	/^    int _tid;$/;"	m	class:EchoRunnable	file:
+_timeoutCount	echoclient.cpp	/^    atomic_t _timeoutCount;$/;"	m	class:EchoPacketHandler	file:
+_timeoutCount	echoclient_syn.cpp	/^    int _timeoutCount;$/;"	m	class:EchoClient	file:
+_timeoutCount	echoclient_syn.cpp	/^    int _timeoutCount;$/;"	m	class:EchoRunnable	file:
+_timeoutCount	signal_test.cpp	/^    atomic_t _timeoutCount;$/;"	m	class:EchoPacketHandler	file:
+_totalRequest	helloworld_c.cpp	/^    int _totalRequest;$/;"	m	class:HelloWorldPacketHandler	file:
+_transport	echoserver.cpp	/^    Transport _transport;$/;"	m	class:EchoServer	file:
+_transport	fork_test.cpp	/^    Transport _transport;$/;"	m	class:EchoServer	file:
+_transport	httpserver.cpp	/^    Transport _transport;$/;"	m	class:HttpServer	file:
+_waitCount	helloworld_httpd.cpp	/^    size_t _waitCount;$/;"	m	struct:RequestQueue	file:
+_waitCount	helloworld_httpd_2.cpp	/^    size_t _waitCount;$/;"	m	struct:RequestQueue	file:
+_waitCount	httpserver_new.cpp	/^    size_t _waitCount;$/;"	m	struct:RequestQueue	file:
+closeFile	helloworld_httpd.cpp	/^    void closeFile(const char*) {$/;"	f	class:RequestProcessor
+closeFile	helloworld_httpd_2.cpp	/^    void closeFile(const char*) {$/;"	f	class:RequestProcessor
+closeFile	helloworld_s_2.cpp	/^    void closeFile(const char*) {$/;"	f	class:RequestProcessor
+doFetch	helloworld_wget.cpp	/^  bool doFetch() {$/;"	f	class:Wget
+doProcess	helloworld_httpd.cpp	/^void doProcess(unsigned int port, unsigned int num) {$/;"	f
+doProcess	helloworld_httpd_2.cpp	/^void doProcess(unsigned int port, unsigned int num) {$/;"	f
+doProcess	helloworld_s_2.cpp	/^void doProcess(unsigned int port, unsigned int num) {$/;"	f
+doProcess	httpserver_new.cpp	/^void doProcess(const char *spec, unsigned int num) {$/;"	f
+doReply	helloworld_httpd.cpp	/^    void doReply(HTTPRequestEntry &entry) {$/;"	f	class:RequestProcessor
+doReply	helloworld_httpd_2.cpp	/^    void doReply(HTTPRequestEntry &entry) {$/;"	f	class:RequestProcessor
+doReply	helloworld_s_2.cpp	/^    void doReply(RequestEntry &entry) {$/;"	f	class:RequestProcessor
+doReply	httpserver.cpp	/^    void doReply(HttpRequest &request) {$/;"	f	class:RequestProcessor
+doReply	httpserver_new.cpp	/^    void doReply(HTTPRequestEntry &entry) {$/;"	f	class:RequestProcessor
+doSend	echoclient_syn.cpp	/^    void doSend() {$/;"	f	class:EchoRunnable
+factory	echoclient.cpp	/^DefaultPacketFactory factory ;$/;"	v
+factory	echoclient.cpp	/^DefaultPacketStreamer streamer(&factory);$/;"	v
+factory	fork_test.cpp	/^DefaultPacketStreamer streamer(&factory);$/;"	v
+factory	httpserver.cpp	/^DefaultHttpPacketFactory factory;$/;"	v
+factory	httpserver.cpp	/^HttpPacketStreamer streamer(&factory);$/;"	v
+factory	httpserver.cpp	/^HttpServerAdapter serverAdapter(&factory);$/;"	v
+factory	signal_test.cpp	/^DefaultPacketFactory factory ;$/;"	v
+factory	signal_test.cpp	/^DefaultPacketStreamer streamer(&factory);$/;"	v
+fillBody	helloworld_httpd.cpp	/^    void fillBody(const string &filename, HTTPPacket *reply) {$/;"	f	class:RequestProcessor
+fillBody	helloworld_httpd_2.cpp	/^    void fillBody(const string &filename, HTTPPacket *reply) {$/;"	f	class:RequestProcessor
+fillBody	helloworld_s_2.cpp	/^    void fillBody(const string &filename, DefaultPacket *reply) {$/;"	f	class:RequestProcessor
+gCondition	httpserver.cpp	/^ThreadCond gCondition;$/;"	v
+gEchoServer	echoserver.cpp	/^EchoServer *gEchoServer;$/;"	v
+gRequests	httpserver.cpp	/^queue<HttpRequest> gRequests;$/;"	v
+gStop	echoclient.cpp	/^bool gStop = false;$/;"	v
+gStop	signal_test.cpp	/^bool gStop = false;$/;"	v
+gTransport	helloworld_s.cpp	/^Transport gTransport;$/;"	v
+g_stop	httpserver.cpp	/^bool g_stop = false;$/;"	v
+gerrorcount	echoclient.cpp	/^int gerrorcount = 0;$/;"	v
+gerrorcount	signal_test.cpp	/^int gerrorcount = 0;$/;"	v
+getLine	benchmark.cpp	/^bool getLine(ifstream &infile, string &line, uint32_t retry = 1000u) {$/;"	f
+globalCurrentPacketPosted	benchmark.cpp	/^int64_t globalCurrentPacketPosted = 0;$/;"	v
+globalQueue	helloworld_httpd.cpp	/^} globalQueue;$/;"	v	typeref:struct:RequestQueue
+globalQueue	helloworld_httpd_2.cpp	/^} globalQueue;$/;"	v	typeref:struct:RequestQueue
+globalQueue	helloworld_s_2.cpp	/^} globalQueue;$/;"	v	typeref:class:RequestQueue
+globalQueue	httpserver_new.cpp	/^} globalQueue;$/;"	v	typeref:struct:RequestQueue
+globalStopFlag	benchmark.cpp	/^bool globalStopFlag = false;$/;"	v
+grecvcount	echoclient.cpp	/^int grecvcount = 0;$/;"	v
+grecvcount	signal_test.cpp	/^int grecvcount = 0;$/;"	v
+grecvlen	echoclient.cpp	/^int grecvlen =0;$/;"	v
+grecvlen	signal_test.cpp	/^int grecvlen =0;$/;"	v
+gsendcount	echoclient.cpp	/^int gsendcount = 1000;$/;"	v
+gsendcount	signal_test.cpp	/^int gsendcount = 1000;$/;"	v
+gsendlen	echoclient.cpp	/^int64_t gsendlen = 0;$/;"	v
+gsendlen	signal_test.cpp	/^int64_t gsendlen = 0;$/;"	v
+gtimeoutcount	echoclient.cpp	/^int gtimeoutcount = 0;$/;"	v
+gtimeoutcount	signal_test.cpp	/^int gtimeoutcount = 0;$/;"	v
+handlePacket	benchmark.cpp	/^    handlePacket(Packet *packet, void *args) {$/;"	f	class:HelloWorldPacketHandler
+handlePacket	echoclient.cpp	/^    HPRetCode handlePacket(Packet *packet, void *args)$/;"	f	class:EchoPacketHandler
+handlePacket	echoserver.cpp	/^EchoServer::handlePacket(Connection *connection, Packet *packet) {$/;"	f	class:EchoServer
+handlePacket	fork_test.cpp	/^    HPRetCode handlePacket(Packet *packet, void *args)$/;"	f	class:EchoClient
+handlePacket	fork_test.cpp	/^    IPacketHandler::HPRetCode handlePacket(Connection *connection, Packet *packet) $/;"	f	class:EchoServer
+handlePacket	helloworld_c.cpp	/^    handlePacket(Packet *packet, void *args) {$/;"	f	class:HelloWorldPacketHandler
+handlePacket	helloworld_httpd.cpp	/^    handlePacket(Connection *connection, Packet *packet) {$/;"	f	class:HTTPServerAdapter
+handlePacket	helloworld_httpd_2.cpp	/^    handlePacket(Connection *connection, Packet *packet) {$/;"	f	class:HTTPServerAdapter
+handlePacket	helloworld_s.cpp	/^    handlePacket(Connection *connection, Packet *packet) {$/;"	f	class:HelloWorldServerAdapter
+handlePacket	helloworld_s_2.cpp	/^    handlePacket(Connection *connection, Packet *packet) {$/;"	f	class:MyServerAdapter
+handlePacket	helloworld_wget.cpp	/^  HPRetCode handlePacket(Packet *packet, void *args) {$/;"	f	class:HandleResult	file:
+handlePacket	httpserver.cpp	/^    IPacketHandler::HPRetCode handlePacket(Connection *connection, Packet *packet)$/;"	f	class:HttpServerAdapter
+handlePacket	httpserver_new.cpp	/^    handlePacket(Connection *connection, Packet *packet) {$/;"	f	class:HTTPServerAdapter
+handlePacket	signal_test.cpp	/^    HPRetCode handlePacket(Packet *packet, void *args)$/;"	f	class:EchoPacketHandler
+handler	echoclient.cpp	/^EchoPacketHandler handler;$/;"	v
+handler	helloworld_wget.cpp	/^  HandleResult handler;$/;"	m	class:Wget	file:
+handler	signal_test.cpp	/^EchoPacketHandler handler;$/;"	v
+mAccDequeueLength	helloworld_s_2.cpp	/^    int64_t mAccDequeueLength;$/;"	m	class:RequestQueue	file:
+mAccDequeueTime	helloworld_s_2.cpp	/^    int64_t mAccDequeueTime;$/;"	m	class:RequestQueue	file:
+mAccDequeueWaitTime	helloworld_s_2.cpp	/^    int64_t mAccDequeueWaitTime;$/;"	m	class:RequestQueue	file:
+mAccEnqueueLength	helloworld_s_2.cpp	/^    int64_t mAccEnqueueLength;$/;"	m	class:RequestQueue	file:
+mAccEnqueueTime	helloworld_s_2.cpp	/^    int64_t mAccEnqueueTime;$/;"	m	class:RequestQueue	file:
+mAccEnqueueWaitTime	helloworld_s_2.cpp	/^    int64_t mAccEnqueueWaitTime;$/;"	m	class:RequestQueue	file:
+mClientTrans	fork_test.cpp	/^    Transport *mClientTrans;$/;"	m	class:EchoClient	file:
+mConnection	fork_test.cpp	/^    Connection* mConnection;$/;"	m	class:EchoClient	file:
+mDequeCount	helloworld_s_2.cpp	/^    int64_t mDequeCount;$/;"	m	class:RequestQueue	file:
+mEndProcess	helloworld_s_2.cpp	/^    int64_t mEndProcess;$/;"	m	struct:RequestEntry	file:
+mEnqueueCount	helloworld_s_2.cpp	/^    int64_t mEnqueueCount;$/;"	m	class:RequestQueue	file:
+mQueueLimit	helloworld_s_2.cpp	/^    size_t mQueueLimit;$/;"	m	class:RequestQueue	file:
+mReceived	benchmark.cpp	/^    bool mReceived;$/;"	m	struct:RequestEntry	file:
+mReplyBytes	benchmark.cpp	/^    size_t mReplyBytes;$/;"	m	struct:RequestEntry	file:
+mRequest	benchmark.cpp	/^    string mRequest;$/;"	m	struct:RequestEntry	file:
+mSendTime	benchmark.cpp	/^    int64_t mSendTime;$/;"	m	struct:RequestEntry	file:
+mSignalCount	helloworld_s_2.cpp	/^    int64_t mSignalCount;$/;"	m	class:RequestQueue	file:
+mStartProcess	helloworld_s_2.cpp	/^    int64_t mStartProcess;$/;"	m	struct:RequestEntry	file:
+mStartPush	helloworld_s_2.cpp	/^    int64_t mStartPush;$/;"	m	struct:RequestEntry	file:
+mStartWait	helloworld_s_2.cpp	/^    int64_t mStartWait;$/;"	m	struct:RequestEntry	file:
+mSuccess	benchmark.cpp	/^    bool mSuccess;$/;"	m	struct:RequestEntry	file:
+mWaitCount	helloworld_s_2.cpp	/^    int64_t mWaitCount;$/;"	m	class:RequestQueue	file:
+mWaitingWorkers	helloworld_s_2.cpp	/^    size_t mWaitingWorkers;$/;"	m	class:RequestQueue	file:
+m_id	helloworld_httpd.cpp	/^    long m_id;$/;"	m	class:RequestProcessor	file:
+m_id	helloworld_httpd_2.cpp	/^    long m_id;$/;"	m	class:RequestProcessor	file:
+m_id	helloworld_s_2.cpp	/^    long m_id;$/;"	m	class:RequestProcessor	file:
+m_lockTime	helloworld_httpd_2.cpp	/^    int64_t m_lockTime;$/;"	m	class:RequestProcessor	file:
+m_lockTime	helloworld_s_2.cpp	/^    int64_t m_lockTime;$/;"	m	class:RequestProcessor	file:
+m_runTime	helloworld_httpd.cpp	/^    int64_t m_runTime;$/;"	m	class:RequestProcessor	file:
+m_runTime	helloworld_httpd_2.cpp	/^    int64_t m_runTime;$/;"	m	class:RequestProcessor	file:
+m_runTime	helloworld_s_2.cpp	/^    int64_t m_runTime;$/;"	m	class:RequestProcessor	file:
+m_taskProcessTime	helloworld_s_2.cpp	/^    int64_t m_taskProcessTime;$/;"	m	class:RequestProcessor	file:
+m_taskProcesssed	helloworld_httpd.cpp	/^    int64_t m_taskProcesssed;$/;"	m	class:RequestProcessor	file:
+m_taskProcesssed	helloworld_httpd_2.cpp	/^    int64_t m_taskProcesssed;$/;"	m	class:RequestProcessor	file:
+m_taskProcesssed	helloworld_s_2.cpp	/^    int64_t m_taskProcesssed;$/;"	m	class:RequestProcessor	file:
+m_taskWaitTime	helloworld_s_2.cpp	/^    int64_t m_taskWaitTime;$/;"	m	class:RequestProcessor	file:
+m_totalTime	helloworld_httpd.cpp	/^    int64_t m_totalTime;$/;"	m	class:RequestProcessor	file:
+m_totalTime	helloworld_httpd_2.cpp	/^    int64_t m_totalTime;$/;"	m	class:RequestProcessor	file:
+m_totalTime	helloworld_s_2.cpp	/^    int64_t m_totalTime;$/;"	m	class:RequestProcessor	file:
+m_waitTime	helloworld_httpd.cpp	/^    int64_t m_waitTime;$/;"	m	class:RequestProcessor	file:
+m_waitTime	helloworld_httpd_2.cpp	/^    int64_t m_waitTime;$/;"	m	class:RequestProcessor	file:
+m_waitTime	helloworld_s_2.cpp	/^    int64_t m_waitTime;$/;"	m	class:RequestProcessor	file:
+main	benchmark.cpp	/^int main(int argc, char *argv[]) {$/;"	f
+main	echoclient.cpp	/^int main(int argc, char *argv[]) {$/;"	f
+main	echoclient_syn.cpp	/^int main(int argc, char *argv[]) {$/;"	f
+main	echoserver.cpp	/^int main(int argc, char *argv[]) {$/;"	f
+main	fork_test.cpp	/^int main()$/;"	f
+main	helloworld_c.cpp	/^int main() {$/;"	f
+main	helloworld_c_syn.cpp	/^int main(int argc, char *argv[]) {$/;"	f
+main	helloworld_httpd.cpp	/^int main(int argc, char *argv[]) {$/;"	f
+main	helloworld_httpd_2.cpp	/^int main(int argc, char *argv[]) {$/;"	f
+main	helloworld_s.cpp	/^int main() {$/;"	f
+main	helloworld_s_2.cpp	/^int main(int argc, char *argv[]) {$/;"	f
+main	helloworld_wget.cpp	/^int main(int argc, char *argv[]) {$/;"	f
+main	helloworld_wget_syn.cpp	/^int main(int argc, char *argv[]) {$/;"	f
+main	httpserver.cpp	/^int main(int argc, char *argv[])$/;"	f
+main	httpserver_new.cpp	/^int main(int argc, char *argv[]) {$/;"	f
+main	signal_test.cpp	/^int main(int argc, char *argv[]) {$/;"	f
+main	wait.cpp	/^int main(int argc, char *argv[]) {$/;"	f
+myHandlePacket	helloworld_httpd.cpp	/^    void myHandlePacket(Connection *connection, HTTPPacket* request) {$/;"	f	class:HTTPServerAdapter
+myHandlePacket	helloworld_httpd_2.cpp	/^    void myHandlePacket(Connection *connection, HTTPPacket* request) {$/;"	f	class:HTTPServerAdapter
+myHandlePacket	helloworld_s_2.cpp	/^    void myHandlePacket(Connection *connection, DefaultPacket* request) {$/;"	f	class:MyServerAdapter
+myHandlePacket	httpserver_new.cpp	/^    void myHandlePacket(Connection *connection, HTTPPacket* request) {$/;"	f	class:HTTPServerAdapter
+post	benchmark.cpp	/^void post(Connection *conn, HelloWorldPacketHandler *handler,$/;"	f
+receive	benchmark.cpp	/^void receive(RequestEntry *entry, int64_t now, int64_t &total,$/;"	f
+root	helloworld_httpd.cpp	/^const char *root = NULL;$/;"	v
+root	helloworld_httpd_2.cpp	/^const char *root = NULL;$/;"	v
+root	helloworld_s_2.cpp	/^string root = "\/";$/;"	v
+run	echoclient.cpp	/^void EchoClient::run(Thread *thread, void *arg) {$/;"	f	class:EchoClient
+run	echoclient_syn.cpp	/^    void run(Thread *thread, void *args) {$/;"	f	class:EchoRunnable
+run	helloworld_httpd.cpp	/^    void run(Thread* thread, void *args) {$/;"	f	class:RequestProcessor
+run	helloworld_httpd_2.cpp	/^    void run(Thread* thread, void *args) {$/;"	f	class:RequestProcessor
+run	helloworld_s_2.cpp	/^    void run(Thread* thread, void *args) {$/;"	f	class:RequestProcessor
+run	httpserver.cpp	/^    void run(Thread* thread, void *args) {$/;"	f	class:RequestProcessor
+run	httpserver_new.cpp	/^    void run(Thread* thread, void *args) {$/;"	f	class:RequestProcessor
+run	signal_test.cpp	/^void EchoClient::run(Thread *thread, void *arg) {$/;"	f	class:EchoClient
+runTime	echoclient.cpp	/^    int64_t runTime(){$/;"	f	class:EchoClient
+runTime	signal_test.cpp	/^    int64_t runTime(){$/;"	f	class:EchoClient
+sigHandler	fork_test.cpp	/^void sigHandler(int sig) {$/;"	f
+singalHandler	benchmark.cpp	/^void singalHandler(int seg)$/;"	f
+singalHandler	echoclient.cpp	/^void singalHandler(int sig)$/;"	f
+singalHandler	echoclient_syn.cpp	/^void singalHandler(int sig) {$/;"	f
+singalHandler	echoserver.cpp	/^void singalHandler(int sig) {$/;"	f
+singalHandler	helloworld_httpd.cpp	/^void singalHandler(int seg)$/;"	f
+singalHandler	helloworld_httpd_2.cpp	/^void singalHandler(int seg)$/;"	f
+singalHandler	helloworld_s.cpp	/^void singalHandler(int sig) {$/;"	f
+singalHandler	helloworld_s_2.cpp	/^void singalHandler(int seg)$/;"	f
+singalHandler	httpserver.cpp	/^void singalHandler(int seg)$/;"	f
+singalHandler	httpserver_new.cpp	/^void singalHandler(int seg)$/;"	f
+singalHandler	signal_test.cpp	/^void singalHandler(int sig)$/;"	f
+spec	fork_test.cpp	/^const char *spec = "tcp:127.0.0.1:8912";$/;"	v
+start	echoclient.cpp	/^void EchoClient::start(int conncount)$/;"	f	class:EchoClient
+start	echoclient_syn.cpp	/^void EchoClient::start(int total, int conncount) {$/;"	f	class:EchoClient
+start	echoserver.cpp	/^void EchoServer::start() {$/;"	f	class:EchoServer
+start	fork_test.cpp	/^    void start()$/;"	f	class:EchoServer
+start	httpserver.cpp	/^void HttpServer::start(int num)$/;"	f	class:HttpServer
+start	signal_test.cpp	/^void EchoClient::start(int conncount)$/;"	f	class:EchoClient
+stop	echoserver.cpp	/^    void stop() {$/;"	f	class:EchoServer
+stop	fork_test.cpp	/^    void stop() {$/;"	f	class:EchoServer
+stop	httpserver.cpp	/^void HttpServer::stop()$/;"	f	class:HttpServer
+taskIteration	helloworld_httpd.cpp	/^    void taskIteration() {$/;"	f	class:RequestProcessor
+taskIteration	helloworld_httpd_2.cpp	/^    void taskIteration() {$/;"	f	class:RequestProcessor
+taskIteration	helloworld_s_2.cpp	/^    void taskIteration() {$/;"	f	class:RequestProcessor
+taskIteration	httpserver.cpp	/^    void taskIteration() {$/;"	f	class:RequestProcessor
+taskIteration	httpserver_new.cpp	/^    void taskIteration() {$/;"	f	class:RequestProcessor
+transport	echoclient.cpp	/^Transport transport;$/;"	v
+transport	signal_test.cpp	/^Transport transport;$/;"	v
+~EchoClient	echoclient.cpp	/^EchoClient::~EchoClient()$/;"	f	class:EchoClient
+~EchoClient	echoclient_syn.cpp	/^    ~EchoClient() {$/;"	f	class:EchoClient
+~EchoClient	signal_test.cpp	/^EchoClient::~EchoClient()$/;"	f	class:EchoClient
+~EchoServer	echoserver.cpp	/^    virtual ~EchoServer() {}$/;"	f	class:EchoServer
+~EchoServer	fork_test.cpp	/^    virtual ~EchoServer() {}$/;"	f	class:EchoServer
+~HelloWorldPacketHandler	helloworld_c.cpp	/^    virtual ~HelloWorldPacketHandler() {}$/;"	f	class:HelloWorldPacketHandler
+~HttpServer	httpserver.cpp	/^HttpServer::~HttpServer()$/;"	f	class:HttpServer
+~Wget	helloworld_wget.cpp	/^  ~Wget() {$/;"	f	class:Wget

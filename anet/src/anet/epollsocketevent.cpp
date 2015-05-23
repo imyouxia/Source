@@ -72,6 +72,7 @@ bool EPollSocketEvent::addEvent(Socket *socket, bool enableRead, bool enableWrit
  * @param enableWrite: 设置是否可写
  * @return  操作是否成功, true  成功, false  失败
  */
+// 修改已经注册的fd的监听事件
 bool EPollSocketEvent::setEvent(Socket *socket, bool enableRead, bool enableWrite) {
 
     struct epoll_event ev;

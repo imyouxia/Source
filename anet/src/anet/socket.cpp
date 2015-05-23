@@ -241,6 +241,8 @@ bool Socket::setIntOption (int option, int value) {
     return rc;
 }
 
+// 用来改变TCP连接断开时候的方式
+// 内核缺省close操作是立即返回，如果有数据残留在套接口缓冲区中则系统将试着将这些数据发送给对方。
 bool Socket::setSoLinger(bool doLinger, int seconds) {
     bool rc=false;
     struct linger lingerTime;
