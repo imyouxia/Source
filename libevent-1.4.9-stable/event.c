@@ -124,6 +124,10 @@ static int	timeout_next(struct event_base *, struct timeval **);
 static void	timeout_process(struct event_base *);
 static void	timeout_correct(struct event_base *, struct timeval *);
 
+/*
+ * CLOCK_MONOTONIC:从系统启动这一刻起开始计时,不受系统时间被用户改变的影响
+ */
+
 static void
 detect_monotonic(void)
 {
@@ -135,6 +139,7 @@ detect_monotonic(void)
 #endif
 }
 
+// 获取系统当前时间距Epoch时间秒数
 static int
 gettime(struct event_base *base, struct timeval *tp)
 {

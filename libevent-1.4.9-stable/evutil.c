@@ -200,6 +200,8 @@ evutil_strtoll(const char *s, char **endptr, int base)
 #endif
 }
 
+// ftime()将目前日期由tp所指的结构返回。tp结构定义
+// time秒数，millitm毫秒
 #ifndef _EVENT_HAVE_GETTIMEOFDAY
 int
 evutil_gettimeofday(struct timeval *tv, struct timezone *tz)

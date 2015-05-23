@@ -35,6 +35,7 @@ extern "C" {
 #include "min_heap.h"
 #include "evsignal.h"
 
+// 事件都有哪些操作方式
 struct eventop {
 	const char *name;
 	void *(*init)(struct event_base *);

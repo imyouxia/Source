@@ -91,6 +91,7 @@ struct timezone {
 			(vvp)->tv_usec -= 1000000;			\
 		}							\
 	} while (0)
+// 时间差
 #define	timersub(tvp, uvp, vvp)						\
 	do {								\
 		(vvp)->tv_sec = (tvp)->tv_sec - (uvp)->tv_sec;		\
